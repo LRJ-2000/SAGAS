@@ -1,0 +1,715 @@
+{
+  "files": {
+    "antmaze-giant-navigate-v0:dataset:387791c414cf": {
+      "bytes": 241141207,
+      "kind": "dataset",
+      "origin": "OGBench dataset",
+      "path": "antmaze-giant-navigate-v0.npz",
+      "sha256": "387791c414cfba2d77eda64a47f3b6db7950bdf146ae901e4f08c2c2f9e0f3aa",
+      "storage": "data",
+      "url": "https://rail.eecs.berkeley.edu/datasets/ogbench/antmaze-giant-navigate-v0.npz"
+    },
+    "antmaze-giant-navigate-v0:dataset:61d40e91899f": {
+      "bytes": 24052175,
+      "kind": "dataset",
+      "origin": "OGBench dataset",
+      "path": "antmaze-giant-navigate-v0-val.npz",
+      "sha256": "61d40e91899f496030fb4ee73ffd61c20dad502ab6cc8075744867097930ce71",
+      "storage": "data",
+      "url": "https://rail.eecs.berkeley.edu/datasets/ogbench/antmaze-giant-navigate-v0-val.npz"
+    },
+    "antmaze-giant-navigate-v0:graph:f497b6692f1f": {
+      "bytes": 11978216,
+      "kind": "graph",
+      "origin": "Recorded benchmark asset (obtain separately)",
+      "path": "graphs/antmaze-giant-navigate-v0/graph-f497b6692f1f/keygraph.pkl",
+      "sha256": "f497b6692f1f709514beb91e814efc211feb6ded59d93b9fbd3d8ee78dbad9e7",
+      "storage": "assets",
+      "url": null
+    },
+    "antmaze-giant-navigate-v0:policy:e7f49de58f50": {
+      "bytes": 67471658,
+      "kind": "policy",
+      "origin": "Recorded benchmark asset (obtain separately)",
+      "path": "checkpoints/antmaze-giant-navigate-v0/policy-e7f49de58f50/params_1000000.pkl",
+      "sha256": "e7f49de58f5023fc87f6b5d51773b914f8f523437ea02a7f057b81c868d78d8a",
+      "storage": "assets",
+      "url": null
+    },
+    "antmaze-giant-navigate-v0:tdr:77a79ff2ca65": {
+      "bytes": 67471658,
+      "kind": "tdr",
+      "origin": "Recorded benchmark asset (obtain separately)",
+      "path": "checkpoints/antmaze-giant-navigate-v0/tdr-77a79ff2ca65/params_1000000.pkl",
+      "sha256": "77a79ff2ca65672bb0550a0974294780e359accde35adfb7a2d09e228bbb999a",
+      "storage": "assets",
+      "url": null
+    },
+    "antmaze-giant-stitch-v0:dataset:b4d0862d31d1": {
+      "bytes": 24541823,
+      "kind": "dataset",
+      "origin": "OGBench dataset",
+      "path": "antmaze-giant-stitch-v0-val.npz",
+      "sha256": "b4d0862d31d1ac014b60deaa732a78bddba0c547489373863ec2b8e30c7edb9d",
+      "storage": "data",
+      "url": "https://rail.eecs.berkeley.edu/datasets/ogbench/antmaze-giant-stitch-v0-val.npz"
+    },
+    "antmaze-giant-stitch-v0:dataset:c697fa4ebd04": {
+      "bytes": 245374624,
+      "kind": "dataset",
+      "origin": "OGBench dataset",
+      "path": "antmaze-giant-stitch-v0.npz",
+      "sha256": "c697fa4ebd0442d66839e1e4a57092657195e52e8905155903d4d21363eb886e",
+      "storage": "data",
+      "url": "https://rail.eecs.berkeley.edu/datasets/ogbench/antmaze-giant-stitch-v0.npz"
+    },
+    "antmaze-giant-stitch-v0:graph:3e1fe008cbee": {
+      "bytes": 15954119,
+      "kind": "graph",
+      "origin": "Recorded benchmark asset (obtain separately)",
+      "path": "graphs/antmaze-giant-stitch-v0/graph-3e1fe008cbee/keygraph.pkl",
+      "sha256": "3e1fe008cbeeae273eb91c2612822a58cbd705c3cdd791e6e1b9e0f7d945ad2a",
+      "storage": "assets",
+      "url": null
+    },
+    "antmaze-giant-stitch-v0:graph:af1e8ebca99f": {
+      "bytes": 16419427,
+      "kind": "graph",
+      "origin": "Recorded benchmark asset (obtain separately)",
+      "path": "graphs/antmaze-giant-stitch-v0/graph-af1e8ebca99f/keygraph.pkl",
+      "sha256": "af1e8ebca99fd288e15d9255b5e4bb191bc89a7fb4fab2e469d4839c1732fc4d",
+      "storage": "assets",
+      "url": null
+    },
+    "antmaze-giant-stitch-v0:policy:948b844b8dc0": {
+      "bytes": 67471658,
+      "kind": "policy",
+      "origin": "Recorded benchmark asset (obtain separately)",
+      "path": "checkpoints/antmaze-giant-stitch-v0/policy-948b844b8dc0/params_1000000.pkl",
+      "sha256": "948b844b8dc0ca52c482bb2a99a9fce4ca2c88bc722dd414e2d0d7534b560da3",
+      "storage": "assets",
+      "url": null
+    },
+    "antmaze-giant-stitch-v0:tdr:0ff0724ab1d4": {
+      "bytes": 67471658,
+      "kind": "tdr",
+      "origin": "Recorded benchmark asset (obtain separately)",
+      "path": "checkpoints/antmaze-giant-stitch-v0/tdr-0ff0724ab1d4/params_1000000.pkl",
+      "sha256": "0ff0724ab1d47d8bf48c4f60fed6df6c9dfa2062755ee946e91b21757407843e",
+      "storage": "assets",
+      "url": null
+    },
+    "antmaze-giant-stitch-v0:tdr:20c40a89b4fb": {
+      "bytes": 67471658,
+      "kind": "tdr",
+      "origin": "GAS checkpoint",
+      "path": "checkpoints/antmaze-giant-stitch-v0/tdr-20c40a89b4fb/params_1000000.pkl",
+      "sha256": "20c40a89b4fb7a0a19fd5334f4248dce8f825f06f607df9b8d1ea5325c9c5b61",
+      "storage": "assets",
+      "upstream": "https://huggingface.co/qortmdgh4141/GAS/resolve/498b866af6569024d27ddba880b7852212c13fef/antmaze-giant-stitch/params_1000000.pkl",
+      "url": null
+    },
+    "antmaze-large-explore-v0:dataset:80fac2570437": {
+      "bytes": 119084527,
+      "kind": "dataset",
+      "origin": "OGBench dataset",
+      "path": "antmaze-large-explore-v0-val.npz",
+      "sha256": "80fac2570437e83666318e2383cdecfdb4198aceb3d007bd205ae7ccc469a7ce",
+      "storage": "data",
+      "url": "https://rail.eecs.berkeley.edu/datasets/ogbench/antmaze-large-explore-v0-val.npz"
+    },
+    "antmaze-large-explore-v0:dataset:8c6303259a60": {
+      "bytes": 1190834580,
+      "kind": "dataset",
+      "origin": "OGBench dataset",
+      "path": "antmaze-large-explore-v0.npz",
+      "sha256": "8c6303259a60db6bfceb742e2a18016507325614472c10648aee798b580e880b",
+      "storage": "data",
+      "url": "https://rail.eecs.berkeley.edu/datasets/ogbench/antmaze-large-explore-v0.npz"
+    },
+    "antmaze-large-explore-v0:graph:d577264452f3": {
+      "bytes": 20872729,
+      "kind": "graph",
+      "origin": "Recorded benchmark asset (obtain separately)",
+      "path": "graphs/antmaze-large-explore-v0/graph-d577264452f3/keygraph.pkl",
+      "sha256": "d577264452f3b1b4dcae0f689d18f540326f956ee1499fa431f9d3b8de58726c",
+      "storage": "assets",
+      "url": null
+    },
+    "antmaze-large-explore-v0:policy:3736d9617c82": {
+      "bytes": 67471658,
+      "kind": "policy",
+      "origin": "Recorded benchmark asset (obtain separately)",
+      "path": "checkpoints/antmaze-large-explore-v0/policy-3736d9617c82/params_1000000.pkl",
+      "sha256": "3736d9617c82d6b5cab227332eda82270f6609a2b68dfeab1eabda77141bce15",
+      "storage": "assets",
+      "url": null
+    },
+    "antmaze-large-explore-v0:tdr:638c6ea79d7d": {
+      "bytes": 67471658,
+      "kind": "tdr",
+      "origin": "Recorded benchmark asset (obtain separately)",
+      "path": "checkpoints/antmaze-large-explore-v0/tdr-638c6ea79d7d/params_1000000.pkl",
+      "sha256": "638c6ea79d7d4043d7b0fa98d0a6096de853985da2c607a10bf9bb132f8a175f",
+      "storage": "assets",
+      "url": null
+    },
+    "antmaze-large-navigate-v0:dataset:2dbe946ac107": {
+      "bytes": 242877817,
+      "kind": "dataset",
+      "origin": "OGBench dataset",
+      "path": "antmaze-large-navigate-v0.npz",
+      "sha256": "2dbe946ac107ca5ac524f82f7a72efa951ceab0be915201d6b32e612d823f2e7",
+      "storage": "data",
+      "url": "https://rail.eecs.berkeley.edu/datasets/ogbench/antmaze-large-navigate-v0.npz"
+    },
+    "antmaze-large-navigate-v0:dataset:e9a4126825fa": {
+      "bytes": 24302303,
+      "kind": "dataset",
+      "origin": "OGBench dataset",
+      "path": "antmaze-large-navigate-v0-val.npz",
+      "sha256": "e9a4126825faefb57c34c29f1ee423858dbc4b6f71d9a9846a8b8bdb908b44a1",
+      "storage": "data",
+      "url": "https://rail.eecs.berkeley.edu/datasets/ogbench/antmaze-large-navigate-v0-val.npz"
+    },
+    "antmaze-large-navigate-v0:graph:50c383bc92bf": {
+      "bytes": 11347184,
+      "kind": "graph",
+      "origin": "Recorded benchmark asset (obtain separately)",
+      "path": "graphs/antmaze-large-navigate-v0/graph-50c383bc92bf/keygraph.pkl",
+      "sha256": "50c383bc92bf28b1a9be1dff63c1399dce4fb94660f51a7dcdf0c8df49527082",
+      "storage": "assets",
+      "url": null
+    },
+    "antmaze-large-navigate-v0:policy:b675d1ddf6a2": {
+      "bytes": 67471658,
+      "kind": "policy",
+      "origin": "Recorded benchmark asset (obtain separately)",
+      "path": "checkpoints/antmaze-large-navigate-v0/policy-b675d1ddf6a2/params_1000000.pkl",
+      "sha256": "b675d1ddf6a2f6921249902e5292a9e81b9693e47d6c34915e35e5a49cdf5baa",
+      "storage": "assets",
+      "url": null
+    },
+    "antmaze-large-navigate-v0:tdr:daf249b3af41": {
+      "bytes": 67471658,
+      "kind": "tdr",
+      "origin": "Recorded benchmark asset (obtain separately)",
+      "path": "checkpoints/antmaze-large-navigate-v0/tdr-daf249b3af41/params_1000000.pkl",
+      "sha256": "daf249b3af412b7f31ec232d4fc76ac32af51c75eaa1bc5d8b162ebb6aaee977",
+      "storage": "assets",
+      "url": null
+    },
+    "antmaze-large-stitch-v0:dataset:a4dea2dcd83f": {
+      "bytes": 24530047,
+      "kind": "dataset",
+      "origin": "OGBench dataset",
+      "path": "antmaze-large-stitch-v0-val.npz",
+      "sha256": "a4dea2dcd83f8fdb40804222fc43707db3aec0cd21ba76e267210b46584a2d82",
+      "storage": "data",
+      "url": "https://rail.eecs.berkeley.edu/datasets/ogbench/antmaze-large-stitch-v0-val.npz"
+    },
+    "antmaze-large-stitch-v0:dataset:f688759187a2": {
+      "bytes": 245288551,
+      "kind": "dataset",
+      "origin": "OGBench dataset",
+      "path": "antmaze-large-stitch-v0.npz",
+      "sha256": "f688759187a2d193760eab70a66ec4f16aa5b20f953ebb63b1f1f4e8a5743cbf",
+      "storage": "data",
+      "url": "https://rail.eecs.berkeley.edu/datasets/ogbench/antmaze-large-stitch-v0.npz"
+    },
+    "antmaze-large-stitch-v0:graph:2418872c2d79": {
+      "bytes": 15452887,
+      "kind": "graph",
+      "origin": "Recorded benchmark asset (obtain separately)",
+      "path": "graphs/antmaze-large-stitch-v0/graph-2418872c2d79/keygraph.pkl",
+      "sha256": "2418872c2d79de6b586ce4b03c26991e4a0a800f292a0be0eac3a3a0aa1dcd81",
+      "storage": "assets",
+      "url": null
+    },
+    "antmaze-large-stitch-v0:policy:098c204c91d8": {
+      "bytes": 67471658,
+      "kind": "policy",
+      "origin": "Recorded benchmark asset (obtain separately)",
+      "path": "checkpoints/antmaze-large-stitch-v0/policy-098c204c91d8/params_1000000.pkl",
+      "sha256": "098c204c91d8110ae7390ae165cb4b7efa8eb2e285300ee21a61514d9862283d",
+      "storage": "assets",
+      "url": null
+    },
+    "antmaze-large-stitch-v0:tdr:cb9e0beffdf9": {
+      "bytes": 67471658,
+      "kind": "tdr",
+      "origin": "Recorded benchmark asset (obtain separately)",
+      "path": "checkpoints/antmaze-large-stitch-v0/tdr-cb9e0beffdf9/params_1000000.pkl",
+      "sha256": "cb9e0beffdf95869e3184509be628a461ab7b03c80a3147f1a28749a37e04c84",
+      "storage": "assets",
+      "url": null
+    },
+    "antmaze-medium-explore-v0:dataset:d66ac9753f3c": {
+      "bytes": 1190626459,
+      "kind": "dataset",
+      "origin": "OGBench dataset",
+      "path": "antmaze-medium-explore-v0.npz",
+      "sha256": "d66ac9753f3c8d87c9b42a6900d2a4f6ec63f92a8d7db082cd676a8f92747493",
+      "storage": "data",
+      "url": "https://rail.eecs.berkeley.edu/datasets/ogbench/antmaze-medium-explore-v0.npz"
+    },
+    "antmaze-medium-explore-v0:dataset:f418027a1789": {
+      "bytes": 119060252,
+      "kind": "dataset",
+      "origin": "OGBench dataset",
+      "path": "antmaze-medium-explore-v0-val.npz",
+      "sha256": "f418027a17891b57abed857a713e697078ca4db003afc2380468cea27fb72257",
+      "storage": "data",
+      "url": "https://rail.eecs.berkeley.edu/datasets/ogbench/antmaze-medium-explore-v0-val.npz"
+    },
+    "antmaze-medium-explore-v0:graph:66d1002b05ed": {
+      "bytes": 20063692,
+      "kind": "graph",
+      "origin": "Recorded benchmark asset (obtain separately)",
+      "path": "graphs/antmaze-medium-explore-v0/graph-66d1002b05ed/keygraph.pkl",
+      "sha256": "66d1002b05ed7f8907a103c28b9ba929694e729b2e71bbb2d4a8fe975df3a70b",
+      "storage": "assets",
+      "url": null
+    },
+    "antmaze-medium-explore-v0:policy:fafa75e14707": {
+      "bytes": 67471658,
+      "kind": "policy",
+      "origin": "Recorded benchmark asset (obtain separately)",
+      "path": "checkpoints/antmaze-medium-explore-v0/policy-fafa75e14707/params_1000000.pkl",
+      "sha256": "fafa75e1470723a07f1a490a339efd54b4505cdfea3199e4ac68d3605a365670",
+      "storage": "assets",
+      "url": null
+    },
+    "antmaze-medium-explore-v0:tdr:dee869d704ce": {
+      "bytes": 67471658,
+      "kind": "tdr",
+      "origin": "Recorded benchmark asset (obtain separately)",
+      "path": "checkpoints/antmaze-medium-explore-v0/tdr-dee869d704ce/params_1000000.pkl",
+      "sha256": "dee869d704cef8c23f4f5524774a2aca346913be2aab74837990f778e0da9d3a",
+      "storage": "assets",
+      "url": null
+    },
+    "antmaze-medium-navigate-v0:dataset:9864ec00fe9e": {
+      "bytes": 24347849,
+      "kind": "dataset",
+      "origin": "OGBench dataset",
+      "path": "antmaze-medium-navigate-v0-val.npz",
+      "sha256": "9864ec00fe9e4afb05a012877f40b87931eb7fc21ae6e4ab4fe7dcdcc0a3490a",
+      "storage": "data",
+      "url": "https://rail.eecs.berkeley.edu/datasets/ogbench/antmaze-medium-navigate-v0-val.npz"
+    },
+    "antmaze-medium-navigate-v0:dataset:d9e72e438044": {
+      "bytes": 243203590,
+      "kind": "dataset",
+      "origin": "OGBench dataset",
+      "path": "antmaze-medium-navigate-v0.npz",
+      "sha256": "d9e72e4380443cbbcdee4e02863a1d869b670d9b1686915345fc8bc78349662e",
+      "storage": "data",
+      "url": "https://rail.eecs.berkeley.edu/datasets/ogbench/antmaze-medium-navigate-v0.npz"
+    },
+    "antmaze-medium-navigate-v0:graph:77c980c83f11": {
+      "bytes": 11178289,
+      "kind": "graph",
+      "origin": "Recorded benchmark asset (obtain separately)",
+      "path": "graphs/antmaze-medium-navigate-v0/graph-77c980c83f11/keygraph.pkl",
+      "sha256": "77c980c83f115481962ba28e642444439f422cac238b0563eeded5c476f1cfb6",
+      "storage": "assets",
+      "url": null
+    },
+    "antmaze-medium-navigate-v0:policy:fec0278a2966": {
+      "bytes": 67471658,
+      "kind": "policy",
+      "origin": "Recorded benchmark asset (obtain separately)",
+      "path": "checkpoints/antmaze-medium-navigate-v0/policy-fec0278a2966/params_1000000.pkl",
+      "sha256": "fec0278a29661f634605ed7113a5a609d26ff418233203f0a5dd612e7ba72cbd",
+      "storage": "assets",
+      "url": null
+    },
+    "antmaze-medium-navigate-v0:tdr:f0f90eba82f4": {
+      "bytes": 67471658,
+      "kind": "tdr",
+      "origin": "Recorded benchmark asset (obtain separately)",
+      "path": "checkpoints/antmaze-medium-navigate-v0/tdr-f0f90eba82f4/params_1000000.pkl",
+      "sha256": "f0f90eba82f444c288c4dca0b94f40838445c48f8298abcc4aa16abc5eee9b3e",
+      "storage": "assets",
+      "url": null
+    },
+    "antmaze-medium-stitch-v0:dataset:3015f74bb9d0": {
+      "bytes": 24523749,
+      "kind": "dataset",
+      "origin": "OGBench dataset",
+      "path": "antmaze-medium-stitch-v0-val.npz",
+      "sha256": "3015f74bb9d0f0fef0037d310c2be157b78af2c613f8cb0579f1de018e7c0af0",
+      "storage": "data",
+      "url": "https://rail.eecs.berkeley.edu/datasets/ogbench/antmaze-medium-stitch-v0-val.npz"
+    },
+    "antmaze-medium-stitch-v0:dataset:b3fa34eef8d2": {
+      "bytes": 245257512,
+      "kind": "dataset",
+      "origin": "OGBench dataset",
+      "path": "antmaze-medium-stitch-v0.npz",
+      "sha256": "b3fa34eef8d24dc812d734abaf74db279a5f39cd63debf23961d62c314d71e99",
+      "storage": "data",
+      "url": "https://rail.eecs.berkeley.edu/datasets/ogbench/antmaze-medium-stitch-v0.npz"
+    },
+    "antmaze-medium-stitch-v0:graph:30d017d2d1e7": {
+      "bytes": 14976550,
+      "kind": "graph",
+      "origin": "Recorded benchmark asset (obtain separately)",
+      "path": "graphs/antmaze-medium-stitch-v0/graph-30d017d2d1e7/keygraph.pkl",
+      "sha256": "30d017d2d1e7b7a7f12ebde8446367ccc42473e51fe6ffa8e16b8e735a91e75b",
+      "storage": "assets",
+      "url": null
+    },
+    "antmaze-medium-stitch-v0:policy:6f5d0662dec5": {
+      "bytes": 67471658,
+      "kind": "policy",
+      "origin": "Recorded benchmark asset (obtain separately)",
+      "path": "checkpoints/antmaze-medium-stitch-v0/policy-6f5d0662dec5/params_1000000.pkl",
+      "sha256": "6f5d0662dec53ce2529f34b34de63f1225a922d6e788c5132972f6aba66d9af8",
+      "storage": "assets",
+      "url": null
+    },
+    "antmaze-medium-stitch-v0:tdr:4cb816133c30": {
+      "bytes": 67471658,
+      "kind": "tdr",
+      "origin": "Recorded benchmark asset (obtain separately)",
+      "path": "checkpoints/antmaze-medium-stitch-v0/tdr-4cb816133c30/params_1000000.pkl",
+      "sha256": "4cb816133c30937f0b226f5ea246619ac88b831a16dbaf63913e6141404c9d74",
+      "storage": "assets",
+      "url": null
+    },
+    "humanoidmaze-giant-navigate-v0:dataset:45ddab6229de": {
+      "bytes": 2147955555,
+      "kind": "dataset",
+      "origin": "OGBench dataset",
+      "path": "humanoidmaze-giant-navigate-v0.npz",
+      "sha256": "45ddab6229de35547d723281ce02fd66203038bd4e8b83f647ccee8f1b1f1cc4",
+      "storage": "data",
+      "url": "https://rail.eecs.berkeley.edu/datasets/ogbench/humanoidmaze-giant-navigate-v0.npz"
+    },
+    "humanoidmaze-giant-navigate-v0:dataset:9db0000d0553": {
+      "bytes": 214825259,
+      "kind": "dataset",
+      "origin": "OGBench dataset",
+      "path": "humanoidmaze-giant-navigate-v0-val.npz",
+      "sha256": "9db0000d055357e54d4c95ceb3e89292a9d3fedda70b05a8079aaa611eb834de",
+      "storage": "data",
+      "url": "https://rail.eecs.berkeley.edu/datasets/ogbench/humanoidmaze-giant-navigate-v0-val.npz"
+    },
+    "humanoidmaze-giant-navigate-v0:graph:cb5c4c73255e": {
+      "bytes": 244640992,
+      "kind": "graph",
+      "origin": "Recorded benchmark asset (obtain separately)",
+      "path": "graphs/humanoidmaze-giant-navigate-v0/graph-cb5c4c73255e/keygraph.pkl",
+      "sha256": "cb5c4c73255e20700ad2b2fafa76e9255e90318bceeb0cd4563006cf7cad7f0f",
+      "storage": "assets",
+      "url": null
+    },
+    "humanoidmaze-giant-navigate-v0:policy:6359f9652162": {
+      "bytes": 70328774,
+      "kind": "policy",
+      "origin": "Recorded benchmark asset (obtain separately)",
+      "path": "checkpoints/humanoidmaze-giant-navigate-v0/policy-6359f9652162/params_1000000.pkl",
+      "sha256": "6359f9652162ab9da7989d2c7b27def0faae65e456350fcf436b3ace108f6a01",
+      "storage": "assets",
+      "url": null
+    },
+    "humanoidmaze-giant-navigate-v0:tdr:d36ca4d88ad6": {
+      "bytes": 70328774,
+      "kind": "tdr",
+      "origin": "Recorded benchmark asset (obtain separately)",
+      "path": "checkpoints/humanoidmaze-giant-navigate-v0/tdr-d36ca4d88ad6/params_1000000.pkl",
+      "sha256": "d36ca4d88ad6901e72c9c11583456d0b5e90b3b0f346dff11d09552888914b78",
+      "storage": "assets",
+      "url": null
+    },
+    "humanoidmaze-giant-stitch-v0:dataset:2080410af44e": {
+      "bytes": 215427861,
+      "kind": "dataset",
+      "origin": "OGBench dataset",
+      "path": "humanoidmaze-giant-stitch-v0-val.npz",
+      "sha256": "2080410af44e4eec61e76ed0e29ae5dc9f60d78a3e94708f981fe3dbe43f311a",
+      "storage": "data",
+      "url": "https://rail.eecs.berkeley.edu/datasets/ogbench/humanoidmaze-giant-stitch-v0-val.npz"
+    },
+    "humanoidmaze-giant-stitch-v0:dataset:f9052874fced": {
+      "bytes": 2154356164,
+      "kind": "dataset",
+      "origin": "OGBench dataset",
+      "path": "humanoidmaze-giant-stitch-v0.npz",
+      "sha256": "f9052874fced91edee5615ae9c6814c15e79f050efeecb2d84a5bb69a9f0bf3e",
+      "storage": "data",
+      "url": "https://rail.eecs.berkeley.edu/datasets/ogbench/humanoidmaze-giant-stitch-v0.npz"
+    },
+    "humanoidmaze-giant-stitch-v0:graph:86fe6242cb6b": {
+      "bytes": 375037368,
+      "kind": "graph",
+      "origin": "Recorded benchmark asset (obtain separately)",
+      "path": "graphs/humanoidmaze-giant-stitch-v0/graph-86fe6242cb6b/keygraph.pkl",
+      "sha256": "86fe6242cb6baf0d59ce66e3b0d9e4d76f15e2ad71f4a6a2506d1c3fa09ab737",
+      "storage": "assets",
+      "url": null
+    },
+    "humanoidmaze-giant-stitch-v0:policy:8a1df36e5d15": {
+      "bytes": 70328774,
+      "kind": "policy",
+      "origin": "Recorded benchmark asset (obtain separately)",
+      "path": "checkpoints/humanoidmaze-giant-stitch-v0/policy-8a1df36e5d15/params_1000000.pkl",
+      "sha256": "8a1df36e5d151298f4038417265b4ea82bff048715196d0d0d9fe0d4e0cdcd86",
+      "storage": "assets",
+      "url": null
+    },
+    "humanoidmaze-giant-stitch-v0:tdr:b24caadfe1a8": {
+      "bytes": 70328774,
+      "kind": "tdr",
+      "origin": "Recorded benchmark asset (obtain separately)",
+      "path": "checkpoints/humanoidmaze-giant-stitch-v0/tdr-b24caadfe1a8/params_1000000.pkl",
+      "sha256": "b24caadfe1a84408235e51b0373a0d0439b284c80653d3473801675fbe1cd5f5",
+      "storage": "assets",
+      "url": null
+    },
+    "humanoidmaze-large-navigate-v0:dataset:a27771bc533d": {
+      "bytes": 1074256878,
+      "kind": "dataset",
+      "origin": "OGBench dataset",
+      "path": "humanoidmaze-large-navigate-v0.npz",
+      "sha256": "a27771bc533d66b451d2117d5954c6c0ec7e319d34afea2cc9c5066e3d07478b",
+      "storage": "data",
+      "url": "https://rail.eecs.berkeley.edu/datasets/ogbench/humanoidmaze-large-navigate-v0.npz"
+    },
+    "humanoidmaze-large-navigate-v0:dataset:edddacdb6fc5": {
+      "bytes": 107452370,
+      "kind": "dataset",
+      "origin": "OGBench dataset",
+      "path": "humanoidmaze-large-navigate-v0-val.npz",
+      "sha256": "edddacdb6fc574b51ba3b610cbf3ba7e533396a790502dd07a71c2221910598f",
+      "storage": "data",
+      "url": "https://rail.eecs.berkeley.edu/datasets/ogbench/humanoidmaze-large-navigate-v0-val.npz"
+    },
+    "humanoidmaze-large-navigate-v0:graph:0cc73408b1bf": {
+      "bytes": 35636343,
+      "kind": "graph",
+      "origin": "Recorded benchmark asset (obtain separately)",
+      "path": "graphs/humanoidmaze-large-navigate-v0/graph-0cc73408b1bf/keygraph.pkl",
+      "sha256": "0cc73408b1bf0a93a1e6d0b5631ffa382a273588d07b1c602d42f5e17179376c",
+      "storage": "assets",
+      "url": null
+    },
+    "humanoidmaze-large-navigate-v0:policy:1e925c0d549f": {
+      "bytes": 70328774,
+      "kind": "policy",
+      "origin": "Recorded benchmark asset (obtain separately)",
+      "path": "checkpoints/humanoidmaze-large-navigate-v0/policy-1e925c0d549f/params_1000000.pkl",
+      "sha256": "1e925c0d549f552af2770a8505fcc23b75e800b9d9bfb90dd18b633daab19449",
+      "storage": "assets",
+      "url": null
+    },
+    "humanoidmaze-large-navigate-v0:tdr:48d4ed606f0e": {
+      "bytes": 70328774,
+      "kind": "tdr",
+      "origin": "Recorded benchmark asset (obtain separately)",
+      "path": "checkpoints/humanoidmaze-large-navigate-v0/tdr-48d4ed606f0e/params_1000000.pkl",
+      "sha256": "48d4ed606f0e8b61e08cfee84ea58f305b39baaad5e0566b03b52186b5316485",
+      "storage": "assets",
+      "url": null
+    },
+    "humanoidmaze-large-stitch-v0:dataset:c7834b156bb8": {
+      "bytes": 1077001152,
+      "kind": "dataset",
+      "origin": "OGBench dataset",
+      "path": "humanoidmaze-large-stitch-v0.npz",
+      "sha256": "c7834b156bb818e229daa33c1c4b7fcf81139f6267f15f1853b01d1dd5edd50e",
+      "storage": "data",
+      "url": "https://rail.eecs.berkeley.edu/datasets/ogbench/humanoidmaze-large-stitch-v0.npz"
+    },
+    "humanoidmaze-large-stitch-v0:dataset:d4d85c430783": {
+      "bytes": 107703575,
+      "kind": "dataset",
+      "origin": "OGBench dataset",
+      "path": "humanoidmaze-large-stitch-v0-val.npz",
+      "sha256": "d4d85c430783ea68f9f9f4d26f739dedbb634a5268e87ae5f69e6ec5ee0e57f9",
+      "storage": "data",
+      "url": "https://rail.eecs.berkeley.edu/datasets/ogbench/humanoidmaze-large-stitch-v0-val.npz"
+    },
+    "humanoidmaze-large-stitch-v0:graph:8d9fcde2ed8b": {
+      "bytes": 88403824,
+      "kind": "graph",
+      "origin": "Recorded benchmark asset (obtain separately)",
+      "path": "graphs/humanoidmaze-large-stitch-v0/graph-8d9fcde2ed8b/keygraph.pkl",
+      "sha256": "8d9fcde2ed8b0badc55d389b9b4d76852cc1880588cfcc1d81bcfc86a3dbd992",
+      "storage": "assets",
+      "url": null
+    },
+    "humanoidmaze-large-stitch-v0:policy:e2c718c78ca2": {
+      "bytes": 70328774,
+      "kind": "policy",
+      "origin": "Recorded benchmark asset (obtain separately)",
+      "path": "checkpoints/humanoidmaze-large-stitch-v0/policy-e2c718c78ca2/params_1000000.pkl",
+      "sha256": "e2c718c78ca2ca925a1d8fe847a0429bdb676426d7fae774b81fa5d877644dc2",
+      "storage": "assets",
+      "url": null
+    },
+    "humanoidmaze-large-stitch-v0:tdr:7b01074a020b": {
+      "bytes": 70328774,
+      "kind": "tdr",
+      "origin": "Recorded benchmark asset (obtain separately)",
+      "path": "checkpoints/humanoidmaze-large-stitch-v0/tdr-7b01074a020b/params_1000000.pkl",
+      "sha256": "7b01074a020be8594ef85a6f9449a69efcb247ada8ed09ef7d8461b27ddbf6a8",
+      "storage": "assets",
+      "url": null
+    },
+    "humanoidmaze-medium-navigate-v0:dataset:d5f7e9e73b61": {
+      "bytes": 1073650016,
+      "kind": "dataset",
+      "origin": "OGBench dataset",
+      "path": "humanoidmaze-medium-navigate-v0.npz",
+      "sha256": "d5f7e9e73b612934ad223f1be27f17db562d584045af84d1bbd8a2f333cfd241",
+      "storage": "data",
+      "url": "https://rail.eecs.berkeley.edu/datasets/ogbench/humanoidmaze-medium-navigate-v0.npz"
+    },
+    "humanoidmaze-medium-navigate-v0:dataset:df603b1bc88a": {
+      "bytes": 107386999,
+      "kind": "dataset",
+      "origin": "OGBench dataset",
+      "path": "humanoidmaze-medium-navigate-v0-val.npz",
+      "sha256": "df603b1bc88a06906bf4290e04b217dfbd760d9417ee9ee39f3809b6a2777abe",
+      "storage": "data",
+      "url": "https://rail.eecs.berkeley.edu/datasets/ogbench/humanoidmaze-medium-navigate-v0-val.npz"
+    },
+    "humanoidmaze-medium-navigate-v0:graph:409e467032f0": {
+      "bytes": 30020619,
+      "kind": "graph",
+      "origin": "Recorded benchmark asset (obtain separately)",
+      "path": "graphs/humanoidmaze-medium-navigate-v0/graph-409e467032f0/keygraph.pkl",
+      "sha256": "409e467032f0a2c0f7f0c2fdc46719611af3551e3347ab68f2da5486d32dcaa4",
+      "storage": "assets",
+      "url": null
+    },
+    "humanoidmaze-medium-navigate-v0:policy:042ab5aebcd6": {
+      "bytes": 70328774,
+      "kind": "policy",
+      "origin": "Recorded benchmark asset (obtain separately)",
+      "path": "checkpoints/humanoidmaze-medium-navigate-v0/policy-042ab5aebcd6/params_1000000.pkl",
+      "sha256": "042ab5aebcd62dfdcfac5b3b5b4ae3f59c4a3d99d18f57f0fd801303a4b9f796",
+      "storage": "assets",
+      "url": null
+    },
+    "humanoidmaze-medium-navigate-v0:tdr:96ad1ebc291f": {
+      "bytes": 70328774,
+      "kind": "tdr",
+      "origin": "Recorded benchmark asset (obtain separately)",
+      "path": "checkpoints/humanoidmaze-medium-navigate-v0/tdr-96ad1ebc291f/params_1000000.pkl",
+      "sha256": "96ad1ebc291f58ebfd58b8fe4df84ca1a3bda8914cbfc7f004ca3158aa4c17b3",
+      "storage": "assets",
+      "url": null
+    },
+    "humanoidmaze-medium-stitch-v0:dataset:1d935d1461a0": {
+      "bytes": 1076762758,
+      "kind": "dataset",
+      "origin": "OGBench dataset",
+      "path": "humanoidmaze-medium-stitch-v0.npz",
+      "sha256": "1d935d1461a0823b0230274335ceba2b06abd915150e1a41f29a8d46b9df0165",
+      "storage": "data",
+      "url": "https://rail.eecs.berkeley.edu/datasets/ogbench/humanoidmaze-medium-stitch-v0.npz"
+    },
+    "humanoidmaze-medium-stitch-v0:dataset:ab1bdaf9ed1d": {
+      "bytes": 107688608,
+      "kind": "dataset",
+      "origin": "OGBench dataset",
+      "path": "humanoidmaze-medium-stitch-v0-val.npz",
+      "sha256": "ab1bdaf9ed1d65194cc3de38fe6692e35ba1e4f8fc4f11eeccca96a9b06e98d4",
+      "storage": "data",
+      "url": "https://rail.eecs.berkeley.edu/datasets/ogbench/humanoidmaze-medium-stitch-v0-val.npz"
+    },
+    "humanoidmaze-medium-stitch-v0:graph:be56fd0c6268": {
+      "bytes": 79009010,
+      "kind": "graph",
+      "origin": "Recorded benchmark asset (obtain separately)",
+      "path": "graphs/humanoidmaze-medium-stitch-v0/graph-be56fd0c6268/keygraph.pkl",
+      "sha256": "be56fd0c6268e3f7b44fa87700cee3272be6fe458fc57c0c2cf5ea30653f6e66",
+      "storage": "assets",
+      "url": null
+    },
+    "humanoidmaze-medium-stitch-v0:policy:4e402e190a4f": {
+      "bytes": 70328774,
+      "kind": "policy",
+      "origin": "Recorded benchmark asset (obtain separately)",
+      "path": "checkpoints/humanoidmaze-medium-stitch-v0/policy-4e402e190a4f/params_1000000.pkl",
+      "sha256": "4e402e190a4f9e36bc3cdb228071337f9200ff3b8b7c1289e77d190e122d32ff",
+      "storage": "assets",
+      "url": null
+    },
+    "humanoidmaze-medium-stitch-v0:tdr:eaa520b0fbfb": {
+      "bytes": 70328774,
+      "kind": "tdr",
+      "origin": "Recorded benchmark asset (obtain separately)",
+      "path": "checkpoints/humanoidmaze-medium-stitch-v0/tdr-eaa520b0fbfb/params_1000000.pkl",
+      "sha256": "eaa520b0fbfb10672f7b80fbea65d42394aafe4cd9c1535cca1883f50117c1cc",
+      "storage": "assets",
+      "url": null
+    },
+    "scene-play-v0:dataset:66625e0cd9f2": {
+      "bytes": 267055508,
+      "kind": "dataset",
+      "origin": "OGBench dataset",
+      "path": "scene-play-v0.npz",
+      "sha256": "66625e0cd9f2fcf92f5988f4d1bedeb2aa8b1e748316e507e89f4a9afb87c341",
+      "storage": "data",
+      "url": "https://rail.eecs.berkeley.edu/datasets/ogbench/scene-play-v0.npz"
+    },
+    "scene-play-v0:dataset:6700c42a1602": {
+      "bytes": 26795398,
+      "kind": "dataset",
+      "origin": "OGBench dataset",
+      "path": "scene-play-v0-val.npz",
+      "sha256": "6700c42a1602fa4a9457414395613d9d8ad6350181662a79751ca02dc0423cb2",
+      "storage": "data",
+      "url": "https://rail.eecs.berkeley.edu/datasets/ogbench/scene-play-v0-val.npz"
+    },
+    "scene-play-v0:graph:b0032a7f89c2": {
+      "bytes": 16451762,
+      "kind": "graph",
+      "origin": "Recorded benchmark asset (obtain separately)",
+      "path": "graphs/scene-play-v0/graph-b0032a7f89c2/keygraph.pkl",
+      "sha256": "b0032a7f89c2323fa1468dc208db73822ec7f9c1c1fbff4a1ee587129e2921a1",
+      "storage": "assets",
+      "url": null
+    },
+    "scene-play-v0:tdr:28272100e01e": {
+      "bytes": 68055302,
+      "kind": "tdr",
+      "origin": "GAS checkpoint",
+      "path": "checkpoints/scene-play-v0/tdr-28272100e01e/params_1000000.pkl",
+      "sha256": "28272100e01ef43aa49fcc47134323616b59e2b589e987ea2e06d403bece7310",
+      "storage": "assets",
+      "upstream": "https://huggingface.co/qortmdgh4141/GAS/resolve/498b866af6569024d27ddba880b7852212c13fef/scene-play/params_1000000.pkl",
+      "url": null
+    }
+  },
+  "hub": {
+    "assets": [
+      "antmaze-medium-navigate-v0:tdr:f0f90eba82f4",
+      "antmaze-medium-navigate-v0:policy:fec0278a2966",
+      "antmaze-medium-navigate-v0:graph:77c980c83f11",
+      "antmaze-large-explore-v0:tdr:638c6ea79d7d",
+      "antmaze-large-explore-v0:policy:3736d9617c82",
+      "antmaze-large-explore-v0:graph:d577264452f3",
+      "antmaze-giant-stitch-v0:tdr:0ff0724ab1d4",
+      "antmaze-giant-stitch-v0:policy:948b844b8dc0",
+      "antmaze-giant-stitch-v0:graph:af1e8ebca99f",
+      "humanoidmaze-medium-stitch-v0:tdr:eaa520b0fbfb",
+      "humanoidmaze-medium-stitch-v0:policy:4e402e190a4f",
+      "humanoidmaze-medium-stitch-v0:graph:be56fd0c6268",
+      "humanoidmaze-large-navigate-v0:tdr:48d4ed606f0e",
+      "humanoidmaze-large-navigate-v0:policy:1e925c0d549f",
+      "humanoidmaze-large-navigate-v0:graph:0cc73408b1bf",
+      "scene-play-v0:tdr:28272100e01e",
+      "scene-play-v0:graph:b0032a7f89c2"
+    ],
+    "repo_id": "lrj-2000/SAGAS",
+    "repo_type": "model",
+    "revision": "2be38df14b9026b4f128941cb3be5af76c11b8d7"
+  },
+  "schema": 1
+}

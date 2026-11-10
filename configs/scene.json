@@ -1,0 +1,37 @@
+[
+  {
+    "agent_config_overrides": {
+      "alpha": 1.0,
+      "batch_size": 1024,
+      "discount": 0.99,
+      "encoder": "not_used",
+      "p_aug": 0.0,
+      "tdr_expectile": 0.999,
+      "way_steps": 48
+    },
+    "assets": {
+      "graph": "scene-play-v0:graph:b0032a7f89c2",
+      "policy": "scene-play-v0:tdr:28272100e01e",
+      "tdr": "scene-play-v0:tdr:28272100e01e"
+    },
+    "datasets": [
+      "scene-play-v0:dataset:66625e0cd9f2",
+      "scene-play-v0:dataset:6700c42a1602"
+    ],
+    "env": "scene-play-v0",
+    "flags": {
+      "env-max-episode-steps": 8000,
+      "gpu": 0,
+      "json": true,
+      "local-step-budget": 8000,
+      "no-render-video": true,
+      "semantic-repulsion": "auto",
+      "suffix-cycles": 1,
+      "task-ids": "all"
+    },
+    "method": "sagas",
+    "task_count": 120,
+    "task_file": "tasks/scene/e6_structured_manipulation_grid.json",
+    "task_sha256": "9d5f6101200cd74efdd5c540255fd0af59a300bfded86743911cbb74ad9a06ba"
+  }
+]

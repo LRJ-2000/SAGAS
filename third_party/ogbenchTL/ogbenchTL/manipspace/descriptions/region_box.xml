@@ -1,0 +1,14 @@
+
+<mujoco model="region">
+    <default>
+        <default class="region_box">
+            <geom type="box" size="0.03 0.03 0.03" rgba="0.2 0.4 0.9 0.3" contype="0" conaffinity="0"/>
+        </default>
+    </default>
+
+    <worldbody>
+        <body name="region_template" pos="0 0 -5" mocap="true">
+            <geom name="region_geom" class="region_box"/>
+        </body>
+    </worldbody>
+</mujoco>

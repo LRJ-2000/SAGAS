@@ -1,0 +1,54 @@
+{
+  "datasets": [
+    "scene-play-v0:dataset:66625e0cd9f2",
+    "scene-play-v0:dataset:6700c42a1602"
+  ],
+  "env": "scene-play-v0",
+  "flags": {
+    "agent_config": {
+      "actor_hidden_dims": [
+        512,
+        512,
+        512
+      ],
+      "agent_name": "gas",
+      "alpha": 1.0,
+      "batch_size": 1024,
+      "const_std": true,
+      "discount": 0.99,
+      "encoder": "not_used",
+      "expectile": 0.7,
+      "final_fc_init_scale": 0.01,
+      "layer_norm": true,
+      "log_std_max": 2,
+      "log_std_min": -5,
+      "lr": 0.0003,
+      "p_aug": 0.0,
+      "state_dependent_std": false,
+      "tanh_squash": false,
+      "tau": 0.005,
+      "tdr_dim": 32,
+      "tdr_expectile": 0.999,
+      "tdr_value_geom_sample": true,
+      "tdr_value_hidden_dims": [
+        512,
+        512,
+        512
+      ],
+      "tdr_value_p_curgoal": 0.0,
+      "tdr_value_p_randomgoal": 0.375,
+      "tdr_value_p_trajgoal": 0.625,
+      "value_hidden_dims": [
+        512,
+        512,
+        512
+      ],
+      "way_steps": 48
+    },
+    "component_merge_strategy": "exact",
+    "gpu": 0,
+    "seed": 0,
+    "te_threshold": 0.99
+  },
+  "tdr": "scene-play-v0:tdr:28272100e01e"
+}

@@ -1,0 +1,3345 @@
+{
+  "configuration_task_schema": "structured_scene_manipulation_v1",
+  "env_name": "scene-play-v0",
+  "generation_summary": {
+    "base_initial_configuration": "task4_init",
+    "family_counts": {
+      "choice_then_goal": 4,
+      "negative_until": 4,
+      "ordered_three": 4,
+      "ordered_two": 4,
+      "recurrent_suffix": 4,
+      "single_stage": 4
+    },
+    "initial_validation": "oracle_state_from_reset_task_info_plus_buchi_initial",
+    "milestone_library": {
+      "cfg_cube_a_closed": [
+        "cube_zone_A",
+        "drawer_closed",
+        "window_closed"
+      ],
+      "cfg_cube_b_open": [
+        "cube_zone_B",
+        "drawer_open",
+        "window_open"
+      ],
+      "cfg_cube_c_drawer_open": [
+        "cube_zone_C",
+        "button1_on",
+        "drawer_open",
+        "window_closed"
+      ],
+      "cfg_cube_c_window_open": [
+        "cube_zone_C",
+        "button1_on",
+        "drawer_closed",
+        "window_open"
+      ],
+      "cfg_cube_drawer_closed": [
+        "cube_in_drawer",
+        "button0_on",
+        "drawer_closed",
+        "window_closed"
+      ],
+      "cfg_cube_drawer_window_open": [
+        "cube_in_drawer",
+        "button0_on",
+        "drawer_closed",
+        "window_open"
+      ],
+      "cfg_drawer_open": [
+        "button0_on",
+        "drawer_open",
+        "window_closed",
+        "cube_context_A"
+      ],
+      "cfg_drawer_ready": [
+        "button0_on",
+        "drawer_closed",
+        "window_closed",
+        "cube_context_A"
+      ],
+      "cfg_window_open": [
+        "button1_on",
+        "drawer_closed",
+        "window_open",
+        "cube_context_A"
+      ],
+      "cfg_window_ready": [
+        "button1_on",
+        "drawer_closed",
+        "window_closed",
+        "cube_context_A"
+      ]
+    },
+    "num_logic_families": 6,
+    "seed_policy": "one_fixed_seed_per_base_formula"
+  },
+  "notes": "Fixed 24-formula manipulation suite with six logic families and four formulas per family. All task propositions denote compound object configurations. The base suite is crossed with official Scene initial configurations in a separate predeclared step.",
+  "num_tasks": 24,
+  "semantic_task_schema": "predicate_specs_v1",
+  "tasks": [
+    {
+      "env_name": "scene-play-v0",
+      "formula_e": "<>(button0_on && drawer_open && window_closed && cube_context_A)",
+      "formula_p": null,
+      "generation_validation": {
+        "accepted": true,
+        "initial_accepting": false,
+        "initial_state_set": [
+          "T0_init"
+        ],
+        "initial_state_set_empty": false,
+        "initial_state_source": "task_info",
+        "oracle_initial_labels": [
+          "cube_context_A",
+          "window_closed"
+        ],
+        "reject_reason": null
+      },
+      "labels": [
+        "button0_on",
+        "cube_context_A",
+        "drawer_open",
+        "window_closed"
+      ],
+      "metadata": {
+        "configuration_milestones": {
+          "cfg_drawer_open": [
+            "button0_on",
+            "drawer_open",
+            "window_closed",
+            "cube_context_A"
+          ]
+        },
+        "environment_goal_semantics": "reset_only_not_used_for_ltl",
+        "expanded_formula": "<>(button0_on && drawer_open && window_closed && cube_context_A)",
+        "family_index": 0,
+        "has_disjunction": false,
+        "has_negative_literal": false,
+        "has_recurrence": false,
+        "logic_family": "single_stage",
+        "milestone_formula": "<>cfg_drawer_open",
+        "object_track": "drawer",
+        "requires_cube_motion": false,
+        "reset_goal_config": "task1_goal",
+        "reset_init_config": "task4_init",
+        "semantic_features": [
+          "manipulation_scene",
+          "object_state",
+          "compound_configuration_predicates",
+          "single_stage",
+          "drawer"
+        ],
+        "stage_count": 1,
+        "template": "e6s_single_stage_drawer"
+      },
+      "predicate_specs": {
+        "button0_on": {
+          "evaluator": "object_state",
+          "property": "button0_on"
+        },
+        "cube_context_A": {
+          "evaluator": "object_state",
+          "object": "cube",
+          "property": "in_region",
+          "region": {
+            "center": [
+              0.35,
+              0.05,
+              0.02
+            ],
+            "radius": 0.1,
+            "source": "official_scene_task1_task4_init_context",
+            "type": "sphere"
+          }
+        },
+        "drawer_open": {
+          "evaluator": "object_state",
+          "property": "drawer_open"
+        },
+        "window_closed": {
+          "evaluator": "object_state",
+          "property": "window_closed"
+        }
+      },
+      "reset_task_info": {
+        "goal": {
+          "block_xyzs": [
+            [
+              0.35,
+              0.05,
+              0.02
+            ]
+          ],
+          "button_states": [
+            1,
+            1
+          ],
+          "drawer_pos": -0.16,
+          "window_pos": 0.2
+        },
+        "init": {
+          "block_xyzs": [
+            [
+              0.35,
+              0.05,
+              0.02
+            ]
+          ],
+          "button_states": [
+            0,
+            0
+          ],
+          "drawer_pos": 0.0,
+          "window_pos": 0.0
+        },
+        "task_name": "e6s_single_stage_drawer"
+      },
+      "seed": 7200,
+      "task_id": 0
+    },
+    {
+      "env_name": "scene-play-v0",
+      "formula_e": "<>(button1_on && drawer_closed && window_open && cube_context_A)",
+      "formula_p": null,
+      "generation_validation": {
+        "accepted": true,
+        "initial_accepting": false,
+        "initial_state_set": [
+          "T0_init"
+        ],
+        "initial_state_set_empty": false,
+        "initial_state_source": "task_info",
+        "oracle_initial_labels": [
+          "cube_context_A",
+          "drawer_closed"
+        ],
+        "reject_reason": null
+      },
+      "labels": [
+        "button1_on",
+        "cube_context_A",
+        "drawer_closed",
+        "window_open"
+      ],
+      "metadata": {
+        "configuration_milestones": {
+          "cfg_window_open": [
+            "button1_on",
+            "drawer_closed",
+            "window_open",
+            "cube_context_A"
+          ]
+        },
+        "environment_goal_semantics": "reset_only_not_used_for_ltl",
+        "expanded_formula": "<>(button1_on && drawer_closed && window_open && cube_context_A)",
+        "family_index": 1,
+        "has_disjunction": false,
+        "has_negative_literal": false,
+        "has_recurrence": false,
+        "logic_family": "single_stage",
+        "milestone_formula": "<>cfg_window_open",
+        "object_track": "window",
+        "requires_cube_motion": false,
+        "reset_goal_config": "task1_goal",
+        "reset_init_config": "task4_init",
+        "semantic_features": [
+          "manipulation_scene",
+          "object_state",
+          "compound_configuration_predicates",
+          "single_stage",
+          "window"
+        ],
+        "stage_count": 1,
+        "template": "e6s_single_stage_window"
+      },
+      "predicate_specs": {
+        "button1_on": {
+          "evaluator": "object_state",
+          "property": "button1_on"
+        },
+        "cube_context_A": {
+          "evaluator": "object_state",
+          "object": "cube",
+          "property": "in_region",
+          "region": {
+            "center": [
+              0.35,
+              0.05,
+              0.02
+            ],
+            "radius": 0.1,
+            "source": "official_scene_task1_task4_init_context",
+            "type": "sphere"
+          }
+        },
+        "drawer_closed": {
+          "evaluator": "object_state",
+          "property": "drawer_closed"
+        },
+        "window_open": {
+          "evaluator": "object_state",
+          "property": "window_open"
+        }
+      },
+      "reset_task_info": {
+        "goal": {
+          "block_xyzs": [
+            [
+              0.35,
+              0.05,
+              0.02
+            ]
+          ],
+          "button_states": [
+            1,
+            1
+          ],
+          "drawer_pos": -0.16,
+          "window_pos": 0.2
+        },
+        "init": {
+          "block_xyzs": [
+            [
+              0.35,
+              0.05,
+              0.02
+            ]
+          ],
+          "button_states": [
+            0,
+            0
+          ],
+          "drawer_pos": 0.0,
+          "window_pos": 0.0
+        },
+        "task_name": "e6s_single_stage_window"
+      },
+      "seed": 7201,
+      "task_id": 1
+    },
+    {
+      "env_name": "scene-play-v0",
+      "formula_e": "<>(cube_zone_C && button1_on && drawer_open && window_closed)",
+      "formula_p": null,
+      "generation_validation": {
+        "accepted": true,
+        "initial_accepting": false,
+        "initial_state_set": [
+          "T0_init"
+        ],
+        "initial_state_set_empty": false,
+        "initial_state_source": "task_info",
+        "oracle_initial_labels": [
+          "window_closed"
+        ],
+        "reject_reason": null
+      },
+      "labels": [
+        "button1_on",
+        "cube_zone_C",
+        "drawer_open",
+        "window_closed"
+      ],
+      "metadata": {
+        "configuration_milestones": {
+          "cfg_cube_c_drawer_open": [
+            "cube_zone_C",
+            "button1_on",
+            "drawer_open",
+            "window_closed"
+          ]
+        },
+        "environment_goal_semantics": "reset_only_not_used_for_ltl",
+        "expanded_formula": "<>(cube_zone_C && button1_on && drawer_open && window_closed)",
+        "family_index": 2,
+        "has_disjunction": false,
+        "has_negative_literal": false,
+        "has_recurrence": false,
+        "logic_family": "single_stage",
+        "milestone_formula": "<>cfg_cube_c_drawer_open",
+        "object_track": "cube_relocation",
+        "requires_cube_motion": true,
+        "reset_goal_config": "task3_goal",
+        "reset_init_config": "task4_init",
+        "semantic_features": [
+          "manipulation_scene",
+          "object_state",
+          "compound_configuration_predicates",
+          "single_stage",
+          "cube_relocation"
+        ],
+        "stage_count": 1,
+        "template": "e6s_single_stage_cube_relocation"
+      },
+      "predicate_specs": {
+        "button1_on": {
+          "evaluator": "object_state",
+          "property": "button1_on"
+        },
+        "cube_zone_C": {
+          "evaluator": "object_state",
+          "object": "cube",
+          "property": "in_region",
+          "region": {
+            "center": [
+              0.4,
+              0.15,
+              0.02
+            ],
+            "radius": 0.06,
+            "source": "official_scene_task3_goal",
+            "type": "sphere"
+          }
+        },
+        "drawer_open": {
+          "evaluator": "object_state",
+          "property": "drawer_open"
+        },
+        "window_closed": {
+          "evaluator": "object_state",
+          "property": "window_closed"
+        }
+      },
+      "reset_task_info": {
+        "goal": {
+          "block_xyzs": [
+            [
+              0.4,
+              0.15,
+              0.02
+            ]
+          ],
+          "button_states": [
+            1,
+            1
+          ],
+          "drawer_pos": -0.16,
+          "window_pos": 0.0
+        },
+        "init": {
+          "block_xyzs": [
+            [
+              0.35,
+              0.05,
+              0.02
+            ]
+          ],
+          "button_states": [
+            0,
+            0
+          ],
+          "drawer_pos": 0.0,
+          "window_pos": 0.0
+        },
+        "task_name": "e6s_single_stage_cube_relocation"
+      },
+      "seed": 7202,
+      "task_id": 2
+    },
+    {
+      "env_name": "scene-play-v0",
+      "formula_e": "<>(cube_in_drawer && button0_on && drawer_closed && window_closed)",
+      "formula_p": null,
+      "generation_validation": {
+        "accepted": true,
+        "initial_accepting": false,
+        "initial_state_set": [
+          "T0_init"
+        ],
+        "initial_state_set_empty": false,
+        "initial_state_source": "task_info",
+        "oracle_initial_labels": [
+          "drawer_closed",
+          "window_closed"
+        ],
+        "reject_reason": null
+      },
+      "labels": [
+        "button0_on",
+        "cube_in_drawer",
+        "drawer_closed",
+        "window_closed"
+      ],
+      "metadata": {
+        "configuration_milestones": {
+          "cfg_cube_drawer_closed": [
+            "cube_in_drawer",
+            "button0_on",
+            "drawer_closed",
+            "window_closed"
+          ]
+        },
+        "environment_goal_semantics": "reset_only_not_used_for_ltl",
+        "expanded_formula": "<>(cube_in_drawer && button0_on && drawer_closed && window_closed)",
+        "family_index": 3,
+        "has_disjunction": false,
+        "has_negative_literal": false,
+        "has_recurrence": false,
+        "logic_family": "single_stage",
+        "milestone_formula": "<>cfg_cube_drawer_closed",
+        "object_track": "cube_storage",
+        "requires_cube_motion": true,
+        "reset_goal_config": "task4_goal",
+        "reset_init_config": "task4_init",
+        "semantic_features": [
+          "manipulation_scene",
+          "object_state",
+          "compound_configuration_predicates",
+          "single_stage",
+          "cube_storage"
+        ],
+        "stage_count": 1,
+        "template": "e6s_single_stage_cube_storage"
+      },
+      "predicate_specs": {
+        "button0_on": {
+          "evaluator": "object_state",
+          "property": "button0_on"
+        },
+        "cube_in_drawer": {
+          "evaluator": "object_state",
+          "property": "cube_in_drawer"
+        },
+        "drawer_closed": {
+          "evaluator": "object_state",
+          "property": "drawer_closed"
+        },
+        "window_closed": {
+          "evaluator": "object_state",
+          "property": "window_closed"
+        }
+      },
+      "reset_task_info": {
+        "goal": {
+          "block_xyzs": [
+            [
+              0.33,
+              -0.356,
+              0.065986
+            ]
+          ],
+          "button_states": [
+            1,
+            0
+          ],
+          "drawer_pos": 0.0,
+          "window_pos": 0.0
+        },
+        "init": {
+          "block_xyzs": [
+            [
+              0.35,
+              0.05,
+              0.02
+            ]
+          ],
+          "button_states": [
+            0,
+            0
+          ],
+          "drawer_pos": 0.0,
+          "window_pos": 0.0
+        },
+        "task_name": "e6s_single_stage_cube_storage"
+      },
+      "seed": 7203,
+      "task_id": 3
+    },
+    {
+      "env_name": "scene-play-v0",
+      "formula_e": "<>((button0_on && drawer_closed && window_closed && cube_context_A) && <>(button0_on && drawer_open && window_closed && cube_context_A))",
+      "formula_p": null,
+      "generation_validation": {
+        "accepted": true,
+        "initial_accepting": false,
+        "initial_state_set": [
+          "T1_init"
+        ],
+        "initial_state_set_empty": false,
+        "initial_state_source": "task_info",
+        "oracle_initial_labels": [
+          "cube_context_A",
+          "drawer_closed",
+          "window_closed"
+        ],
+        "reject_reason": null
+      },
+      "labels": [
+        "button0_on",
+        "cube_context_A",
+        "drawer_closed",
+        "drawer_open",
+        "window_closed"
+      ],
+      "metadata": {
+        "configuration_milestones": {
+          "cfg_drawer_open": [
+            "button0_on",
+            "drawer_open",
+            "window_closed",
+            "cube_context_A"
+          ],
+          "cfg_drawer_ready": [
+            "button0_on",
+            "drawer_closed",
+            "window_closed",
+            "cube_context_A"
+          ]
+        },
+        "environment_goal_semantics": "reset_only_not_used_for_ltl",
+        "expanded_formula": "<>((button0_on && drawer_closed && window_closed && cube_context_A) && <>(button0_on && drawer_open && window_closed && cube_context_A))",
+        "family_index": 0,
+        "has_disjunction": false,
+        "has_negative_literal": false,
+        "has_recurrence": false,
+        "logic_family": "ordered_two",
+        "milestone_formula": "<>(cfg_drawer_ready && <>cfg_drawer_open)",
+        "object_track": "drawer",
+        "requires_cube_motion": false,
+        "reset_goal_config": "task1_goal",
+        "reset_init_config": "task4_init",
+        "semantic_features": [
+          "manipulation_scene",
+          "object_state",
+          "compound_configuration_predicates",
+          "ordered_two",
+          "drawer"
+        ],
+        "stage_count": 2,
+        "template": "e6s_ordered_two_drawer"
+      },
+      "predicate_specs": {
+        "button0_on": {
+          "evaluator": "object_state",
+          "property": "button0_on"
+        },
+        "cube_context_A": {
+          "evaluator": "object_state",
+          "object": "cube",
+          "property": "in_region",
+          "region": {
+            "center": [
+              0.35,
+              0.05,
+              0.02
+            ],
+            "radius": 0.1,
+            "source": "official_scene_task1_task4_init_context",
+            "type": "sphere"
+          }
+        },
+        "drawer_closed": {
+          "evaluator": "object_state",
+          "property": "drawer_closed"
+        },
+        "drawer_open": {
+          "evaluator": "object_state",
+          "property": "drawer_open"
+        },
+        "window_closed": {
+          "evaluator": "object_state",
+          "property": "window_closed"
+        }
+      },
+      "reset_task_info": {
+        "goal": {
+          "block_xyzs": [
+            [
+              0.35,
+              0.05,
+              0.02
+            ]
+          ],
+          "button_states": [
+            1,
+            1
+          ],
+          "drawer_pos": -0.16,
+          "window_pos": 0.2
+        },
+        "init": {
+          "block_xyzs": [
+            [
+              0.35,
+              0.05,
+              0.02
+            ]
+          ],
+          "button_states": [
+            0,
+            0
+          ],
+          "drawer_pos": 0.0,
+          "window_pos": 0.0
+        },
+        "task_name": "e6s_ordered_two_drawer"
+      },
+      "seed": 7204,
+      "task_id": 4
+    },
+    {
+      "env_name": "scene-play-v0",
+      "formula_e": "<>((button1_on && drawer_closed && window_closed && cube_context_A) && <>(button1_on && drawer_closed && window_open && cube_context_A))",
+      "formula_p": null,
+      "generation_validation": {
+        "accepted": true,
+        "initial_accepting": false,
+        "initial_state_set": [
+          "T1_init"
+        ],
+        "initial_state_set_empty": false,
+        "initial_state_source": "task_info",
+        "oracle_initial_labels": [
+          "cube_context_A",
+          "drawer_closed",
+          "window_closed"
+        ],
+        "reject_reason": null
+      },
+      "labels": [
+        "button1_on",
+        "cube_context_A",
+        "drawer_closed",
+        "window_closed",
+        "window_open"
+      ],
+      "metadata": {
+        "configuration_milestones": {
+          "cfg_window_open": [
+            "button1_on",
+            "drawer_closed",
+            "window_open",
+            "cube_context_A"
+          ],
+          "cfg_window_ready": [
+            "button1_on",
+            "drawer_closed",
+            "window_closed",
+            "cube_context_A"
+          ]
+        },
+        "environment_goal_semantics": "reset_only_not_used_for_ltl",
+        "expanded_formula": "<>((button1_on && drawer_closed && window_closed && cube_context_A) && <>(button1_on && drawer_closed && window_open && cube_context_A))",
+        "family_index": 1,
+        "has_disjunction": false,
+        "has_negative_literal": false,
+        "has_recurrence": false,
+        "logic_family": "ordered_two",
+        "milestone_formula": "<>(cfg_window_ready && <>cfg_window_open)",
+        "object_track": "window",
+        "requires_cube_motion": false,
+        "reset_goal_config": "task1_goal",
+        "reset_init_config": "task4_init",
+        "semantic_features": [
+          "manipulation_scene",
+          "object_state",
+          "compound_configuration_predicates",
+          "ordered_two",
+          "window"
+        ],
+        "stage_count": 2,
+        "template": "e6s_ordered_two_window"
+      },
+      "predicate_specs": {
+        "button1_on": {
+          "evaluator": "object_state",
+          "property": "button1_on"
+        },
+        "cube_context_A": {
+          "evaluator": "object_state",
+          "object": "cube",
+          "property": "in_region",
+          "region": {
+            "center": [
+              0.35,
+              0.05,
+              0.02
+            ],
+            "radius": 0.1,
+            "source": "official_scene_task1_task4_init_context",
+            "type": "sphere"
+          }
+        },
+        "drawer_closed": {
+          "evaluator": "object_state",
+          "property": "drawer_closed"
+        },
+        "window_closed": {
+          "evaluator": "object_state",
+          "property": "window_closed"
+        },
+        "window_open": {
+          "evaluator": "object_state",
+          "property": "window_open"
+        }
+      },
+      "reset_task_info": {
+        "goal": {
+          "block_xyzs": [
+            [
+              0.35,
+              0.05,
+              0.02
+            ]
+          ],
+          "button_states": [
+            1,
+            1
+          ],
+          "drawer_pos": -0.16,
+          "window_pos": 0.2
+        },
+        "init": {
+          "block_xyzs": [
+            [
+              0.35,
+              0.05,
+              0.02
+            ]
+          ],
+          "button_states": [
+            0,
+            0
+          ],
+          "drawer_pos": 0.0,
+          "window_pos": 0.0
+        },
+        "task_name": "e6s_ordered_two_window"
+      },
+      "seed": 7205,
+      "task_id": 5
+    },
+    {
+      "env_name": "scene-play-v0",
+      "formula_e": "<>((button0_on && drawer_open && window_closed && cube_context_A) && <>(button1_on && drawer_closed && window_open && cube_context_A))",
+      "formula_p": null,
+      "generation_validation": {
+        "accepted": true,
+        "initial_accepting": false,
+        "initial_state_set": [
+          "T1_init"
+        ],
+        "initial_state_set_empty": false,
+        "initial_state_source": "task_info",
+        "oracle_initial_labels": [
+          "cube_context_A",
+          "drawer_closed",
+          "window_closed"
+        ],
+        "reject_reason": null
+      },
+      "labels": [
+        "button0_on",
+        "button1_on",
+        "cube_context_A",
+        "drawer_closed",
+        "drawer_open",
+        "window_closed",
+        "window_open"
+      ],
+      "metadata": {
+        "configuration_milestones": {
+          "cfg_drawer_open": [
+            "button0_on",
+            "drawer_open",
+            "window_closed",
+            "cube_context_A"
+          ],
+          "cfg_window_open": [
+            "button1_on",
+            "drawer_closed",
+            "window_open",
+            "cube_context_A"
+          ]
+        },
+        "environment_goal_semantics": "reset_only_not_used_for_ltl",
+        "expanded_formula": "<>((button0_on && drawer_open && window_closed && cube_context_A) && <>(button1_on && drawer_closed && window_open && cube_context_A))",
+        "family_index": 2,
+        "has_disjunction": false,
+        "has_negative_literal": false,
+        "has_recurrence": false,
+        "logic_family": "ordered_two",
+        "milestone_formula": "<>(cfg_drawer_open && <>cfg_window_open)",
+        "object_track": "cross_control",
+        "requires_cube_motion": false,
+        "reset_goal_config": "task1_goal",
+        "reset_init_config": "task4_init",
+        "semantic_features": [
+          "manipulation_scene",
+          "object_state",
+          "compound_configuration_predicates",
+          "ordered_two",
+          "cross_control"
+        ],
+        "stage_count": 2,
+        "template": "e6s_ordered_two_cross_control"
+      },
+      "predicate_specs": {
+        "button0_on": {
+          "evaluator": "object_state",
+          "property": "button0_on"
+        },
+        "button1_on": {
+          "evaluator": "object_state",
+          "property": "button1_on"
+        },
+        "cube_context_A": {
+          "evaluator": "object_state",
+          "object": "cube",
+          "property": "in_region",
+          "region": {
+            "center": [
+              0.35,
+              0.05,
+              0.02
+            ],
+            "radius": 0.1,
+            "source": "official_scene_task1_task4_init_context",
+            "type": "sphere"
+          }
+        },
+        "drawer_closed": {
+          "evaluator": "object_state",
+          "property": "drawer_closed"
+        },
+        "drawer_open": {
+          "evaluator": "object_state",
+          "property": "drawer_open"
+        },
+        "window_closed": {
+          "evaluator": "object_state",
+          "property": "window_closed"
+        },
+        "window_open": {
+          "evaluator": "object_state",
+          "property": "window_open"
+        }
+      },
+      "reset_task_info": {
+        "goal": {
+          "block_xyzs": [
+            [
+              0.35,
+              0.05,
+              0.02
+            ]
+          ],
+          "button_states": [
+            1,
+            1
+          ],
+          "drawer_pos": -0.16,
+          "window_pos": 0.2
+        },
+        "init": {
+          "block_xyzs": [
+            [
+              0.35,
+              0.05,
+              0.02
+            ]
+          ],
+          "button_states": [
+            0,
+            0
+          ],
+          "drawer_pos": 0.0,
+          "window_pos": 0.0
+        },
+        "task_name": "e6s_ordered_two_cross_control"
+      },
+      "seed": 7206,
+      "task_id": 6
+    },
+    {
+      "env_name": "scene-play-v0",
+      "formula_e": "<>((cube_zone_A && drawer_closed && window_closed) && <>(cube_zone_C && button1_on && drawer_open && window_closed))",
+      "formula_p": null,
+      "generation_validation": {
+        "accepted": true,
+        "initial_accepting": false,
+        "initial_state_set": [
+          "T0_S2",
+          "T1_init"
+        ],
+        "initial_state_set_empty": false,
+        "initial_state_source": "task_info",
+        "oracle_initial_labels": [
+          "cube_zone_A",
+          "drawer_closed",
+          "window_closed"
+        ],
+        "reject_reason": null
+      },
+      "labels": [
+        "button1_on",
+        "cube_zone_A",
+        "cube_zone_C",
+        "drawer_closed",
+        "drawer_open",
+        "window_closed"
+      ],
+      "metadata": {
+        "configuration_milestones": {
+          "cfg_cube_a_closed": [
+            "cube_zone_A",
+            "drawer_closed",
+            "window_closed"
+          ],
+          "cfg_cube_c_drawer_open": [
+            "cube_zone_C",
+            "button1_on",
+            "drawer_open",
+            "window_closed"
+          ]
+        },
+        "environment_goal_semantics": "reset_only_not_used_for_ltl",
+        "expanded_formula": "<>((cube_zone_A && drawer_closed && window_closed) && <>(cube_zone_C && button1_on && drawer_open && window_closed))",
+        "family_index": 3,
+        "has_disjunction": false,
+        "has_negative_literal": false,
+        "has_recurrence": false,
+        "logic_family": "ordered_two",
+        "milestone_formula": "<>(cfg_cube_a_closed && <>cfg_cube_c_drawer_open)",
+        "object_track": "cube_relocation",
+        "requires_cube_motion": true,
+        "reset_goal_config": "task3_goal",
+        "reset_init_config": "task4_init",
+        "semantic_features": [
+          "manipulation_scene",
+          "object_state",
+          "compound_configuration_predicates",
+          "ordered_two",
+          "cube_relocation"
+        ],
+        "stage_count": 2,
+        "template": "e6s_ordered_two_cube_relocation"
+      },
+      "predicate_specs": {
+        "button1_on": {
+          "evaluator": "object_state",
+          "property": "button1_on"
+        },
+        "cube_zone_A": {
+          "evaluator": "object_state",
+          "object": "cube",
+          "property": "in_region",
+          "region": {
+            "center": [
+              0.35,
+              0.05,
+              0.02
+            ],
+            "radius": 0.06,
+            "source": "official_scene_task1_task4_init",
+            "type": "sphere"
+          }
+        },
+        "cube_zone_C": {
+          "evaluator": "object_state",
+          "object": "cube",
+          "property": "in_region",
+          "region": {
+            "center": [
+              0.4,
+              0.15,
+              0.02
+            ],
+            "radius": 0.06,
+            "source": "official_scene_task3_goal",
+            "type": "sphere"
+          }
+        },
+        "drawer_closed": {
+          "evaluator": "object_state",
+          "property": "drawer_closed"
+        },
+        "drawer_open": {
+          "evaluator": "object_state",
+          "property": "drawer_open"
+        },
+        "window_closed": {
+          "evaluator": "object_state",
+          "property": "window_closed"
+        }
+      },
+      "reset_task_info": {
+        "goal": {
+          "block_xyzs": [
+            [
+              0.4,
+              0.15,
+              0.02
+            ]
+          ],
+          "button_states": [
+            1,
+            1
+          ],
+          "drawer_pos": -0.16,
+          "window_pos": 0.0
+        },
+        "init": {
+          "block_xyzs": [
+            [
+              0.35,
+              0.05,
+              0.02
+            ]
+          ],
+          "button_states": [
+            0,
+            0
+          ],
+          "drawer_pos": 0.0,
+          "window_pos": 0.0
+        },
+        "task_name": "e6s_ordered_two_cube_relocation"
+      },
+      "seed": 7207,
+      "task_id": 7
+    },
+    {
+      "env_name": "scene-play-v0",
+      "formula_e": "<>((button0_on && drawer_closed && window_closed && cube_context_A) && <>((button0_on && drawer_open && window_closed && cube_context_A) && <>(button1_on && drawer_closed && window_open && cube_context_A)))",
+      "formula_p": null,
+      "generation_validation": {
+        "accepted": true,
+        "initial_accepting": false,
+        "initial_state_set": [
+          "T2_init"
+        ],
+        "initial_state_set_empty": false,
+        "initial_state_source": "task_info",
+        "oracle_initial_labels": [
+          "cube_context_A",
+          "drawer_closed",
+          "window_closed"
+        ],
+        "reject_reason": null
+      },
+      "labels": [
+        "button0_on",
+        "button1_on",
+        "cube_context_A",
+        "drawer_closed",
+        "drawer_open",
+        "window_closed",
+        "window_open"
+      ],
+      "metadata": {
+        "configuration_milestones": {
+          "cfg_drawer_open": [
+            "button0_on",
+            "drawer_open",
+            "window_closed",
+            "cube_context_A"
+          ],
+          "cfg_drawer_ready": [
+            "button0_on",
+            "drawer_closed",
+            "window_closed",
+            "cube_context_A"
+          ],
+          "cfg_window_open": [
+            "button1_on",
+            "drawer_closed",
+            "window_open",
+            "cube_context_A"
+          ]
+        },
+        "environment_goal_semantics": "reset_only_not_used_for_ltl",
+        "expanded_formula": "<>((button0_on && drawer_closed && window_closed && cube_context_A) && <>((button0_on && drawer_open && window_closed && cube_context_A) && <>(button1_on && drawer_closed && window_open && cube_context_A)))",
+        "family_index": 0,
+        "has_disjunction": false,
+        "has_negative_literal": false,
+        "has_recurrence": false,
+        "logic_family": "ordered_three",
+        "milestone_formula": "<>(cfg_drawer_ready && <>(cfg_drawer_open && <>cfg_window_open))",
+        "object_track": "drawer_to_window",
+        "requires_cube_motion": false,
+        "reset_goal_config": "task1_goal",
+        "reset_init_config": "task4_init",
+        "semantic_features": [
+          "manipulation_scene",
+          "object_state",
+          "compound_configuration_predicates",
+          "ordered_three",
+          "drawer_to_window"
+        ],
+        "stage_count": 3,
+        "template": "e6s_ordered_three_drawer_to_window"
+      },
+      "predicate_specs": {
+        "button0_on": {
+          "evaluator": "object_state",
+          "property": "button0_on"
+        },
+        "button1_on": {
+          "evaluator": "object_state",
+          "property": "button1_on"
+        },
+        "cube_context_A": {
+          "evaluator": "object_state",
+          "object": "cube",
+          "property": "in_region",
+          "region": {
+            "center": [
+              0.35,
+              0.05,
+              0.02
+            ],
+            "radius": 0.1,
+            "source": "official_scene_task1_task4_init_context",
+            "type": "sphere"
+          }
+        },
+        "drawer_closed": {
+          "evaluator": "object_state",
+          "property": "drawer_closed"
+        },
+        "drawer_open": {
+          "evaluator": "object_state",
+          "property": "drawer_open"
+        },
+        "window_closed": {
+          "evaluator": "object_state",
+          "property": "window_closed"
+        },
+        "window_open": {
+          "evaluator": "object_state",
+          "property": "window_open"
+        }
+      },
+      "reset_task_info": {
+        "goal": {
+          "block_xyzs": [
+            [
+              0.35,
+              0.05,
+              0.02
+            ]
+          ],
+          "button_states": [
+            1,
+            1
+          ],
+          "drawer_pos": -0.16,
+          "window_pos": 0.2
+        },
+        "init": {
+          "block_xyzs": [
+            [
+              0.35,
+              0.05,
+              0.02
+            ]
+          ],
+          "button_states": [
+            0,
+            0
+          ],
+          "drawer_pos": 0.0,
+          "window_pos": 0.0
+        },
+        "task_name": "e6s_ordered_three_drawer_to_window"
+      },
+      "seed": 7208,
+      "task_id": 8
+    },
+    {
+      "env_name": "scene-play-v0",
+      "formula_e": "<>((button1_on && drawer_closed && window_closed && cube_context_A) && <>((button1_on && drawer_closed && window_open && cube_context_A) && <>(button0_on && drawer_open && window_closed && cube_context_A)))",
+      "formula_p": null,
+      "generation_validation": {
+        "accepted": true,
+        "initial_accepting": false,
+        "initial_state_set": [
+          "T2_init"
+        ],
+        "initial_state_set_empty": false,
+        "initial_state_source": "task_info",
+        "oracle_initial_labels": [
+          "cube_context_A",
+          "drawer_closed",
+          "window_closed"
+        ],
+        "reject_reason": null
+      },
+      "labels": [
+        "button0_on",
+        "button1_on",
+        "cube_context_A",
+        "drawer_closed",
+        "drawer_open",
+        "window_closed",
+        "window_open"
+      ],
+      "metadata": {
+        "configuration_milestones": {
+          "cfg_drawer_open": [
+            "button0_on",
+            "drawer_open",
+            "window_closed",
+            "cube_context_A"
+          ],
+          "cfg_window_open": [
+            "button1_on",
+            "drawer_closed",
+            "window_open",
+            "cube_context_A"
+          ],
+          "cfg_window_ready": [
+            "button1_on",
+            "drawer_closed",
+            "window_closed",
+            "cube_context_A"
+          ]
+        },
+        "environment_goal_semantics": "reset_only_not_used_for_ltl",
+        "expanded_formula": "<>((button1_on && drawer_closed && window_closed && cube_context_A) && <>((button1_on && drawer_closed && window_open && cube_context_A) && <>(button0_on && drawer_open && window_closed && cube_context_A)))",
+        "family_index": 1,
+        "has_disjunction": false,
+        "has_negative_literal": false,
+        "has_recurrence": false,
+        "logic_family": "ordered_three",
+        "milestone_formula": "<>(cfg_window_ready && <>(cfg_window_open && <>cfg_drawer_open))",
+        "object_track": "window_to_drawer",
+        "requires_cube_motion": false,
+        "reset_goal_config": "task1_goal",
+        "reset_init_config": "task4_init",
+        "semantic_features": [
+          "manipulation_scene",
+          "object_state",
+          "compound_configuration_predicates",
+          "ordered_three",
+          "window_to_drawer"
+        ],
+        "stage_count": 3,
+        "template": "e6s_ordered_three_window_to_drawer"
+      },
+      "predicate_specs": {
+        "button0_on": {
+          "evaluator": "object_state",
+          "property": "button0_on"
+        },
+        "button1_on": {
+          "evaluator": "object_state",
+          "property": "button1_on"
+        },
+        "cube_context_A": {
+          "evaluator": "object_state",
+          "object": "cube",
+          "property": "in_region",
+          "region": {
+            "center": [
+              0.35,
+              0.05,
+              0.02
+            ],
+            "radius": 0.1,
+            "source": "official_scene_task1_task4_init_context",
+            "type": "sphere"
+          }
+        },
+        "drawer_closed": {
+          "evaluator": "object_state",
+          "property": "drawer_closed"
+        },
+        "drawer_open": {
+          "evaluator": "object_state",
+          "property": "drawer_open"
+        },
+        "window_closed": {
+          "evaluator": "object_state",
+          "property": "window_closed"
+        },
+        "window_open": {
+          "evaluator": "object_state",
+          "property": "window_open"
+        }
+      },
+      "reset_task_info": {
+        "goal": {
+          "block_xyzs": [
+            [
+              0.35,
+              0.05,
+              0.02
+            ]
+          ],
+          "button_states": [
+            1,
+            1
+          ],
+          "drawer_pos": -0.16,
+          "window_pos": 0.2
+        },
+        "init": {
+          "block_xyzs": [
+            [
+              0.35,
+              0.05,
+              0.02
+            ]
+          ],
+          "button_states": [
+            0,
+            0
+          ],
+          "drawer_pos": 0.0,
+          "window_pos": 0.0
+        },
+        "task_name": "e6s_ordered_three_window_to_drawer"
+      },
+      "seed": 7209,
+      "task_id": 9
+    },
+    {
+      "env_name": "scene-play-v0",
+      "formula_e": "<>((cube_zone_A && drawer_closed && window_closed) && <>((cube_zone_C && button1_on && drawer_open && window_closed) && <>(cube_zone_C && button1_on && drawer_closed && window_open)))",
+      "formula_p": null,
+      "generation_validation": {
+        "accepted": true,
+        "initial_accepting": false,
+        "initial_state_set": [
+          "T1_S2",
+          "T2_init"
+        ],
+        "initial_state_set_empty": false,
+        "initial_state_source": "task_info",
+        "oracle_initial_labels": [
+          "cube_zone_A",
+          "drawer_closed",
+          "window_closed"
+        ],
+        "reject_reason": null
+      },
+      "labels": [
+        "button1_on",
+        "cube_zone_A",
+        "cube_zone_C",
+        "drawer_closed",
+        "drawer_open",
+        "window_closed",
+        "window_open"
+      ],
+      "metadata": {
+        "configuration_milestones": {
+          "cfg_cube_a_closed": [
+            "cube_zone_A",
+            "drawer_closed",
+            "window_closed"
+          ],
+          "cfg_cube_c_drawer_open": [
+            "cube_zone_C",
+            "button1_on",
+            "drawer_open",
+            "window_closed"
+          ],
+          "cfg_cube_c_window_open": [
+            "cube_zone_C",
+            "button1_on",
+            "drawer_closed",
+            "window_open"
+          ]
+        },
+        "environment_goal_semantics": "reset_only_not_used_for_ltl",
+        "expanded_formula": "<>((cube_zone_A && drawer_closed && window_closed) && <>((cube_zone_C && button1_on && drawer_open && window_closed) && <>(cube_zone_C && button1_on && drawer_closed && window_open)))",
+        "family_index": 2,
+        "has_disjunction": false,
+        "has_negative_literal": false,
+        "has_recurrence": false,
+        "logic_family": "ordered_three",
+        "milestone_formula": "<>(cfg_cube_a_closed && <>(cfg_cube_c_drawer_open && <>cfg_cube_c_window_open))",
+        "object_track": "cube_relocation",
+        "requires_cube_motion": true,
+        "reset_goal_config": "task3_goal",
+        "reset_init_config": "task4_init",
+        "semantic_features": [
+          "manipulation_scene",
+          "object_state",
+          "compound_configuration_predicates",
+          "ordered_three",
+          "cube_relocation"
+        ],
+        "stage_count": 3,
+        "template": "e6s_ordered_three_cube_relocation"
+      },
+      "predicate_specs": {
+        "button1_on": {
+          "evaluator": "object_state",
+          "property": "button1_on"
+        },
+        "cube_zone_A": {
+          "evaluator": "object_state",
+          "object": "cube",
+          "property": "in_region",
+          "region": {
+            "center": [
+              0.35,
+              0.05,
+              0.02
+            ],
+            "radius": 0.06,
+            "source": "official_scene_task1_task4_init",
+            "type": "sphere"
+          }
+        },
+        "cube_zone_C": {
+          "evaluator": "object_state",
+          "object": "cube",
+          "property": "in_region",
+          "region": {
+            "center": [
+              0.4,
+              0.15,
+              0.02
+            ],
+            "radius": 0.06,
+            "source": "official_scene_task3_goal",
+            "type": "sphere"
+          }
+        },
+        "drawer_closed": {
+          "evaluator": "object_state",
+          "property": "drawer_closed"
+        },
+        "drawer_open": {
+          "evaluator": "object_state",
+          "property": "drawer_open"
+        },
+        "window_closed": {
+          "evaluator": "object_state",
+          "property": "window_closed"
+        },
+        "window_open": {
+          "evaluator": "object_state",
+          "property": "window_open"
+        }
+      },
+      "reset_task_info": {
+        "goal": {
+          "block_xyzs": [
+            [
+              0.4,
+              0.15,
+              0.02
+            ]
+          ],
+          "button_states": [
+            1,
+            1
+          ],
+          "drawer_pos": -0.16,
+          "window_pos": 0.0
+        },
+        "init": {
+          "block_xyzs": [
+            [
+              0.35,
+              0.05,
+              0.02
+            ]
+          ],
+          "button_states": [
+            0,
+            0
+          ],
+          "drawer_pos": 0.0,
+          "window_pos": 0.0
+        },
+        "task_name": "e6s_ordered_three_cube_relocation"
+      },
+      "seed": 7210,
+      "task_id": 10
+    },
+    {
+      "env_name": "scene-play-v0",
+      "formula_e": "<>((cube_zone_B && drawer_open && window_open) && <>((cube_in_drawer && button0_on && drawer_closed && window_closed) && <>(cube_in_drawer && button0_on && drawer_closed && window_open)))",
+      "formula_p": null,
+      "generation_validation": {
+        "accepted": true,
+        "initial_accepting": false,
+        "initial_state_set": [
+          "T2_init"
+        ],
+        "initial_state_set_empty": false,
+        "initial_state_source": "task_info",
+        "oracle_initial_labels": [
+          "drawer_closed",
+          "window_closed"
+        ],
+        "reject_reason": null
+      },
+      "labels": [
+        "button0_on",
+        "cube_in_drawer",
+        "cube_zone_B",
+        "drawer_closed",
+        "drawer_open",
+        "window_closed",
+        "window_open"
+      ],
+      "metadata": {
+        "configuration_milestones": {
+          "cfg_cube_b_open": [
+            "cube_zone_B",
+            "drawer_open",
+            "window_open"
+          ],
+          "cfg_cube_drawer_closed": [
+            "cube_in_drawer",
+            "button0_on",
+            "drawer_closed",
+            "window_closed"
+          ],
+          "cfg_cube_drawer_window_open": [
+            "cube_in_drawer",
+            "button0_on",
+            "drawer_closed",
+            "window_open"
+          ]
+        },
+        "environment_goal_semantics": "reset_only_not_used_for_ltl",
+        "expanded_formula": "<>((cube_zone_B && drawer_open && window_open) && <>((cube_in_drawer && button0_on && drawer_closed && window_closed) && <>(cube_in_drawer && button0_on && drawer_closed && window_open)))",
+        "family_index": 3,
+        "has_disjunction": false,
+        "has_negative_literal": false,
+        "has_recurrence": false,
+        "logic_family": "ordered_three",
+        "milestone_formula": "<>(cfg_cube_b_open && <>(cfg_cube_drawer_closed && <>cfg_cube_drawer_window_open))",
+        "object_track": "cube_storage",
+        "requires_cube_motion": true,
+        "reset_goal_config": "task4_goal",
+        "reset_init_config": "task4_init",
+        "semantic_features": [
+          "manipulation_scene",
+          "object_state",
+          "compound_configuration_predicates",
+          "ordered_three",
+          "cube_storage"
+        ],
+        "stage_count": 3,
+        "template": "e6s_ordered_three_cube_storage"
+      },
+      "predicate_specs": {
+        "button0_on": {
+          "evaluator": "object_state",
+          "property": "button0_on"
+        },
+        "cube_in_drawer": {
+          "evaluator": "object_state",
+          "property": "cube_in_drawer"
+        },
+        "cube_zone_B": {
+          "evaluator": "object_state",
+          "object": "cube",
+          "property": "in_region",
+          "region": {
+            "center": [
+              0.35,
+              -0.05,
+              0.02
+            ],
+            "radius": 0.06,
+            "source": "official_scene_task2_init",
+            "type": "sphere"
+          }
+        },
+        "drawer_closed": {
+          "evaluator": "object_state",
+          "property": "drawer_closed"
+        },
+        "drawer_open": {
+          "evaluator": "object_state",
+          "property": "drawer_open"
+        },
+        "window_closed": {
+          "evaluator": "object_state",
+          "property": "window_closed"
+        },
+        "window_open": {
+          "evaluator": "object_state",
+          "property": "window_open"
+        }
+      },
+      "reset_task_info": {
+        "goal": {
+          "block_xyzs": [
+            [
+              0.33,
+              -0.356,
+              0.065986
+            ]
+          ],
+          "button_states": [
+            1,
+            0
+          ],
+          "drawer_pos": 0.0,
+          "window_pos": 0.0
+        },
+        "init": {
+          "block_xyzs": [
+            [
+              0.35,
+              0.05,
+              0.02
+            ]
+          ],
+          "button_states": [
+            0,
+            0
+          ],
+          "drawer_pos": 0.0,
+          "window_pos": 0.0
+        },
+        "task_name": "e6s_ordered_three_cube_storage"
+      },
+      "seed": 7211,
+      "task_id": 11
+    },
+    {
+      "env_name": "scene-play-v0",
+      "formula_e": "<>(((button0_on && drawer_closed && window_closed && cube_context_A) || (button1_on && drawer_closed && window_closed && cube_context_A)) && <>(button0_on && drawer_open && window_closed && cube_context_A))",
+      "formula_p": null,
+      "generation_validation": {
+        "accepted": true,
+        "initial_accepting": false,
+        "initial_state_set": [
+          "T1_init"
+        ],
+        "initial_state_set_empty": false,
+        "initial_state_source": "task_info",
+        "oracle_initial_labels": [
+          "cube_context_A",
+          "drawer_closed",
+          "window_closed"
+        ],
+        "reject_reason": null
+      },
+      "labels": [
+        "button0_on",
+        "button1_on",
+        "cube_context_A",
+        "drawer_closed",
+        "drawer_open",
+        "window_closed"
+      ],
+      "metadata": {
+        "configuration_milestones": {
+          "cfg_drawer_open": [
+            "button0_on",
+            "drawer_open",
+            "window_closed",
+            "cube_context_A"
+          ],
+          "cfg_drawer_ready": [
+            "button0_on",
+            "drawer_closed",
+            "window_closed",
+            "cube_context_A"
+          ],
+          "cfg_window_ready": [
+            "button1_on",
+            "drawer_closed",
+            "window_closed",
+            "cube_context_A"
+          ]
+        },
+        "environment_goal_semantics": "reset_only_not_used_for_ltl",
+        "expanded_formula": "<>(((button0_on && drawer_closed && window_closed && cube_context_A) || (button1_on && drawer_closed && window_closed && cube_context_A)) && <>(button0_on && drawer_open && window_closed && cube_context_A))",
+        "family_index": 0,
+        "has_disjunction": true,
+        "has_negative_literal": false,
+        "has_recurrence": false,
+        "logic_family": "choice_then_goal",
+        "milestone_formula": "<>((cfg_drawer_ready || cfg_window_ready) && <>cfg_drawer_open)",
+        "object_track": "drawer",
+        "requires_cube_motion": false,
+        "reset_goal_config": "task1_goal",
+        "reset_init_config": "task4_init",
+        "semantic_features": [
+          "manipulation_scene",
+          "object_state",
+          "compound_configuration_predicates",
+          "choice_then_goal",
+          "drawer"
+        ],
+        "stage_count": 2,
+        "template": "e6s_choice_then_goal_drawer"
+      },
+      "predicate_specs": {
+        "button0_on": {
+          "evaluator": "object_state",
+          "property": "button0_on"
+        },
+        "button1_on": {
+          "evaluator": "object_state",
+          "property": "button1_on"
+        },
+        "cube_context_A": {
+          "evaluator": "object_state",
+          "object": "cube",
+          "property": "in_region",
+          "region": {
+            "center": [
+              0.35,
+              0.05,
+              0.02
+            ],
+            "radius": 0.1,
+            "source": "official_scene_task1_task4_init_context",
+            "type": "sphere"
+          }
+        },
+        "drawer_closed": {
+          "evaluator": "object_state",
+          "property": "drawer_closed"
+        },
+        "drawer_open": {
+          "evaluator": "object_state",
+          "property": "drawer_open"
+        },
+        "window_closed": {
+          "evaluator": "object_state",
+          "property": "window_closed"
+        }
+      },
+      "reset_task_info": {
+        "goal": {
+          "block_xyzs": [
+            [
+              0.35,
+              0.05,
+              0.02
+            ]
+          ],
+          "button_states": [
+            1,
+            1
+          ],
+          "drawer_pos": -0.16,
+          "window_pos": 0.2
+        },
+        "init": {
+          "block_xyzs": [
+            [
+              0.35,
+              0.05,
+              0.02
+            ]
+          ],
+          "button_states": [
+            0,
+            0
+          ],
+          "drawer_pos": 0.0,
+          "window_pos": 0.0
+        },
+        "task_name": "e6s_choice_then_goal_drawer"
+      },
+      "seed": 7212,
+      "task_id": 12
+    },
+    {
+      "env_name": "scene-play-v0",
+      "formula_e": "<>(((button0_on && drawer_open && window_closed && cube_context_A) || (button1_on && drawer_closed && window_open && cube_context_A)) && <>(button1_on && drawer_closed && window_closed && cube_context_A))",
+      "formula_p": null,
+      "generation_validation": {
+        "accepted": true,
+        "initial_accepting": false,
+        "initial_state_set": [
+          "T1_init"
+        ],
+        "initial_state_set_empty": false,
+        "initial_state_source": "task_info",
+        "oracle_initial_labels": [
+          "cube_context_A",
+          "drawer_closed",
+          "window_closed"
+        ],
+        "reject_reason": null
+      },
+      "labels": [
+        "button0_on",
+        "button1_on",
+        "cube_context_A",
+        "drawer_closed",
+        "drawer_open",
+        "window_closed",
+        "window_open"
+      ],
+      "metadata": {
+        "configuration_milestones": {
+          "cfg_drawer_open": [
+            "button0_on",
+            "drawer_open",
+            "window_closed",
+            "cube_context_A"
+          ],
+          "cfg_window_open": [
+            "button1_on",
+            "drawer_closed",
+            "window_open",
+            "cube_context_A"
+          ],
+          "cfg_window_ready": [
+            "button1_on",
+            "drawer_closed",
+            "window_closed",
+            "cube_context_A"
+          ]
+        },
+        "environment_goal_semantics": "reset_only_not_used_for_ltl",
+        "expanded_formula": "<>(((button0_on && drawer_open && window_closed && cube_context_A) || (button1_on && drawer_closed && window_open && cube_context_A)) && <>(button1_on && drawer_closed && window_closed && cube_context_A))",
+        "family_index": 1,
+        "has_disjunction": true,
+        "has_negative_literal": false,
+        "has_recurrence": false,
+        "logic_family": "choice_then_goal",
+        "milestone_formula": "<>((cfg_drawer_open || cfg_window_open) && <>cfg_window_ready)",
+        "object_track": "window",
+        "requires_cube_motion": false,
+        "reset_goal_config": "task1_goal",
+        "reset_init_config": "task4_init",
+        "semantic_features": [
+          "manipulation_scene",
+          "object_state",
+          "compound_configuration_predicates",
+          "choice_then_goal",
+          "window"
+        ],
+        "stage_count": 2,
+        "template": "e6s_choice_then_goal_window"
+      },
+      "predicate_specs": {
+        "button0_on": {
+          "evaluator": "object_state",
+          "property": "button0_on"
+        },
+        "button1_on": {
+          "evaluator": "object_state",
+          "property": "button1_on"
+        },
+        "cube_context_A": {
+          "evaluator": "object_state",
+          "object": "cube",
+          "property": "in_region",
+          "region": {
+            "center": [
+              0.35,
+              0.05,
+              0.02
+            ],
+            "radius": 0.1,
+            "source": "official_scene_task1_task4_init_context",
+            "type": "sphere"
+          }
+        },
+        "drawer_closed": {
+          "evaluator": "object_state",
+          "property": "drawer_closed"
+        },
+        "drawer_open": {
+          "evaluator": "object_state",
+          "property": "drawer_open"
+        },
+        "window_closed": {
+          "evaluator": "object_state",
+          "property": "window_closed"
+        },
+        "window_open": {
+          "evaluator": "object_state",
+          "property": "window_open"
+        }
+      },
+      "reset_task_info": {
+        "goal": {
+          "block_xyzs": [
+            [
+              0.35,
+              0.05,
+              0.02
+            ]
+          ],
+          "button_states": [
+            1,
+            1
+          ],
+          "drawer_pos": -0.16,
+          "window_pos": 0.2
+        },
+        "init": {
+          "block_xyzs": [
+            [
+              0.35,
+              0.05,
+              0.02
+            ]
+          ],
+          "button_states": [
+            0,
+            0
+          ],
+          "drawer_pos": 0.0,
+          "window_pos": 0.0
+        },
+        "task_name": "e6s_choice_then_goal_window"
+      },
+      "seed": 7213,
+      "task_id": 13
+    },
+    {
+      "env_name": "scene-play-v0",
+      "formula_e": "<>(((cube_zone_A && drawer_closed && window_closed) || (cube_zone_B && drawer_open && window_open)) && <>(cube_in_drawer && button0_on && drawer_closed && window_closed))",
+      "formula_p": null,
+      "generation_validation": {
+        "accepted": true,
+        "initial_accepting": false,
+        "initial_state_set": [
+          "T0_S2",
+          "T1_init"
+        ],
+        "initial_state_set_empty": false,
+        "initial_state_source": "task_info",
+        "oracle_initial_labels": [
+          "cube_zone_A",
+          "drawer_closed",
+          "window_closed"
+        ],
+        "reject_reason": null
+      },
+      "labels": [
+        "button0_on",
+        "cube_in_drawer",
+        "cube_zone_A",
+        "cube_zone_B",
+        "drawer_closed",
+        "drawer_open",
+        "window_closed",
+        "window_open"
+      ],
+      "metadata": {
+        "configuration_milestones": {
+          "cfg_cube_a_closed": [
+            "cube_zone_A",
+            "drawer_closed",
+            "window_closed"
+          ],
+          "cfg_cube_b_open": [
+            "cube_zone_B",
+            "drawer_open",
+            "window_open"
+          ],
+          "cfg_cube_drawer_closed": [
+            "cube_in_drawer",
+            "button0_on",
+            "drawer_closed",
+            "window_closed"
+          ]
+        },
+        "environment_goal_semantics": "reset_only_not_used_for_ltl",
+        "expanded_formula": "<>(((cube_zone_A && drawer_closed && window_closed) || (cube_zone_B && drawer_open && window_open)) && <>(cube_in_drawer && button0_on && drawer_closed && window_closed))",
+        "family_index": 2,
+        "has_disjunction": true,
+        "has_negative_literal": false,
+        "has_recurrence": false,
+        "logic_family": "choice_then_goal",
+        "milestone_formula": "<>((cfg_cube_a_closed || cfg_cube_b_open) && <>cfg_cube_drawer_closed)",
+        "object_track": "cube_relocation",
+        "requires_cube_motion": true,
+        "reset_goal_config": "task4_goal",
+        "reset_init_config": "task4_init",
+        "semantic_features": [
+          "manipulation_scene",
+          "object_state",
+          "compound_configuration_predicates",
+          "choice_then_goal",
+          "cube_relocation"
+        ],
+        "stage_count": 2,
+        "template": "e6s_choice_then_goal_cube_relocation"
+      },
+      "predicate_specs": {
+        "button0_on": {
+          "evaluator": "object_state",
+          "property": "button0_on"
+        },
+        "cube_in_drawer": {
+          "evaluator": "object_state",
+          "property": "cube_in_drawer"
+        },
+        "cube_zone_A": {
+          "evaluator": "object_state",
+          "object": "cube",
+          "property": "in_region",
+          "region": {
+            "center": [
+              0.35,
+              0.05,
+              0.02
+            ],
+            "radius": 0.06,
+            "source": "official_scene_task1_task4_init",
+            "type": "sphere"
+          }
+        },
+        "cube_zone_B": {
+          "evaluator": "object_state",
+          "object": "cube",
+          "property": "in_region",
+          "region": {
+            "center": [
+              0.35,
+              -0.05,
+              0.02
+            ],
+            "radius": 0.06,
+            "source": "official_scene_task2_init",
+            "type": "sphere"
+          }
+        },
+        "drawer_closed": {
+          "evaluator": "object_state",
+          "property": "drawer_closed"
+        },
+        "drawer_open": {
+          "evaluator": "object_state",
+          "property": "drawer_open"
+        },
+        "window_closed": {
+          "evaluator": "object_state",
+          "property": "window_closed"
+        },
+        "window_open": {
+          "evaluator": "object_state",
+          "property": "window_open"
+        }
+      },
+      "reset_task_info": {
+        "goal": {
+          "block_xyzs": [
+            [
+              0.33,
+              -0.356,
+              0.065986
+            ]
+          ],
+          "button_states": [
+            1,
+            0
+          ],
+          "drawer_pos": 0.0,
+          "window_pos": 0.0
+        },
+        "init": {
+          "block_xyzs": [
+            [
+              0.35,
+              0.05,
+              0.02
+            ]
+          ],
+          "button_states": [
+            0,
+            0
+          ],
+          "drawer_pos": 0.0,
+          "window_pos": 0.0
+        },
+        "task_name": "e6s_choice_then_goal_cube_relocation"
+      },
+      "seed": 7214,
+      "task_id": 14
+    },
+    {
+      "env_name": "scene-play-v0",
+      "formula_e": "<>(((cube_zone_C && button1_on && drawer_open && window_closed) || (cube_in_drawer && button0_on && drawer_closed && window_closed)) && <>(cube_in_drawer && button0_on && drawer_closed && window_open))",
+      "formula_p": null,
+      "generation_validation": {
+        "accepted": true,
+        "initial_accepting": false,
+        "initial_state_set": [
+          "T1_init"
+        ],
+        "initial_state_set_empty": false,
+        "initial_state_source": "task_info",
+        "oracle_initial_labels": [
+          "drawer_closed",
+          "window_closed"
+        ],
+        "reject_reason": null
+      },
+      "labels": [
+        "button0_on",
+        "button1_on",
+        "cube_in_drawer",
+        "cube_zone_C",
+        "drawer_closed",
+        "drawer_open",
+        "window_closed",
+        "window_open"
+      ],
+      "metadata": {
+        "configuration_milestones": {
+          "cfg_cube_c_drawer_open": [
+            "cube_zone_C",
+            "button1_on",
+            "drawer_open",
+            "window_closed"
+          ],
+          "cfg_cube_drawer_closed": [
+            "cube_in_drawer",
+            "button0_on",
+            "drawer_closed",
+            "window_closed"
+          ],
+          "cfg_cube_drawer_window_open": [
+            "cube_in_drawer",
+            "button0_on",
+            "drawer_closed",
+            "window_open"
+          ]
+        },
+        "environment_goal_semantics": "reset_only_not_used_for_ltl",
+        "expanded_formula": "<>(((cube_zone_C && button1_on && drawer_open && window_closed) || (cube_in_drawer && button0_on && drawer_closed && window_closed)) && <>(cube_in_drawer && button0_on && drawer_closed && window_open))",
+        "family_index": 3,
+        "has_disjunction": true,
+        "has_negative_literal": false,
+        "has_recurrence": false,
+        "logic_family": "choice_then_goal",
+        "milestone_formula": "<>((cfg_cube_c_drawer_open || cfg_cube_drawer_closed) && <>cfg_cube_drawer_window_open)",
+        "object_track": "cube_storage",
+        "requires_cube_motion": true,
+        "reset_goal_config": "task4_goal",
+        "reset_init_config": "task4_init",
+        "semantic_features": [
+          "manipulation_scene",
+          "object_state",
+          "compound_configuration_predicates",
+          "choice_then_goal",
+          "cube_storage"
+        ],
+        "stage_count": 2,
+        "template": "e6s_choice_then_goal_cube_storage"
+      },
+      "predicate_specs": {
+        "button0_on": {
+          "evaluator": "object_state",
+          "property": "button0_on"
+        },
+        "button1_on": {
+          "evaluator": "object_state",
+          "property": "button1_on"
+        },
+        "cube_in_drawer": {
+          "evaluator": "object_state",
+          "property": "cube_in_drawer"
+        },
+        "cube_zone_C": {
+          "evaluator": "object_state",
+          "object": "cube",
+          "property": "in_region",
+          "region": {
+            "center": [
+              0.4,
+              0.15,
+              0.02
+            ],
+            "radius": 0.06,
+            "source": "official_scene_task3_goal",
+            "type": "sphere"
+          }
+        },
+        "drawer_closed": {
+          "evaluator": "object_state",
+          "property": "drawer_closed"
+        },
+        "drawer_open": {
+          "evaluator": "object_state",
+          "property": "drawer_open"
+        },
+        "window_closed": {
+          "evaluator": "object_state",
+          "property": "window_closed"
+        },
+        "window_open": {
+          "evaluator": "object_state",
+          "property": "window_open"
+        }
+      },
+      "reset_task_info": {
+        "goal": {
+          "block_xyzs": [
+            [
+              0.33,
+              -0.356,
+              0.065986
+            ]
+          ],
+          "button_states": [
+            1,
+            0
+          ],
+          "drawer_pos": 0.0,
+          "window_pos": 0.0
+        },
+        "init": {
+          "block_xyzs": [
+            [
+              0.35,
+              0.05,
+              0.02
+            ]
+          ],
+          "button_states": [
+            0,
+            0
+          ],
+          "drawer_pos": 0.0,
+          "window_pos": 0.0
+        },
+        "task_name": "e6s_choice_then_goal_cube_storage"
+      },
+      "seed": 7215,
+      "task_id": 15
+    },
+    {
+      "env_name": "scene-play-v0",
+      "formula_e": "(!(drawer_open && window_closed) U (button0_on && drawer_open && window_closed && cube_context_A))",
+      "formula_p": null,
+      "generation_validation": {
+        "accepted": true,
+        "initial_accepting": false,
+        "initial_state_set": [
+          "T0_init"
+        ],
+        "initial_state_set_empty": false,
+        "initial_state_source": "task_info",
+        "oracle_initial_labels": [
+          "cube_context_A",
+          "window_closed"
+        ],
+        "reject_reason": null
+      },
+      "labels": [
+        "button0_on",
+        "cube_context_A",
+        "drawer_open",
+        "window_closed"
+      ],
+      "metadata": {
+        "configuration_milestones": {
+          "cfg_drawer_open": [
+            "button0_on",
+            "drawer_open",
+            "window_closed",
+            "cube_context_A"
+          ]
+        },
+        "environment_goal_semantics": "reset_only_not_used_for_ltl",
+        "expanded_formula": "(!(drawer_open && window_closed) U (button0_on && drawer_open && window_closed && cube_context_A))",
+        "family_index": 0,
+        "has_disjunction": false,
+        "has_negative_literal": true,
+        "has_recurrence": false,
+        "logic_family": "negative_until",
+        "milestone_formula": "(!(drawer_open && window_closed) U cfg_drawer_open)",
+        "object_track": "drawer",
+        "requires_cube_motion": false,
+        "reset_goal_config": "task1_goal",
+        "reset_init_config": "task4_init",
+        "semantic_features": [
+          "manipulation_scene",
+          "object_state",
+          "compound_configuration_predicates",
+          "negative_until",
+          "drawer"
+        ],
+        "stage_count": 1,
+        "template": "e6s_negative_until_drawer"
+      },
+      "predicate_specs": {
+        "button0_on": {
+          "evaluator": "object_state",
+          "property": "button0_on"
+        },
+        "cube_context_A": {
+          "evaluator": "object_state",
+          "object": "cube",
+          "property": "in_region",
+          "region": {
+            "center": [
+              0.35,
+              0.05,
+              0.02
+            ],
+            "radius": 0.1,
+            "source": "official_scene_task1_task4_init_context",
+            "type": "sphere"
+          }
+        },
+        "drawer_open": {
+          "evaluator": "object_state",
+          "property": "drawer_open"
+        },
+        "window_closed": {
+          "evaluator": "object_state",
+          "property": "window_closed"
+        }
+      },
+      "reset_task_info": {
+        "goal": {
+          "block_xyzs": [
+            [
+              0.35,
+              0.05,
+              0.02
+            ]
+          ],
+          "button_states": [
+            1,
+            1
+          ],
+          "drawer_pos": -0.16,
+          "window_pos": 0.2
+        },
+        "init": {
+          "block_xyzs": [
+            [
+              0.35,
+              0.05,
+              0.02
+            ]
+          ],
+          "button_states": [
+            0,
+            0
+          ],
+          "drawer_pos": 0.0,
+          "window_pos": 0.0
+        },
+        "task_name": "e6s_negative_until_drawer"
+      },
+      "seed": 7216,
+      "task_id": 16
+    },
+    {
+      "env_name": "scene-play-v0",
+      "formula_e": "(!(button0_on && drawer_open) U (button1_on && drawer_closed && window_open && cube_context_A))",
+      "formula_p": null,
+      "generation_validation": {
+        "accepted": true,
+        "initial_accepting": false,
+        "initial_state_set": [
+          "T0_init"
+        ],
+        "initial_state_set_empty": false,
+        "initial_state_source": "task_info",
+        "oracle_initial_labels": [
+          "cube_context_A",
+          "drawer_closed"
+        ],
+        "reject_reason": null
+      },
+      "labels": [
+        "button0_on",
+        "button1_on",
+        "cube_context_A",
+        "drawer_closed",
+        "drawer_open",
+        "window_open"
+      ],
+      "metadata": {
+        "configuration_milestones": {
+          "cfg_window_open": [
+            "button1_on",
+            "drawer_closed",
+            "window_open",
+            "cube_context_A"
+          ]
+        },
+        "environment_goal_semantics": "reset_only_not_used_for_ltl",
+        "expanded_formula": "(!(button0_on && drawer_open) U (button1_on && drawer_closed && window_open && cube_context_A))",
+        "family_index": 1,
+        "has_disjunction": false,
+        "has_negative_literal": true,
+        "has_recurrence": false,
+        "logic_family": "negative_until",
+        "milestone_formula": "(!(button0_on && drawer_open) U cfg_window_open)",
+        "object_track": "window",
+        "requires_cube_motion": false,
+        "reset_goal_config": "task1_goal",
+        "reset_init_config": "task4_init",
+        "semantic_features": [
+          "manipulation_scene",
+          "object_state",
+          "compound_configuration_predicates",
+          "negative_until",
+          "window"
+        ],
+        "stage_count": 1,
+        "template": "e6s_negative_until_window"
+      },
+      "predicate_specs": {
+        "button0_on": {
+          "evaluator": "object_state",
+          "property": "button0_on"
+        },
+        "button1_on": {
+          "evaluator": "object_state",
+          "property": "button1_on"
+        },
+        "cube_context_A": {
+          "evaluator": "object_state",
+          "object": "cube",
+          "property": "in_region",
+          "region": {
+            "center": [
+              0.35,
+              0.05,
+              0.02
+            ],
+            "radius": 0.1,
+            "source": "official_scene_task1_task4_init_context",
+            "type": "sphere"
+          }
+        },
+        "drawer_closed": {
+          "evaluator": "object_state",
+          "property": "drawer_closed"
+        },
+        "drawer_open": {
+          "evaluator": "object_state",
+          "property": "drawer_open"
+        },
+        "window_open": {
+          "evaluator": "object_state",
+          "property": "window_open"
+        }
+      },
+      "reset_task_info": {
+        "goal": {
+          "block_xyzs": [
+            [
+              0.35,
+              0.05,
+              0.02
+            ]
+          ],
+          "button_states": [
+            1,
+            1
+          ],
+          "drawer_pos": -0.16,
+          "window_pos": 0.2
+        },
+        "init": {
+          "block_xyzs": [
+            [
+              0.35,
+              0.05,
+              0.02
+            ]
+          ],
+          "button_states": [
+            0,
+            0
+          ],
+          "drawer_pos": 0.0,
+          "window_pos": 0.0
+        },
+        "task_name": "e6s_negative_until_window"
+      },
+      "seed": 7217,
+      "task_id": 17
+    },
+    {
+      "env_name": "scene-play-v0",
+      "formula_e": "(!cube_in_drawer U (cube_zone_C && button1_on && drawer_open && window_closed))",
+      "formula_p": null,
+      "generation_validation": {
+        "accepted": true,
+        "initial_accepting": false,
+        "initial_state_set": [
+          "T0_init"
+        ],
+        "initial_state_set_empty": false,
+        "initial_state_source": "task_info",
+        "oracle_initial_labels": [
+          "window_closed"
+        ],
+        "reject_reason": null
+      },
+      "labels": [
+        "button1_on",
+        "cube_in_drawer",
+        "cube_zone_C",
+        "drawer_open",
+        "window_closed"
+      ],
+      "metadata": {
+        "configuration_milestones": {
+          "cfg_cube_c_drawer_open": [
+            "cube_zone_C",
+            "button1_on",
+            "drawer_open",
+            "window_closed"
+          ]
+        },
+        "environment_goal_semantics": "reset_only_not_used_for_ltl",
+        "expanded_formula": "(!cube_in_drawer U (cube_zone_C && button1_on && drawer_open && window_closed))",
+        "family_index": 2,
+        "has_disjunction": false,
+        "has_negative_literal": true,
+        "has_recurrence": false,
+        "logic_family": "negative_until",
+        "milestone_formula": "(!cube_in_drawer U cfg_cube_c_drawer_open)",
+        "object_track": "cube_relocation",
+        "requires_cube_motion": true,
+        "reset_goal_config": "task3_goal",
+        "reset_init_config": "task4_init",
+        "semantic_features": [
+          "manipulation_scene",
+          "object_state",
+          "compound_configuration_predicates",
+          "negative_until",
+          "cube_relocation"
+        ],
+        "stage_count": 1,
+        "template": "e6s_negative_until_cube_relocation"
+      },
+      "predicate_specs": {
+        "button1_on": {
+          "evaluator": "object_state",
+          "property": "button1_on"
+        },
+        "cube_in_drawer": {
+          "evaluator": "object_state",
+          "property": "cube_in_drawer"
+        },
+        "cube_zone_C": {
+          "evaluator": "object_state",
+          "object": "cube",
+          "property": "in_region",
+          "region": {
+            "center": [
+              0.4,
+              0.15,
+              0.02
+            ],
+            "radius": 0.06,
+            "source": "official_scene_task3_goal",
+            "type": "sphere"
+          }
+        },
+        "drawer_open": {
+          "evaluator": "object_state",
+          "property": "drawer_open"
+        },
+        "window_closed": {
+          "evaluator": "object_state",
+          "property": "window_closed"
+        }
+      },
+      "reset_task_info": {
+        "goal": {
+          "block_xyzs": [
+            [
+              0.4,
+              0.15,
+              0.02
+            ]
+          ],
+          "button_states": [
+            1,
+            1
+          ],
+          "drawer_pos": -0.16,
+          "window_pos": 0.0
+        },
+        "init": {
+          "block_xyzs": [
+            [
+              0.35,
+              0.05,
+              0.02
+            ]
+          ],
+          "button_states": [
+            0,
+            0
+          ],
+          "drawer_pos": 0.0,
+          "window_pos": 0.0
+        },
+        "task_name": "e6s_negative_until_cube_relocation"
+      },
+      "seed": 7218,
+      "task_id": 18
+    },
+    {
+      "env_name": "scene-play-v0",
+      "formula_e": "(!(button1_on && window_open) U (cube_in_drawer && button0_on && drawer_closed && window_closed))",
+      "formula_p": null,
+      "generation_validation": {
+        "accepted": true,
+        "initial_accepting": false,
+        "initial_state_set": [
+          "T0_init"
+        ],
+        "initial_state_set_empty": false,
+        "initial_state_source": "task_info",
+        "oracle_initial_labels": [
+          "drawer_closed",
+          "window_closed"
+        ],
+        "reject_reason": null
+      },
+      "labels": [
+        "button0_on",
+        "button1_on",
+        "cube_in_drawer",
+        "drawer_closed",
+        "window_closed",
+        "window_open"
+      ],
+      "metadata": {
+        "configuration_milestones": {
+          "cfg_cube_drawer_closed": [
+            "cube_in_drawer",
+            "button0_on",
+            "drawer_closed",
+            "window_closed"
+          ]
+        },
+        "environment_goal_semantics": "reset_only_not_used_for_ltl",
+        "expanded_formula": "(!(button1_on && window_open) U (cube_in_drawer && button0_on && drawer_closed && window_closed))",
+        "family_index": 3,
+        "has_disjunction": false,
+        "has_negative_literal": true,
+        "has_recurrence": false,
+        "logic_family": "negative_until",
+        "milestone_formula": "(!(button1_on && window_open) U cfg_cube_drawer_closed)",
+        "object_track": "cube_storage",
+        "requires_cube_motion": true,
+        "reset_goal_config": "task4_goal",
+        "reset_init_config": "task4_init",
+        "semantic_features": [
+          "manipulation_scene",
+          "object_state",
+          "compound_configuration_predicates",
+          "negative_until",
+          "cube_storage"
+        ],
+        "stage_count": 1,
+        "template": "e6s_negative_until_cube_storage"
+      },
+      "predicate_specs": {
+        "button0_on": {
+          "evaluator": "object_state",
+          "property": "button0_on"
+        },
+        "button1_on": {
+          "evaluator": "object_state",
+          "property": "button1_on"
+        },
+        "cube_in_drawer": {
+          "evaluator": "object_state",
+          "property": "cube_in_drawer"
+        },
+        "drawer_closed": {
+          "evaluator": "object_state",
+          "property": "drawer_closed"
+        },
+        "window_closed": {
+          "evaluator": "object_state",
+          "property": "window_closed"
+        },
+        "window_open": {
+          "evaluator": "object_state",
+          "property": "window_open"
+        }
+      },
+      "reset_task_info": {
+        "goal": {
+          "block_xyzs": [
+            [
+              0.33,
+              -0.356,
+              0.065986
+            ]
+          ],
+          "button_states": [
+            1,
+            0
+          ],
+          "drawer_pos": 0.0,
+          "window_pos": 0.0
+        },
+        "init": {
+          "block_xyzs": [
+            [
+              0.35,
+              0.05,
+              0.02
+            ]
+          ],
+          "button_states": [
+            0,
+            0
+          ],
+          "drawer_pos": 0.0,
+          "window_pos": 0.0
+        },
+        "task_name": "e6s_negative_until_cube_storage"
+      },
+      "seed": 7219,
+      "task_id": 19
+    },
+    {
+      "env_name": "scene-play-v0",
+      "formula_e": "[]<>((button0_on && drawer_open && window_closed && cube_context_A) && <>(button1_on && drawer_closed && window_open && cube_context_A))",
+      "formula_p": null,
+      "generation_validation": {
+        "accepted": true,
+        "initial_accepting": false,
+        "initial_state_set": [
+          "T1_S1"
+        ],
+        "initial_state_set_empty": false,
+        "initial_state_source": "task_info",
+        "oracle_initial_labels": [
+          "cube_context_A",
+          "drawer_closed",
+          "window_closed"
+        ],
+        "reject_reason": null
+      },
+      "labels": [
+        "button0_on",
+        "button1_on",
+        "cube_context_A",
+        "drawer_closed",
+        "drawer_open",
+        "window_closed",
+        "window_open"
+      ],
+      "metadata": {
+        "configuration_milestones": {
+          "cfg_drawer_open": [
+            "button0_on",
+            "drawer_open",
+            "window_closed",
+            "cube_context_A"
+          ],
+          "cfg_window_open": [
+            "button1_on",
+            "drawer_closed",
+            "window_open",
+            "cube_context_A"
+          ]
+        },
+        "environment_goal_semantics": "reset_only_not_used_for_ltl",
+        "expanded_formula": "[]<>((button0_on && drawer_open && window_closed && cube_context_A) && <>(button1_on && drawer_closed && window_open && cube_context_A))",
+        "family_index": 0,
+        "has_disjunction": false,
+        "has_negative_literal": false,
+        "has_recurrence": true,
+        "logic_family": "recurrent_suffix",
+        "milestone_formula": "[]<>(cfg_drawer_open && <>cfg_window_open)",
+        "object_track": "drawer_to_window",
+        "requires_cube_motion": false,
+        "reset_goal_config": "task1_goal",
+        "reset_init_config": "task4_init",
+        "semantic_features": [
+          "manipulation_scene",
+          "object_state",
+          "compound_configuration_predicates",
+          "recurrent_suffix",
+          "drawer_to_window"
+        ],
+        "stage_count": 2,
+        "template": "e6s_recurrent_suffix_drawer_to_window"
+      },
+      "predicate_specs": {
+        "button0_on": {
+          "evaluator": "object_state",
+          "property": "button0_on"
+        },
+        "button1_on": {
+          "evaluator": "object_state",
+          "property": "button1_on"
+        },
+        "cube_context_A": {
+          "evaluator": "object_state",
+          "object": "cube",
+          "property": "in_region",
+          "region": {
+            "center": [
+              0.35,
+              0.05,
+              0.02
+            ],
+            "radius": 0.1,
+            "source": "official_scene_task1_task4_init_context",
+            "type": "sphere"
+          }
+        },
+        "drawer_closed": {
+          "evaluator": "object_state",
+          "property": "drawer_closed"
+        },
+        "drawer_open": {
+          "evaluator": "object_state",
+          "property": "drawer_open"
+        },
+        "window_closed": {
+          "evaluator": "object_state",
+          "property": "window_closed"
+        },
+        "window_open": {
+          "evaluator": "object_state",
+          "property": "window_open"
+        }
+      },
+      "reset_task_info": {
+        "goal": {
+          "block_xyzs": [
+            [
+              0.35,
+              0.05,
+              0.02
+            ]
+          ],
+          "button_states": [
+            1,
+            1
+          ],
+          "drawer_pos": -0.16,
+          "window_pos": 0.2
+        },
+        "init": {
+          "block_xyzs": [
+            [
+              0.35,
+              0.05,
+              0.02
+            ]
+          ],
+          "button_states": [
+            0,
+            0
+          ],
+          "drawer_pos": 0.0,
+          "window_pos": 0.0
+        },
+        "task_name": "e6s_recurrent_suffix_drawer_to_window"
+      },
+      "seed": 7220,
+      "task_id": 20
+    },
+    {
+      "env_name": "scene-play-v0",
+      "formula_e": "[]<>((button1_on && drawer_closed && window_open && cube_context_A) && <>(button0_on && drawer_open && window_closed && cube_context_A))",
+      "formula_p": null,
+      "generation_validation": {
+        "accepted": true,
+        "initial_accepting": false,
+        "initial_state_set": [
+          "T1_S1"
+        ],
+        "initial_state_set_empty": false,
+        "initial_state_source": "task_info",
+        "oracle_initial_labels": [
+          "cube_context_A",
+          "drawer_closed",
+          "window_closed"
+        ],
+        "reject_reason": null
+      },
+      "labels": [
+        "button0_on",
+        "button1_on",
+        "cube_context_A",
+        "drawer_closed",
+        "drawer_open",
+        "window_closed",
+        "window_open"
+      ],
+      "metadata": {
+        "configuration_milestones": {
+          "cfg_drawer_open": [
+            "button0_on",
+            "drawer_open",
+            "window_closed",
+            "cube_context_A"
+          ],
+          "cfg_window_open": [
+            "button1_on",
+            "drawer_closed",
+            "window_open",
+            "cube_context_A"
+          ]
+        },
+        "environment_goal_semantics": "reset_only_not_used_for_ltl",
+        "expanded_formula": "[]<>((button1_on && drawer_closed && window_open && cube_context_A) && <>(button0_on && drawer_open && window_closed && cube_context_A))",
+        "family_index": 1,
+        "has_disjunction": false,
+        "has_negative_literal": false,
+        "has_recurrence": true,
+        "logic_family": "recurrent_suffix",
+        "milestone_formula": "[]<>(cfg_window_open && <>cfg_drawer_open)",
+        "object_track": "window_to_drawer",
+        "requires_cube_motion": false,
+        "reset_goal_config": "task1_goal",
+        "reset_init_config": "task4_init",
+        "semantic_features": [
+          "manipulation_scene",
+          "object_state",
+          "compound_configuration_predicates",
+          "recurrent_suffix",
+          "window_to_drawer"
+        ],
+        "stage_count": 2,
+        "template": "e6s_recurrent_suffix_window_to_drawer"
+      },
+      "predicate_specs": {
+        "button0_on": {
+          "evaluator": "object_state",
+          "property": "button0_on"
+        },
+        "button1_on": {
+          "evaluator": "object_state",
+          "property": "button1_on"
+        },
+        "cube_context_A": {
+          "evaluator": "object_state",
+          "object": "cube",
+          "property": "in_region",
+          "region": {
+            "center": [
+              0.35,
+              0.05,
+              0.02
+            ],
+            "radius": 0.1,
+            "source": "official_scene_task1_task4_init_context",
+            "type": "sphere"
+          }
+        },
+        "drawer_closed": {
+          "evaluator": "object_state",
+          "property": "drawer_closed"
+        },
+        "drawer_open": {
+          "evaluator": "object_state",
+          "property": "drawer_open"
+        },
+        "window_closed": {
+          "evaluator": "object_state",
+          "property": "window_closed"
+        },
+        "window_open": {
+          "evaluator": "object_state",
+          "property": "window_open"
+        }
+      },
+      "reset_task_info": {
+        "goal": {
+          "block_xyzs": [
+            [
+              0.35,
+              0.05,
+              0.02
+            ]
+          ],
+          "button_states": [
+            1,
+            1
+          ],
+          "drawer_pos": -0.16,
+          "window_pos": 0.2
+        },
+        "init": {
+          "block_xyzs": [
+            [
+              0.35,
+              0.05,
+              0.02
+            ]
+          ],
+          "button_states": [
+            0,
+            0
+          ],
+          "drawer_pos": 0.0,
+          "window_pos": 0.0
+        },
+        "task_name": "e6s_recurrent_suffix_window_to_drawer"
+      },
+      "seed": 7221,
+      "task_id": 21
+    },
+    {
+      "env_name": "scene-play-v0",
+      "formula_e": "[]<>((cube_zone_C && button1_on && drawer_open && window_closed) && <>(cube_zone_C && button1_on && drawer_closed && window_open))",
+      "formula_p": null,
+      "generation_validation": {
+        "accepted": true,
+        "initial_accepting": false,
+        "initial_state_set": [
+          "T1_S1"
+        ],
+        "initial_state_set_empty": false,
+        "initial_state_source": "task_info",
+        "oracle_initial_labels": [
+          "drawer_closed",
+          "window_closed"
+        ],
+        "reject_reason": null
+      },
+      "labels": [
+        "button1_on",
+        "cube_zone_C",
+        "drawer_closed",
+        "drawer_open",
+        "window_closed",
+        "window_open"
+      ],
+      "metadata": {
+        "configuration_milestones": {
+          "cfg_cube_c_drawer_open": [
+            "cube_zone_C",
+            "button1_on",
+            "drawer_open",
+            "window_closed"
+          ],
+          "cfg_cube_c_window_open": [
+            "cube_zone_C",
+            "button1_on",
+            "drawer_closed",
+            "window_open"
+          ]
+        },
+        "environment_goal_semantics": "reset_only_not_used_for_ltl",
+        "expanded_formula": "[]<>((cube_zone_C && button1_on && drawer_open && window_closed) && <>(cube_zone_C && button1_on && drawer_closed && window_open))",
+        "family_index": 2,
+        "has_disjunction": false,
+        "has_negative_literal": false,
+        "has_recurrence": true,
+        "logic_family": "recurrent_suffix",
+        "milestone_formula": "[]<>(cfg_cube_c_drawer_open && <>cfg_cube_c_window_open)",
+        "object_track": "cube_relocation",
+        "requires_cube_motion": true,
+        "reset_goal_config": "task3_goal",
+        "reset_init_config": "task4_init",
+        "semantic_features": [
+          "manipulation_scene",
+          "object_state",
+          "compound_configuration_predicates",
+          "recurrent_suffix",
+          "cube_relocation"
+        ],
+        "stage_count": 2,
+        "template": "e6s_recurrent_suffix_cube_relocation"
+      },
+      "predicate_specs": {
+        "button1_on": {
+          "evaluator": "object_state",
+          "property": "button1_on"
+        },
+        "cube_zone_C": {
+          "evaluator": "object_state",
+          "object": "cube",
+          "property": "in_region",
+          "region": {
+            "center": [
+              0.4,
+              0.15,
+              0.02
+            ],
+            "radius": 0.06,
+            "source": "official_scene_task3_goal",
+            "type": "sphere"
+          }
+        },
+        "drawer_closed": {
+          "evaluator": "object_state",
+          "property": "drawer_closed"
+        },
+        "drawer_open": {
+          "evaluator": "object_state",
+          "property": "drawer_open"
+        },
+        "window_closed": {
+          "evaluator": "object_state",
+          "property": "window_closed"
+        },
+        "window_open": {
+          "evaluator": "object_state",
+          "property": "window_open"
+        }
+      },
+      "reset_task_info": {
+        "goal": {
+          "block_xyzs": [
+            [
+              0.4,
+              0.15,
+              0.02
+            ]
+          ],
+          "button_states": [
+            1,
+            1
+          ],
+          "drawer_pos": -0.16,
+          "window_pos": 0.0
+        },
+        "init": {
+          "block_xyzs": [
+            [
+              0.35,
+              0.05,
+              0.02
+            ]
+          ],
+          "button_states": [
+            0,
+            0
+          ],
+          "drawer_pos": 0.0,
+          "window_pos": 0.0
+        },
+        "task_name": "e6s_recurrent_suffix_cube_relocation"
+      },
+      "seed": 7222,
+      "task_id": 22
+    },
+    {
+      "env_name": "scene-play-v0",
+      "formula_e": "[]<>((cube_in_drawer && button0_on && drawer_closed && window_closed) && <>(cube_in_drawer && button0_on && drawer_closed && window_open))",
+      "formula_p": null,
+      "generation_validation": {
+        "accepted": true,
+        "initial_accepting": false,
+        "initial_state_set": [
+          "T1_S1"
+        ],
+        "initial_state_set_empty": false,
+        "initial_state_source": "task_info",
+        "oracle_initial_labels": [
+          "drawer_closed",
+          "window_closed"
+        ],
+        "reject_reason": null
+      },
+      "labels": [
+        "button0_on",
+        "cube_in_drawer",
+        "drawer_closed",
+        "window_closed",
+        "window_open"
+      ],
+      "metadata": {
+        "configuration_milestones": {
+          "cfg_cube_drawer_closed": [
+            "cube_in_drawer",
+            "button0_on",
+            "drawer_closed",
+            "window_closed"
+          ],
+          "cfg_cube_drawer_window_open": [
+            "cube_in_drawer",
+            "button0_on",
+            "drawer_closed",
+            "window_open"
+          ]
+        },
+        "environment_goal_semantics": "reset_only_not_used_for_ltl",
+        "expanded_formula": "[]<>((cube_in_drawer && button0_on && drawer_closed && window_closed) && <>(cube_in_drawer && button0_on && drawer_closed && window_open))",
+        "family_index": 3,
+        "has_disjunction": false,
+        "has_negative_literal": false,
+        "has_recurrence": true,
+        "logic_family": "recurrent_suffix",
+        "milestone_formula": "[]<>(cfg_cube_drawer_closed && <>cfg_cube_drawer_window_open)",
+        "object_track": "cube_storage",
+        "requires_cube_motion": true,
+        "reset_goal_config": "task4_goal",
+        "reset_init_config": "task4_init",
+        "semantic_features": [
+          "manipulation_scene",
+          "object_state",
+          "compound_configuration_predicates",
+          "recurrent_suffix",
+          "cube_storage"
+        ],
+        "stage_count": 2,
+        "template": "e6s_recurrent_suffix_cube_storage"
+      },
+      "predicate_specs": {
+        "button0_on": {
+          "evaluator": "object_state",
+          "property": "button0_on"
+        },
+        "cube_in_drawer": {
+          "evaluator": "object_state",
+          "property": "cube_in_drawer"
+        },
+        "drawer_closed": {
+          "evaluator": "object_state",
+          "property": "drawer_closed"
+        },
+        "window_closed": {
+          "evaluator": "object_state",
+          "property": "window_closed"
+        },
+        "window_open": {
+          "evaluator": "object_state",
+          "property": "window_open"
+        }
+      },
+      "reset_task_info": {
+        "goal": {
+          "block_xyzs": [
+            [
+              0.33,
+              -0.356,
+              0.065986
+            ]
+          ],
+          "button_states": [
+            1,
+            0
+          ],
+          "drawer_pos": 0.0,
+          "window_pos": 0.0
+        },
+        "init": {
+          "block_xyzs": [
+            [
+              0.35,
+              0.05,
+              0.02
+            ]
+          ],
+          "button_states": [
+            0,
+            0
+          ],
+          "drawer_pos": 0.0,
+          "window_pos": 0.0
+        },
+        "task_name": "e6s_recurrent_suffix_cube_storage"
+      },
+      "seed": 7223,
+      "task_id": 23
+    }
+  ]
+}

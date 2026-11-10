@@ -1,0 +1,6390 @@
+{
+  "env_name": "antmaze-giant-stitch-v0",
+  "free_point_seed": 3646082957,
+  "generation": {
+    "env_region_type": "mixed",
+    "free_point_jitter": 0.75,
+    "max_task_attempts": 250,
+    "nonconvex_prob": 0.25,
+    "region_size_scale": 3.0,
+    "render_size": 800,
+    "samples_per_cell": 4,
+    "shape_mode": "mixed"
+  },
+  "group_counts": {
+    "ordered_overlap": 30
+  },
+  "group_offset_range": [
+    10,
+    39
+  ],
+  "num_tasks": 30,
+  "random_stream_derivation": "uint32 big-endian first four SHA256 bytes of base_seed:env:family",
+  "seed": 20261027,
+  "selection_uses_planner_or_rollout": false,
+  "semantic_task_schema": "state_region_with_predicate_specs_v1",
+  "tasks": [
+    {
+      "formula_e": "<>((a && b) && <>d)",
+      "formula_p": null,
+      "generation_attempt": 0,
+      "labels": [
+        "a",
+        "b",
+        "d"
+      ],
+      "metadata": {
+        "base_seed": 20261027,
+        "complexity": "hard",
+        "cr_uid": "antmaze-giant-stitch-v0:ordered_overlap:10",
+        "e5_distractor_bbox_disjoint": true,
+        "e5_distractor_resample": 0,
+        "e5_group": "ordered_overlap",
+        "e5_group_offset": 10,
+        "e5_role": {
+          "a_b": "overlapping multi-positive target",
+          "c": null,
+          "d": "required subsequent goal"
+        },
+        "generator": "generate_semantic_ltl_tasks.py",
+        "predicate_specs": {
+          "a": {
+            "evaluator": "state_region",
+            "geometry": {
+              "center": [
+                -0.014008751703441624,
+                10.58641599955595
+              ],
+              "color": [
+                0.15,
+                0.45,
+                0.95,
+                0.55
+              ],
+              "radius": 6.408245505783825,
+              "type": "circle"
+            },
+            "metadata": {
+              "shape_kind": "circle",
+              "source": "task_space_geometry"
+            }
+          },
+          "b": {
+            "evaluator": "state_region",
+            "geometry": {
+              "center": [
+                -0.49556611678879625,
+                12.120076940707058
+              ],
+              "color": [
+                0.05,
+                0.7,
+                0.35,
+                0.55
+              ],
+              "radius": 4.285501038856855,
+              "type": "circle"
+            },
+            "metadata": {
+              "shape_kind": "circle",
+              "source": "task_space_geometry"
+            }
+          },
+          "d": {
+            "evaluator": "state_region",
+            "geometry": {
+              "color": [
+                0.95,
+                0.25,
+                0.2,
+                0.5
+              ],
+              "type": "polygon",
+              "vertices": [
+                [
+                  43.78478657093917,
+                  0.33200313121157315
+                ],
+                [
+                  44.024513551991454,
+                  1.2798393978130567
+                ],
+                [
+                  41.26513718984363,
+                  3.7019382755735553
+                ],
+                [
+                  36.03379882356153,
+                  -0.8079669287322174
+                ]
+              ]
+            },
+            "metadata": {
+              "shape_kind": "polygon",
+              "source": "task_space_geometry"
+            }
+          }
+        },
+        "region_kinds": {
+          "a": "circle",
+          "b": "circle",
+          "d": "polygon"
+        },
+        "relation_checks": {
+          "nontrivial:a": true,
+          "nontrivial:b": true,
+          "nontrivial:d": true,
+          "overlap:a,b": true,
+          "separated:a,b|d": true,
+          "start_clear": true
+        },
+        "semantic_features": [
+          "overlap",
+          "multi_positive",
+          "sequence"
+        ],
+        "stream_seed": 3234108583,
+        "template": "cr_ordered_overlap"
+      },
+      "regions": {
+        "a": {
+          "center": [
+            -0.014008751703441624,
+            10.58641599955595
+          ],
+          "color": [
+            0.15,
+            0.45,
+            0.95,
+            0.55
+          ],
+          "radius": 6.408245505783825,
+          "type": "circle"
+        },
+        "b": {
+          "center": [
+            -0.49556611678879625,
+            12.120076940707058
+          ],
+          "color": [
+            0.05,
+            0.7,
+            0.35,
+            0.55
+          ],
+          "radius": 4.285501038856855,
+          "type": "circle"
+        },
+        "d": {
+          "color": [
+            0.95,
+            0.25,
+            0.2,
+            0.5
+          ],
+          "type": "polygon",
+          "vertices": [
+            [
+              43.78478657093917,
+              0.33200313121157315
+            ],
+            [
+              44.024513551991454,
+              1.2798393978130567
+            ],
+            [
+              41.26513718984363,
+              3.7019382755735553
+            ],
+            [
+              36.03379882356153,
+              -0.8079669287322174
+            ]
+          ]
+        }
+      },
+      "seed": 3234111083,
+      "start_xy": [
+        40.61386593147808,
+        3.852336243591562
+      ],
+      "task_id": 0
+    },
+    {
+      "formula_e": "<>((a && b) && <>d)",
+      "formula_p": null,
+      "generation_attempt": 0,
+      "labels": [
+        "a",
+        "b",
+        "d"
+      ],
+      "metadata": {
+        "base_seed": 20261027,
+        "complexity": "hard",
+        "cr_uid": "antmaze-giant-stitch-v0:ordered_overlap:11",
+        "e5_distractor_bbox_disjoint": true,
+        "e5_distractor_resample": 0,
+        "e5_group": "ordered_overlap",
+        "e5_group_offset": 11,
+        "e5_role": {
+          "a_b": "overlapping multi-positive target",
+          "c": null,
+          "d": "required subsequent goal"
+        },
+        "generator": "generate_semantic_ltl_tasks.py",
+        "predicate_specs": {
+          "a": {
+            "evaluator": "state_region",
+            "geometry": {
+              "color": [
+                0.15,
+                0.45,
+                0.95,
+                0.55
+              ],
+              "type": "rect",
+              "xmax": 37.81133014594844,
+              "xmin": 24.50519930784887,
+              "ymax": 38.48859538538573,
+              "ymin": 29.17683208625436
+            },
+            "metadata": {
+              "shape_kind": "rect",
+              "source": "task_space_geometry"
+            }
+          },
+          "b": {
+            "evaluator": "state_region",
+            "geometry": {
+              "center": [
+                30.777288363828333,
+                36.24329827891209
+              ],
+              "color": [
+                0.05,
+                0.7,
+                0.35,
+                0.55
+              ],
+              "radius": 6.183966067884876,
+              "type": "circle"
+            },
+            "metadata": {
+              "shape_kind": "circle",
+              "source": "task_space_geometry"
+            }
+          },
+          "d": {
+            "evaluator": "state_region",
+            "geometry": {
+              "color": [
+                0.95,
+                0.25,
+                0.2,
+                0.5
+              ],
+              "nonconvex": true,
+              "type": "polygon",
+              "vertices": [
+                [
+                  25.108773078202717,
+                  3.927251883698589
+                ],
+                [
+                  31.978468505185404,
+                  3.927251883698589
+                ],
+                [
+                  31.978468505185404,
+                  6.692575302940023
+                ],
+                [
+                  27.87409649744415,
+                  6.692575302940023
+                ],
+                [
+                  27.87409649744415,
+                  11.414071372524692
+                ],
+                [
+                  25.108773078202717,
+                  11.414071372524692
+                ]
+              ]
+            },
+            "metadata": {
+              "shape_kind": "nonconvex_polygon",
+              "source": "task_space_geometry"
+            }
+          }
+        },
+        "region_kinds": {
+          "a": "rect",
+          "b": "circle",
+          "d": "nonconvex_polygon"
+        },
+        "relation_checks": {
+          "nontrivial:a": true,
+          "nontrivial:b": true,
+          "nontrivial:d": true,
+          "overlap:a,b": true,
+          "separated:a,b|d": true,
+          "start_clear": true
+        },
+        "semantic_features": [
+          "overlap",
+          "multi_positive",
+          "sequence"
+        ],
+        "stream_seed": 3234108583,
+        "template": "cr_ordered_overlap"
+      },
+      "regions": {
+        "a": {
+          "color": [
+            0.15,
+            0.45,
+            0.95,
+            0.55
+          ],
+          "type": "rect",
+          "xmax": 37.81133014594844,
+          "xmin": 24.50519930784887,
+          "ymax": 38.48859538538573,
+          "ymin": 29.17683208625436
+        },
+        "b": {
+          "center": [
+            30.777288363828333,
+            36.24329827891209
+          ],
+          "color": [
+            0.05,
+            0.7,
+            0.35,
+            0.55
+          ],
+          "radius": 6.183966067884876,
+          "type": "circle"
+        },
+        "d": {
+          "color": [
+            0.95,
+            0.25,
+            0.2,
+            0.5
+          ],
+          "nonconvex": true,
+          "type": "polygon",
+          "vertices": [
+            [
+              25.108773078202717,
+              3.927251883698589
+            ],
+            [
+              31.978468505185404,
+              3.927251883698589
+            ],
+            [
+              31.978468505185404,
+              6.692575302940023
+            ],
+            [
+              27.87409649744415,
+              6.692575302940023
+            ],
+            [
+              27.87409649744415,
+              11.414071372524692
+            ],
+            [
+              25.108773078202717,
+              11.414071372524692
+            ]
+          ]
+        }
+      },
+      "seed": 3234111333,
+      "start_xy": [
+        3.3069326323106605,
+        23.632846334628802
+      ],
+      "task_id": 1
+    },
+    {
+      "formula_e": "<>((a && b) && <>d)",
+      "formula_p": null,
+      "generation_attempt": 0,
+      "labels": [
+        "a",
+        "b",
+        "d"
+      ],
+      "metadata": {
+        "base_seed": 20261027,
+        "complexity": "hard",
+        "cr_uid": "antmaze-giant-stitch-v0:ordered_overlap:12",
+        "e5_distractor_bbox_disjoint": true,
+        "e5_distractor_resample": 0,
+        "e5_group": "ordered_overlap",
+        "e5_group_offset": 12,
+        "e5_role": {
+          "a_b": "overlapping multi-positive target",
+          "c": null,
+          "d": "required subsequent goal"
+        },
+        "generator": "generate_semantic_ltl_tasks.py",
+        "predicate_specs": {
+          "a": {
+            "evaluator": "state_region",
+            "geometry": {
+              "center": [
+                4.715445271258223,
+                35.385118122731754
+              ],
+              "color": [
+                0.15,
+                0.45,
+                0.95,
+                0.55
+              ],
+              "radius": 6.044568960561435,
+              "type": "circle"
+            },
+            "metadata": {
+              "shape_kind": "circle",
+              "source": "task_space_geometry"
+            }
+          },
+          "b": {
+            "evaluator": "state_region",
+            "geometry": {
+              "color": [
+                0.05,
+                0.7,
+                0.35,
+                0.55
+              ],
+              "nonconvex": true,
+              "type": "polygon",
+              "vertices": [
+                [
+                  -0.10857117537754224,
+                  31.196788046557863
+                ],
+                [
+                  10.859709524168423,
+                  31.196788046557863
+                ],
+                [
+                  10.859709524168423,
+                  36.96130288610302
+                ],
+                [
+                  5.655943664167614,
+                  36.96130288610302
+                ],
+                [
+                  5.655943664167614,
+                  42.71311111886411
+                ],
+                [
+                  -0.10857117537754224,
+                  42.71311111886411
+                ]
+              ]
+            },
+            "metadata": {
+              "shape_kind": "nonconvex_polygon",
+              "source": "task_space_geometry"
+            }
+          },
+          "d": {
+            "evaluator": "state_region",
+            "geometry": {
+              "center": [
+                36.687773913597425,
+                15.379048766595986
+              ],
+              "color": [
+                0.95,
+                0.25,
+                0.2,
+                0.5
+              ],
+              "radius": 4.021518095101294,
+              "type": "circle"
+            },
+            "metadata": {
+              "shape_kind": "circle",
+              "source": "task_space_geometry"
+            }
+          }
+        },
+        "region_kinds": {
+          "a": "circle",
+          "b": "nonconvex_polygon",
+          "d": "circle"
+        },
+        "relation_checks": {
+          "nontrivial:a": true,
+          "nontrivial:b": true,
+          "nontrivial:d": true,
+          "overlap:a,b": true,
+          "separated:a,b|d": true,
+          "start_clear": true
+        },
+        "semantic_features": [
+          "overlap",
+          "multi_positive",
+          "sequence"
+        ],
+        "stream_seed": 3234108583,
+        "template": "cr_ordered_overlap"
+      },
+      "regions": {
+        "a": {
+          "center": [
+            4.715445271258223,
+            35.385118122731754
+          ],
+          "color": [
+            0.15,
+            0.45,
+            0.95,
+            0.55
+          ],
+          "radius": 6.044568960561435,
+          "type": "circle"
+        },
+        "b": {
+          "color": [
+            0.05,
+            0.7,
+            0.35,
+            0.55
+          ],
+          "nonconvex": true,
+          "type": "polygon",
+          "vertices": [
+            [
+              -0.10857117537754224,
+              31.196788046557863
+            ],
+            [
+              10.859709524168423,
+              31.196788046557863
+            ],
+            [
+              10.859709524168423,
+              36.96130288610302
+            ],
+            [
+              5.655943664167614,
+              36.96130288610302
+            ],
+            [
+              5.655943664167614,
+              42.71311111886411
+            ],
+            [
+              -0.10857117537754224,
+              42.71311111886411
+            ]
+          ]
+        },
+        "d": {
+          "center": [
+            36.687773913597425,
+            15.379048766595986
+          ],
+          "color": [
+            0.95,
+            0.25,
+            0.2,
+            0.5
+          ],
+          "radius": 4.021518095101294,
+          "type": "circle"
+        }
+      },
+      "seed": 3234111583,
+      "start_xy": [
+        8.564780709529826,
+        8.297189457583805
+      ],
+      "task_id": 2
+    },
+    {
+      "formula_e": "<>((a && b) && <>d)",
+      "formula_p": null,
+      "generation_attempt": 0,
+      "labels": [
+        "a",
+        "b",
+        "d"
+      ],
+      "metadata": {
+        "base_seed": 20261027,
+        "complexity": "hard",
+        "cr_uid": "antmaze-giant-stitch-v0:ordered_overlap:13",
+        "e5_distractor_bbox_disjoint": true,
+        "e5_distractor_resample": 0,
+        "e5_group": "ordered_overlap",
+        "e5_group_offset": 13,
+        "e5_role": {
+          "a_b": "overlapping multi-positive target",
+          "c": null,
+          "d": "required subsequent goal"
+        },
+        "generator": "generate_semantic_ltl_tasks.py",
+        "predicate_specs": {
+          "a": {
+            "evaluator": "state_region",
+            "geometry": {
+              "color": [
+                0.15,
+                0.45,
+                0.95,
+                0.55
+              ],
+              "nonconvex": true,
+              "type": "polygon",
+              "vertices": [
+                [
+                  -5.7119786207514744,
+                  4.344250112043765
+                ],
+                [
+                  8.229786950585796,
+                  4.344250112043765
+                ],
+                [
+                  8.229786950585796,
+                  10.93582690255926
+                ],
+                [
+                  0.8795981697640203,
+                  10.93582690255926
+                ],
+                [
+                  0.8795981697640203,
+                  16.813123006007693
+                ],
+                [
+                  -5.7119786207514744,
+                  16.813123006007693
+                ]
+              ]
+            },
+            "metadata": {
+              "shape_kind": "nonconvex_polygon",
+              "source": "task_space_geometry"
+            }
+          },
+          "b": {
+            "evaluator": "state_region",
+            "geometry": {
+              "color": [
+                0.05,
+                0.7,
+                0.35,
+                0.55
+              ],
+              "type": "rect",
+              "xmax": 5.117156585519822,
+              "xmin": -5.612231994765237,
+              "ymax": 16.494169225312902,
+              "ymin": 8.711906601375842
+            },
+            "metadata": {
+              "shape_kind": "rect",
+              "source": "task_space_geometry"
+            }
+          },
+          "d": {
+            "evaluator": "state_region",
+            "geometry": {
+              "center": [
+                15.371711596443607,
+                16.41379475663483
+              ],
+              "color": [
+                0.95,
+                0.25,
+                0.2,
+                0.5
+              ],
+              "radius": 3.3544438456637096,
+              "type": "circle"
+            },
+            "metadata": {
+              "shape_kind": "circle",
+              "source": "task_space_geometry"
+            }
+          }
+        },
+        "region_kinds": {
+          "a": "nonconvex_polygon",
+          "b": "rect",
+          "d": "circle"
+        },
+        "relation_checks": {
+          "nontrivial:a": true,
+          "nontrivial:b": true,
+          "nontrivial:d": true,
+          "overlap:a,b": true,
+          "separated:a,b|d": true,
+          "start_clear": true
+        },
+        "semantic_features": [
+          "overlap",
+          "multi_positive",
+          "sequence"
+        ],
+        "stream_seed": 3234108583,
+        "template": "cr_ordered_overlap"
+      },
+      "regions": {
+        "a": {
+          "color": [
+            0.15,
+            0.45,
+            0.95,
+            0.55
+          ],
+          "nonconvex": true,
+          "type": "polygon",
+          "vertices": [
+            [
+              -5.7119786207514744,
+              4.344250112043765
+            ],
+            [
+              8.229786950585796,
+              4.344250112043765
+            ],
+            [
+              8.229786950585796,
+              10.93582690255926
+            ],
+            [
+              0.8795981697640203,
+              10.93582690255926
+            ],
+            [
+              0.8795981697640203,
+              16.813123006007693
+            ],
+            [
+              -5.7119786207514744,
+              16.813123006007693
+            ]
+          ]
+        },
+        "b": {
+          "color": [
+            0.05,
+            0.7,
+            0.35,
+            0.55
+          ],
+          "type": "rect",
+          "xmax": 5.117156585519822,
+          "xmin": -5.612231994765237,
+          "ymax": 16.494169225312902,
+          "ymin": 8.711906601375842
+        },
+        "d": {
+          "center": [
+            15.371711596443607,
+            16.41379475663483
+          ],
+          "color": [
+            0.95,
+            0.25,
+            0.2,
+            0.5
+          ],
+          "radius": 3.3544438456637096,
+          "type": "circle"
+        }
+      },
+      "seed": 3234111833,
+      "start_xy": [
+        36.31384127927777,
+        32.082513483059245
+      ],
+      "task_id": 3
+    },
+    {
+      "formula_e": "<>((a && b) && <>d)",
+      "formula_p": null,
+      "generation_attempt": 0,
+      "labels": [
+        "a",
+        "b",
+        "d"
+      ],
+      "metadata": {
+        "base_seed": 20261027,
+        "complexity": "hard",
+        "cr_uid": "antmaze-giant-stitch-v0:ordered_overlap:14",
+        "e5_distractor_bbox_disjoint": true,
+        "e5_distractor_resample": 1,
+        "e5_group": "ordered_overlap",
+        "e5_group_offset": 14,
+        "e5_role": {
+          "a_b": "overlapping multi-positive target",
+          "c": null,
+          "d": "required subsequent goal"
+        },
+        "generator": "generate_semantic_ltl_tasks.py",
+        "predicate_specs": {
+          "a": {
+            "evaluator": "state_region",
+            "geometry": {
+              "center": [
+                18.470241762296602,
+                8.189971651025132
+              ],
+              "color": [
+                0.15,
+                0.45,
+                0.95,
+                0.55
+              ],
+              "radius": 4.895862809768442,
+              "type": "circle"
+            },
+            "metadata": {
+              "shape_kind": "circle",
+              "source": "task_space_geometry"
+            }
+          },
+          "b": {
+            "evaluator": "state_region",
+            "geometry": {
+              "center": [
+                21.324951203484407,
+                8.893209938778723
+              ],
+              "color": [
+                0.05,
+                0.7,
+                0.35,
+                0.55
+              ],
+              "radius": 4.33553797134201,
+              "type": "circle"
+            },
+            "metadata": {
+              "shape_kind": "circle",
+              "source": "task_space_geometry"
+            }
+          },
+          "d": {
+            "evaluator": "state_region",
+            "geometry": {
+              "color": [
+                0.95,
+                0.25,
+                0.2,
+                0.5
+              ],
+              "nonconvex": true,
+              "type": "polygon",
+              "vertices": [
+                [
+                  16.134819814637545,
+                  28.215848414899376
+                ],
+                [
+                  23.97415227626893,
+                  28.215848414899376
+                ],
+                [
+                  23.97415227626893,
+                  32.22213679796059
+                ],
+                [
+                  20.141108197698756,
+                  32.22213679796059
+                ],
+                [
+                  20.141108197698756,
+                  37.200434903057236
+                ],
+                [
+                  16.134819814637545,
+                  37.200434903057236
+                ]
+              ]
+            },
+            "metadata": {
+              "shape_kind": "nonconvex_polygon",
+              "source": "task_space_geometry"
+            }
+          }
+        },
+        "region_kinds": {
+          "a": "circle",
+          "b": "circle",
+          "d": "nonconvex_polygon"
+        },
+        "relation_checks": {
+          "nontrivial:a": true,
+          "nontrivial:b": true,
+          "nontrivial:d": true,
+          "overlap:a,b": true,
+          "separated:a,b|d": true,
+          "start_clear": true
+        },
+        "semantic_features": [
+          "overlap",
+          "multi_positive",
+          "sequence"
+        ],
+        "stream_seed": 3234108583,
+        "template": "cr_ordered_overlap"
+      },
+      "regions": {
+        "a": {
+          "center": [
+            18.470241762296602,
+            8.189971651025132
+          ],
+          "color": [
+            0.15,
+            0.45,
+            0.95,
+            0.55
+          ],
+          "radius": 4.895862809768442,
+          "type": "circle"
+        },
+        "b": {
+          "center": [
+            21.324951203484407,
+            8.893209938778723
+          ],
+          "color": [
+            0.05,
+            0.7,
+            0.35,
+            0.55
+          ],
+          "radius": 4.33553797134201,
+          "type": "circle"
+        },
+        "d": {
+          "color": [
+            0.95,
+            0.25,
+            0.2,
+            0.5
+          ],
+          "nonconvex": true,
+          "type": "polygon",
+          "vertices": [
+            [
+              16.134819814637545,
+              28.215848414899376
+            ],
+            [
+              23.97415227626893,
+              28.215848414899376
+            ],
+            [
+              23.97415227626893,
+              32.22213679796059
+            ],
+            [
+              20.141108197698756,
+              32.22213679796059
+            ],
+            [
+              20.141108197698756,
+              37.200434903057236
+            ],
+            [
+              16.134819814637545,
+              37.200434903057236
+            ]
+          ]
+        }
+      },
+      "seed": 3235112086,
+      "start_xy": [
+        39.63899572659267,
+        15.52436193050874
+      ],
+      "task_id": 4
+    },
+    {
+      "formula_e": "<>((a && b) && <>d)",
+      "formula_p": null,
+      "generation_attempt": 1,
+      "labels": [
+        "a",
+        "b",
+        "d"
+      ],
+      "metadata": {
+        "base_seed": 20261027,
+        "complexity": "hard",
+        "cr_uid": "antmaze-giant-stitch-v0:ordered_overlap:15",
+        "e5_distractor_bbox_disjoint": true,
+        "e5_distractor_resample": 1,
+        "e5_group": "ordered_overlap",
+        "e5_group_offset": 15,
+        "e5_role": {
+          "a_b": "overlapping multi-positive target",
+          "c": null,
+          "d": "required subsequent goal"
+        },
+        "generator": "generate_semantic_ltl_tasks.py",
+        "predicate_specs": {
+          "a": {
+            "evaluator": "state_region",
+            "geometry": {
+              "color": [
+                0.15,
+                0.45,
+                0.95,
+                0.55
+              ],
+              "type": "polygon",
+              "vertices": [
+                [
+                  28.514174981977327,
+                  30.654478186732746
+                ],
+                [
+                  26.92227262971648,
+                  27.98316332786063
+                ],
+                [
+                  22.917001929404606,
+                  23.794341363798253
+                ],
+                [
+                  29.148969590863228,
+                  21.014955825013846
+                ],
+                [
+                  31.899542679310255,
+                  22.854656814536323
+                ]
+              ]
+            },
+            "metadata": {
+              "shape_kind": "polygon",
+              "source": "task_space_geometry"
+            }
+          },
+          "b": {
+            "evaluator": "state_region",
+            "geometry": {
+              "color": [
+                0.05,
+                0.7,
+                0.35,
+                0.55
+              ],
+              "nonconvex": true,
+              "type": "polygon",
+              "vertices": [
+                [
+                  23.839854157658916,
+                  19.83094383688388
+                ],
+                [
+                  33.44470856562479,
+                  19.83094383688388
+                ],
+                [
+                  33.44470856562479,
+                  22.5148533335436
+                ],
+                [
+                  26.523763654318635,
+                  22.5148533335436
+                ],
+                [
+                  26.523763654318635,
+                  26.851375780740465
+                ],
+                [
+                  23.839854157658916,
+                  26.851375780740465
+                ]
+              ]
+            },
+            "metadata": {
+              "shape_kind": "nonconvex_polygon",
+              "source": "task_space_geometry"
+            }
+          },
+          "d": {
+            "evaluator": "state_region",
+            "geometry": {
+              "color": [
+                0.95,
+                0.25,
+                0.2,
+                0.5
+              ],
+              "type": "polygon",
+              "vertices": [
+                [
+                  5.30858092337345,
+                  13.173954247777004
+                ],
+                [
+                  3.1496045851190386,
+                  7.123085575475675
+                ],
+                [
+                  5.469587784648263,
+                  4.704789630452842
+                ],
+                [
+                  9.832459856231184,
+                  5.189182851576902
+                ]
+              ]
+            },
+            "metadata": {
+              "shape_kind": "polygon",
+              "source": "task_space_geometry"
+            }
+          }
+        },
+        "region_kinds": {
+          "a": "polygon",
+          "b": "nonconvex_polygon",
+          "d": "polygon"
+        },
+        "relation_checks": {
+          "nontrivial:a": true,
+          "nontrivial:b": true,
+          "nontrivial:d": true,
+          "overlap:a,b": true,
+          "separated:a,b|d": true,
+          "start_clear": true
+        },
+        "semantic_features": [
+          "overlap",
+          "multi_positive",
+          "sequence"
+        ],
+        "stream_seed": 3234108583,
+        "template": "cr_ordered_overlap"
+      },
+      "regions": {
+        "a": {
+          "color": [
+            0.15,
+            0.45,
+            0.95,
+            0.55
+          ],
+          "type": "polygon",
+          "vertices": [
+            [
+              28.514174981977327,
+              30.654478186732746
+            ],
+            [
+              26.92227262971648,
+              27.98316332786063
+            ],
+            [
+              22.917001929404606,
+              23.794341363798253
+            ],
+            [
+              29.148969590863228,
+              21.014955825013846
+            ],
+            [
+              31.899542679310255,
+              22.854656814536323
+            ]
+          ]
+        },
+        "b": {
+          "color": [
+            0.05,
+            0.7,
+            0.35,
+            0.55
+          ],
+          "nonconvex": true,
+          "type": "polygon",
+          "vertices": [
+            [
+              23.839854157658916,
+              19.83094383688388
+            ],
+            [
+              33.44470856562479,
+              19.83094383688388
+            ],
+            [
+              33.44470856562479,
+              22.5148533335436
+            ],
+            [
+              26.523763654318635,
+              22.5148533335436
+            ],
+            [
+              26.523763654318635,
+              26.851375780740465
+            ],
+            [
+              23.839854157658916,
+              26.851375780740465
+            ]
+          ]
+        },
+        "d": {
+          "color": [
+            0.95,
+            0.25,
+            0.2,
+            0.5
+          ],
+          "type": "polygon",
+          "vertices": [
+            [
+              5.30858092337345,
+              13.173954247777004
+            ],
+            [
+              3.1496045851190386,
+              7.123085575475675
+            ],
+            [
+              5.469587784648263,
+              4.704789630452842
+            ],
+            [
+              9.832459856231184,
+              5.189182851576902
+            ]
+          ]
+        }
+      },
+      "seed": 3235112337,
+      "start_xy": [
+        16.21012143443886,
+        19.37454921551696
+      ],
+      "task_id": 5
+    },
+    {
+      "formula_e": "<>((a && b) && <>d)",
+      "formula_p": null,
+      "generation_attempt": 0,
+      "labels": [
+        "a",
+        "b",
+        "d"
+      ],
+      "metadata": {
+        "base_seed": 20261027,
+        "complexity": "hard",
+        "cr_uid": "antmaze-giant-stitch-v0:ordered_overlap:16",
+        "e5_distractor_bbox_disjoint": true,
+        "e5_distractor_resample": 0,
+        "e5_group": "ordered_overlap",
+        "e5_group_offset": 16,
+        "e5_role": {
+          "a_b": "overlapping multi-positive target",
+          "c": null,
+          "d": "required subsequent goal"
+        },
+        "generator": "generate_semantic_ltl_tasks.py",
+        "predicate_specs": {
+          "a": {
+            "evaluator": "state_region",
+            "geometry": {
+              "center": [
+                31.096639844504992,
+                36.95210303325831
+              ],
+              "color": [
+                0.15,
+                0.45,
+                0.95,
+                0.55
+              ],
+              "radius": 4.719131675599353,
+              "type": "circle"
+            },
+            "metadata": {
+              "shape_kind": "circle",
+              "source": "task_space_geometry"
+            }
+          },
+          "b": {
+            "evaluator": "state_region",
+            "geometry": {
+              "color": [
+                0.05,
+                0.7,
+                0.35,
+                0.55
+              ],
+              "type": "rect",
+              "xmax": 37.15040267873689,
+              "xmin": 30.112135408864116,
+              "ymax": 39.81094361501342,
+              "ymin": 29.744557014947297
+            },
+            "metadata": {
+              "shape_kind": "rect",
+              "source": "task_space_geometry"
+            }
+          },
+          "d": {
+            "evaluator": "state_region",
+            "geometry": {
+              "center": [
+                12.280337708351134,
+                -0.40382320265106647
+              ],
+              "color": [
+                0.95,
+                0.25,
+                0.2,
+                0.5
+              ],
+              "radius": 6.263812705470304,
+              "type": "circle"
+            },
+            "metadata": {
+              "shape_kind": "circle",
+              "source": "task_space_geometry"
+            }
+          }
+        },
+        "region_kinds": {
+          "a": "circle",
+          "b": "rect",
+          "d": "circle"
+        },
+        "relation_checks": {
+          "nontrivial:a": true,
+          "nontrivial:b": true,
+          "nontrivial:d": true,
+          "overlap:a,b": true,
+          "separated:a,b|d": true,
+          "start_clear": true
+        },
+        "semantic_features": [
+          "overlap",
+          "multi_positive",
+          "sequence"
+        ],
+        "stream_seed": 3234108583,
+        "template": "cr_ordered_overlap"
+      },
+      "regions": {
+        "a": {
+          "center": [
+            31.096639844504992,
+            36.95210303325831
+          ],
+          "color": [
+            0.15,
+            0.45,
+            0.95,
+            0.55
+          ],
+          "radius": 4.719131675599353,
+          "type": "circle"
+        },
+        "b": {
+          "color": [
+            0.05,
+            0.7,
+            0.35,
+            0.55
+          ],
+          "type": "rect",
+          "xmax": 37.15040267873689,
+          "xmin": 30.112135408864116,
+          "ymax": 39.81094361501342,
+          "ymin": 29.744557014947297
+        },
+        "d": {
+          "center": [
+            12.280337708351134,
+            -0.40382320265106647
+          ],
+          "color": [
+            0.95,
+            0.25,
+            0.2,
+            0.5
+          ],
+          "radius": 6.263812705470304,
+          "type": "circle"
+        }
+      },
+      "seed": 3234112583,
+      "start_xy": [
+        8.037299786804304,
+        15.36992903922626
+      ],
+      "task_id": 6
+    },
+    {
+      "formula_e": "<>((a && b) && <>d)",
+      "formula_p": null,
+      "generation_attempt": 0,
+      "labels": [
+        "a",
+        "b",
+        "d"
+      ],
+      "metadata": {
+        "base_seed": 20261027,
+        "complexity": "hard",
+        "cr_uid": "antmaze-giant-stitch-v0:ordered_overlap:17",
+        "e5_distractor_bbox_disjoint": true,
+        "e5_distractor_resample": 0,
+        "e5_group": "ordered_overlap",
+        "e5_group_offset": 17,
+        "e5_role": {
+          "a_b": "overlapping multi-positive target",
+          "c": null,
+          "d": "required subsequent goal"
+        },
+        "generator": "generate_semantic_ltl_tasks.py",
+        "predicate_specs": {
+          "a": {
+            "evaluator": "state_region",
+            "geometry": {
+              "center": [
+                48.63764199454225,
+                37.33208128681556
+              ],
+              "color": [
+                0.15,
+                0.45,
+                0.95,
+                0.55
+              ],
+              "radius": 5.456702898531366,
+              "type": "circle"
+            },
+            "metadata": {
+              "shape_kind": "circle",
+              "source": "task_space_geometry"
+            }
+          },
+          "b": {
+            "evaluator": "state_region",
+            "geometry": {
+              "center": [
+                47.14942743447729,
+                36.12179132118573
+              ],
+              "color": [
+                0.05,
+                0.7,
+                0.35,
+                0.55
+              ],
+              "radius": 6.3483624187825995,
+              "type": "circle"
+            },
+            "metadata": {
+              "shape_kind": "circle",
+              "source": "task_space_geometry"
+            }
+          },
+          "d": {
+            "evaluator": "state_region",
+            "geometry": {
+              "color": [
+                0.95,
+                0.25,
+                0.2,
+                0.5
+              ],
+              "nonconvex": true,
+              "type": "polygon",
+              "vertices": [
+                [
+                  20.902496675635195,
+                  -5.397109909949954
+                ],
+                [
+                  34.461300493450416,
+                  -5.397109909949954
+                ],
+                [
+                  34.461300493450416,
+                  -0.6877234122692562
+                ],
+                [
+                  25.611883173315892,
+                  -0.6877234122692562
+                ],
+                [
+                  25.611883173315892,
+                  4.032546100483133
+                ],
+                [
+                  20.902496675635195,
+                  4.032546100483133
+                ]
+              ]
+            },
+            "metadata": {
+              "shape_kind": "nonconvex_polygon",
+              "source": "task_space_geometry"
+            }
+          }
+        },
+        "region_kinds": {
+          "a": "circle",
+          "b": "circle",
+          "d": "nonconvex_polygon"
+        },
+        "relation_checks": {
+          "nontrivial:a": true,
+          "nontrivial:b": true,
+          "nontrivial:d": true,
+          "overlap:a,b": true,
+          "separated:a,b|d": true,
+          "start_clear": true
+        },
+        "semantic_features": [
+          "overlap",
+          "multi_positive",
+          "sequence"
+        ],
+        "stream_seed": 3234108583,
+        "template": "cr_ordered_overlap"
+      },
+      "regions": {
+        "a": {
+          "center": [
+            48.63764199454225,
+            37.33208128681556
+          ],
+          "color": [
+            0.15,
+            0.45,
+            0.95,
+            0.55
+          ],
+          "radius": 5.456702898531366,
+          "type": "circle"
+        },
+        "b": {
+          "center": [
+            47.14942743447729,
+            36.12179132118573
+          ],
+          "color": [
+            0.05,
+            0.7,
+            0.35,
+            0.55
+          ],
+          "radius": 6.3483624187825995,
+          "type": "circle"
+        },
+        "d": {
+          "color": [
+            0.95,
+            0.25,
+            0.2,
+            0.5
+          ],
+          "nonconvex": true,
+          "type": "polygon",
+          "vertices": [
+            [
+              20.902496675635195,
+              -5.397109909949954
+            ],
+            [
+              34.461300493450416,
+              -5.397109909949954
+            ],
+            [
+              34.461300493450416,
+              -0.6877234122692562
+            ],
+            [
+              25.611883173315892,
+              -0.6877234122692562
+            ],
+            [
+              25.611883173315892,
+              4.032546100483133
+            ],
+            [
+              20.902496675635195,
+              4.032546100483133
+            ]
+          ]
+        }
+      },
+      "seed": 3234112833,
+      "start_xy": [
+        48.179401052821675,
+        8.55690848784485
+      ],
+      "task_id": 7
+    },
+    {
+      "formula_e": "<>((a && b) && <>d)",
+      "formula_p": null,
+      "generation_attempt": 0,
+      "labels": [
+        "a",
+        "b",
+        "d"
+      ],
+      "metadata": {
+        "base_seed": 20261027,
+        "complexity": "hard",
+        "cr_uid": "antmaze-giant-stitch-v0:ordered_overlap:18",
+        "e5_distractor_bbox_disjoint": true,
+        "e5_distractor_resample": 1,
+        "e5_group": "ordered_overlap",
+        "e5_group_offset": 18,
+        "e5_role": {
+          "a_b": "overlapping multi-positive target",
+          "c": null,
+          "d": "required subsequent goal"
+        },
+        "generator": "generate_semantic_ltl_tasks.py",
+        "predicate_specs": {
+          "a": {
+            "evaluator": "state_region",
+            "geometry": {
+              "color": [
+                0.15,
+                0.45,
+                0.95,
+                0.55
+              ],
+              "type": "rect",
+              "xmax": 51.01296795424168,
+              "xmin": 37.77696457081944,
+              "ymax": 16.041673917279567,
+              "ymin": -0.842069324854311
+            },
+            "metadata": {
+              "shape_kind": "rect",
+              "source": "task_space_geometry"
+            }
+          },
+          "b": {
+            "evaluator": "state_region",
+            "geometry": {
+              "color": [
+                0.05,
+                0.7,
+                0.35,
+                0.55
+              ],
+              "nonconvex": true,
+              "type": "polygon",
+              "vertices": [
+                [
+                  39.43555659053796,
+                  -0.2454724478344108
+                ],
+                [
+                  50.57389165852643,
+                  -0.2454724478344108
+                ],
+                [
+                  50.57389165852643,
+                  5.062670995960254
+                ],
+                [
+                  44.743700034332626,
+                  5.062670995960254
+                ],
+                [
+                  44.743700034332626,
+                  13.557048398830771
+                ],
+                [
+                  39.43555659053796,
+                  13.557048398830771
+                ]
+              ]
+            },
+            "metadata": {
+              "shape_kind": "nonconvex_polygon",
+              "source": "task_space_geometry"
+            }
+          },
+          "d": {
+            "evaluator": "state_region",
+            "geometry": {
+              "center": [
+                23.761890530461898,
+                20.532920390275276
+              ],
+              "color": [
+                0.95,
+                0.25,
+                0.2,
+                0.5
+              ],
+              "radius": 6.274273052963288,
+              "type": "circle"
+            },
+            "metadata": {
+              "shape_kind": "circle",
+              "source": "task_space_geometry"
+            }
+          }
+        },
+        "region_kinds": {
+          "a": "rect",
+          "b": "nonconvex_polygon",
+          "d": "circle"
+        },
+        "relation_checks": {
+          "nontrivial:a": true,
+          "nontrivial:b": true,
+          "nontrivial:d": true,
+          "overlap:a,b": true,
+          "separated:a,b|d": true,
+          "start_clear": true
+        },
+        "semantic_features": [
+          "overlap",
+          "multi_positive",
+          "sequence"
+        ],
+        "stream_seed": 3234108583,
+        "template": "cr_ordered_overlap"
+      },
+      "regions": {
+        "a": {
+          "color": [
+            0.15,
+            0.45,
+            0.95,
+            0.55
+          ],
+          "type": "rect",
+          "xmax": 51.01296795424168,
+          "xmin": 37.77696457081944,
+          "ymax": 16.041673917279567,
+          "ymin": -0.842069324854311
+        },
+        "b": {
+          "color": [
+            0.05,
+            0.7,
+            0.35,
+            0.55
+          ],
+          "nonconvex": true,
+          "type": "polygon",
+          "vertices": [
+            [
+              39.43555659053796,
+              -0.2454724478344108
+            ],
+            [
+              50.57389165852643,
+              -0.2454724478344108
+            ],
+            [
+              50.57389165852643,
+              5.062670995960254
+            ],
+            [
+              44.743700034332626,
+              5.062670995960254
+            ],
+            [
+              44.743700034332626,
+              13.557048398830771
+            ],
+            [
+              39.43555659053796,
+              13.557048398830771
+            ]
+          ]
+        },
+        "d": {
+          "center": [
+            23.761890530461898,
+            20.532920390275276
+          ],
+          "color": [
+            0.95,
+            0.25,
+            0.2,
+            0.5
+          ],
+          "radius": 6.274273052963288,
+          "type": "circle"
+        }
+      },
+      "seed": 3235113086,
+      "start_xy": [
+        36.58770355673096,
+        7.92831015411956
+      ],
+      "task_id": 8
+    },
+    {
+      "formula_e": "<>((a && b) && <>d)",
+      "formula_p": null,
+      "generation_attempt": 1,
+      "labels": [
+        "a",
+        "b",
+        "d"
+      ],
+      "metadata": {
+        "base_seed": 20261027,
+        "complexity": "hard",
+        "cr_uid": "antmaze-giant-stitch-v0:ordered_overlap:19",
+        "e5_distractor_bbox_disjoint": true,
+        "e5_distractor_resample": 0,
+        "e5_group": "ordered_overlap",
+        "e5_group_offset": 19,
+        "e5_role": {
+          "a_b": "overlapping multi-positive target",
+          "c": null,
+          "d": "required subsequent goal"
+        },
+        "generator": "generate_semantic_ltl_tasks.py",
+        "predicate_specs": {
+          "a": {
+            "evaluator": "state_region",
+            "geometry": {
+              "color": [
+                0.15,
+                0.45,
+                0.95,
+                0.55
+              ],
+              "nonconvex": true,
+              "type": "polygon",
+              "vertices": [
+                [
+                  4.1117694402675,
+                  3.3135660296474776
+                ],
+                [
+                  14.87031167399581,
+                  3.3135660296474776
+                ],
+                [
+                  14.87031167399581,
+                  6.606348671479269
+                ],
+                [
+                  7.404552082099292,
+                  6.606348671479269
+                ],
+                [
+                  7.404552082099292,
+                  11.00820976025499
+                ],
+                [
+                  4.1117694402675,
+                  11.00820976025499
+                ]
+              ]
+            },
+            "metadata": {
+              "shape_kind": "nonconvex_polygon",
+              "source": "task_space_geometry"
+            }
+          },
+          "b": {
+            "evaluator": "state_region",
+            "geometry": {
+              "color": [
+                0.05,
+                0.7,
+                0.35,
+                0.55
+              ],
+              "nonconvex": true,
+              "type": "polygon",
+              "vertices": [
+                [
+                  5.529412165684894,
+                  2.862808372377223
+                ],
+                [
+                  13.09329510503049,
+                  2.862808372377223
+                ],
+                [
+                  13.09329510503049,
+                  6.714455234053499
+                ],
+                [
+                  9.38105902736117,
+                  6.714455234053499
+                ],
+                [
+                  9.38105902736117,
+                  9.866236804717465
+                ],
+                [
+                  5.529412165684894,
+                  9.866236804717465
+                ]
+              ]
+            },
+            "metadata": {
+              "shape_kind": "nonconvex_polygon",
+              "source": "task_space_geometry"
+            }
+          },
+          "d": {
+            "evaluator": "state_region",
+            "geometry": {
+              "color": [
+                0.95,
+                0.25,
+                0.2,
+                0.5
+              ],
+              "nonconvex": true,
+              "type": "polygon",
+              "vertices": [
+                [
+                  4.307583600806733,
+                  15.379960082196748
+                ],
+                [
+                  11.910721873721663,
+                  15.379960082196748
+                ],
+                [
+                  11.910721873721663,
+                  18.428450798137376
+                ],
+                [
+                  7.356074316747363,
+                  18.428450798137376
+                ],
+                [
+                  7.356074316747363,
+                  24.781417628341003
+                ],
+                [
+                  4.307583600806733,
+                  24.781417628341003
+                ]
+              ]
+            },
+            "metadata": {
+              "shape_kind": "nonconvex_polygon",
+              "source": "task_space_geometry"
+            }
+          }
+        },
+        "region_kinds": {
+          "a": "nonconvex_polygon",
+          "b": "nonconvex_polygon",
+          "d": "nonconvex_polygon"
+        },
+        "relation_checks": {
+          "nontrivial:a": true,
+          "nontrivial:b": true,
+          "nontrivial:d": true,
+          "overlap:a,b": true,
+          "separated:a,b|d": true,
+          "start_clear": true
+        },
+        "semantic_features": [
+          "overlap",
+          "multi_positive",
+          "sequence"
+        ],
+        "stream_seed": 3234108583,
+        "template": "cr_ordered_overlap"
+      },
+      "regions": {
+        "a": {
+          "color": [
+            0.15,
+            0.45,
+            0.95,
+            0.55
+          ],
+          "nonconvex": true,
+          "type": "polygon",
+          "vertices": [
+            [
+              4.1117694402675,
+              3.3135660296474776
+            ],
+            [
+              14.87031167399581,
+              3.3135660296474776
+            ],
+            [
+              14.87031167399581,
+              6.606348671479269
+            ],
+            [
+              7.404552082099292,
+              6.606348671479269
+            ],
+            [
+              7.404552082099292,
+              11.00820976025499
+            ],
+            [
+              4.1117694402675,
+              11.00820976025499
+            ]
+          ]
+        },
+        "b": {
+          "color": [
+            0.05,
+            0.7,
+            0.35,
+            0.55
+          ],
+          "nonconvex": true,
+          "type": "polygon",
+          "vertices": [
+            [
+              5.529412165684894,
+              2.862808372377223
+            ],
+            [
+              13.09329510503049,
+              2.862808372377223
+            ],
+            [
+              13.09329510503049,
+              6.714455234053499
+            ],
+            [
+              9.38105902736117,
+              6.714455234053499
+            ],
+            [
+              9.38105902736117,
+              9.866236804717465
+            ],
+            [
+              5.529412165684894,
+              9.866236804717465
+            ]
+          ]
+        },
+        "d": {
+          "color": [
+            0.95,
+            0.25,
+            0.2,
+            0.5
+          ],
+          "nonconvex": true,
+          "type": "polygon",
+          "vertices": [
+            [
+              4.307583600806733,
+              15.379960082196748
+            ],
+            [
+              11.910721873721663,
+              15.379960082196748
+            ],
+            [
+              11.910721873721663,
+              18.428450798137376
+            ],
+            [
+              7.356074316747363,
+              18.428450798137376
+            ],
+            [
+              7.356074316747363,
+              24.781417628341003
+            ],
+            [
+              4.307583600806733,
+              24.781417628341003
+            ]
+          ]
+        }
+      },
+      "seed": 3234113334,
+      "start_xy": [
+        7.372142433354363,
+        24.53687125871979
+      ],
+      "task_id": 9
+    },
+    {
+      "formula_e": "<>((a && b) && <>d)",
+      "formula_p": null,
+      "generation_attempt": 0,
+      "labels": [
+        "a",
+        "b",
+        "d"
+      ],
+      "metadata": {
+        "base_seed": 20261027,
+        "complexity": "hard",
+        "cr_uid": "antmaze-giant-stitch-v0:ordered_overlap:20",
+        "e5_distractor_bbox_disjoint": true,
+        "e5_distractor_resample": 0,
+        "e5_group": "ordered_overlap",
+        "e5_group_offset": 20,
+        "e5_role": {
+          "a_b": "overlapping multi-positive target",
+          "c": null,
+          "d": "required subsequent goal"
+        },
+        "generator": "generate_semantic_ltl_tasks.py",
+        "predicate_specs": {
+          "a": {
+            "evaluator": "state_region",
+            "geometry": {
+              "center": [
+                31.35667734621399,
+                32.36389979113087
+              ],
+              "color": [
+                0.15,
+                0.45,
+                0.95,
+                0.55
+              ],
+              "radius": 3.3610075046044265,
+              "type": "circle"
+            },
+            "metadata": {
+              "shape_kind": "circle",
+              "source": "task_space_geometry"
+            }
+          },
+          "b": {
+            "evaluator": "state_region",
+            "geometry": {
+              "color": [
+                0.05,
+                0.7,
+                0.35,
+                0.55
+              ],
+              "nonconvex": true,
+              "type": "polygon",
+              "vertices": [
+                [
+                  29.888914759823347,
+                  25.261393022831776
+                ],
+                [
+                  39.139294213943444,
+                  25.261393022831776
+                ],
+                [
+                  39.139294213943444,
+                  28.69305038426938
+                ],
+                [
+                  33.32057212126095,
+                  28.69305038426938
+                ],
+                [
+                  33.32057212126095,
+                  35.340548940022366
+                ],
+                [
+                  29.888914759823347,
+                  35.340548940022366
+                ]
+              ]
+            },
+            "metadata": {
+              "shape_kind": "nonconvex_polygon",
+              "source": "task_space_geometry"
+            }
+          },
+          "d": {
+            "evaluator": "state_region",
+            "geometry": {
+              "color": [
+                0.95,
+                0.25,
+                0.2,
+                0.5
+              ],
+              "type": "rect",
+              "xmax": 4.390142092083764,
+              "xmin": -4.847974854184333,
+              "ymax": 17.430517495068052,
+              "ymin": 7.101714079311333
+            },
+            "metadata": {
+              "shape_kind": "rect",
+              "source": "task_space_geometry"
+            }
+          }
+        },
+        "region_kinds": {
+          "a": "circle",
+          "b": "nonconvex_polygon",
+          "d": "rect"
+        },
+        "relation_checks": {
+          "nontrivial:a": true,
+          "nontrivial:b": true,
+          "nontrivial:d": true,
+          "overlap:a,b": true,
+          "separated:a,b|d": true,
+          "start_clear": true
+        },
+        "semantic_features": [
+          "overlap",
+          "multi_positive",
+          "sequence"
+        ],
+        "stream_seed": 3234108583,
+        "template": "cr_ordered_overlap"
+      },
+      "regions": {
+        "a": {
+          "center": [
+            31.35667734621399,
+            32.36389979113087
+          ],
+          "color": [
+            0.15,
+            0.45,
+            0.95,
+            0.55
+          ],
+          "radius": 3.3610075046044265,
+          "type": "circle"
+        },
+        "b": {
+          "color": [
+            0.05,
+            0.7,
+            0.35,
+            0.55
+          ],
+          "nonconvex": true,
+          "type": "polygon",
+          "vertices": [
+            [
+              29.888914759823347,
+              25.261393022831776
+            ],
+            [
+              39.139294213943444,
+              25.261393022831776
+            ],
+            [
+              39.139294213943444,
+              28.69305038426938
+            ],
+            [
+              33.32057212126095,
+              28.69305038426938
+            ],
+            [
+              33.32057212126095,
+              35.340548940022366
+            ],
+            [
+              29.888914759823347,
+              35.340548940022366
+            ]
+          ]
+        },
+        "d": {
+          "color": [
+            0.95,
+            0.25,
+            0.2,
+            0.5
+          ],
+          "type": "rect",
+          "xmax": 4.390142092083764,
+          "xmin": -4.847974854184333,
+          "ymax": 17.430517495068052,
+          "ymin": 7.101714079311333
+        }
+      },
+      "seed": 3234113583,
+      "start_xy": [
+        23.640057546242677,
+        -0.6350879340069626
+      ],
+      "task_id": 10
+    },
+    {
+      "formula_e": "<>((a && b) && <>d)",
+      "formula_p": null,
+      "generation_attempt": 0,
+      "labels": [
+        "a",
+        "b",
+        "d"
+      ],
+      "metadata": {
+        "base_seed": 20261027,
+        "complexity": "hard",
+        "cr_uid": "antmaze-giant-stitch-v0:ordered_overlap:21",
+        "e5_distractor_bbox_disjoint": true,
+        "e5_distractor_resample": 0,
+        "e5_group": "ordered_overlap",
+        "e5_group_offset": 21,
+        "e5_role": {
+          "a_b": "overlapping multi-positive target",
+          "c": null,
+          "d": "required subsequent goal"
+        },
+        "generator": "generate_semantic_ltl_tasks.py",
+        "predicate_specs": {
+          "a": {
+            "evaluator": "state_region",
+            "geometry": {
+              "center": [
+                10.835299713053761,
+                37.06203081123773
+              ],
+              "color": [
+                0.15,
+                0.45,
+                0.95,
+                0.55
+              ],
+              "radius": 3.8505887269341987,
+              "type": "circle"
+            },
+            "metadata": {
+              "shape_kind": "circle",
+              "source": "task_space_geometry"
+            }
+          },
+          "b": {
+            "evaluator": "state_region",
+            "geometry": {
+              "color": [
+                0.05,
+                0.7,
+                0.35,
+                0.55
+              ],
+              "type": "polygon",
+              "vertices": [
+                [
+                  19.036037900464493,
+                  38.71120625697732
+                ],
+                [
+                  13.016602922457093,
+                  42.667957027937106
+                ],
+                [
+                  8.913199734745099,
+                  39.136544884068286
+                ],
+                [
+                  10.524892013621841,
+                  37.081697639609764
+                ],
+                [
+                  15.199892427984484,
+                  30.462379557206518
+                ]
+              ]
+            },
+            "metadata": {
+              "shape_kind": "polygon",
+              "source": "task_space_geometry"
+            }
+          },
+          "d": {
+            "evaluator": "state_region",
+            "geometry": {
+              "center": [
+                31.668883522477472,
+                24.396331623368425
+              ],
+              "color": [
+                0.95,
+                0.25,
+                0.2,
+                0.5
+              ],
+              "radius": 4.975703161282874,
+              "type": "circle"
+            },
+            "metadata": {
+              "shape_kind": "circle",
+              "source": "task_space_geometry"
+            }
+          }
+        },
+        "region_kinds": {
+          "a": "circle",
+          "b": "polygon",
+          "d": "circle"
+        },
+        "relation_checks": {
+          "nontrivial:a": true,
+          "nontrivial:b": true,
+          "nontrivial:d": true,
+          "overlap:a,b": true,
+          "separated:a,b|d": true,
+          "start_clear": true
+        },
+        "semantic_features": [
+          "overlap",
+          "multi_positive",
+          "sequence"
+        ],
+        "stream_seed": 3234108583,
+        "template": "cr_ordered_overlap"
+      },
+      "regions": {
+        "a": {
+          "center": [
+            10.835299713053761,
+            37.06203081123773
+          ],
+          "color": [
+            0.15,
+            0.45,
+            0.95,
+            0.55
+          ],
+          "radius": 3.8505887269341987,
+          "type": "circle"
+        },
+        "b": {
+          "color": [
+            0.05,
+            0.7,
+            0.35,
+            0.55
+          ],
+          "type": "polygon",
+          "vertices": [
+            [
+              19.036037900464493,
+              38.71120625697732
+            ],
+            [
+              13.016602922457093,
+              42.667957027937106
+            ],
+            [
+              8.913199734745099,
+              39.136544884068286
+            ],
+            [
+              10.524892013621841,
+              37.081697639609764
+            ],
+            [
+              15.199892427984484,
+              30.462379557206518
+            ]
+          ]
+        },
+        "d": {
+          "center": [
+            31.668883522477472,
+            24.396331623368425
+          ],
+          "color": [
+            0.95,
+            0.25,
+            0.2,
+            0.5
+          ],
+          "radius": 4.975703161282874,
+          "type": "circle"
+        }
+      },
+      "seed": 3234113833,
+      "start_xy": [
+        24.490121583801013,
+        35.32653654607792
+      ],
+      "task_id": 11
+    },
+    {
+      "formula_e": "<>((a && b) && <>d)",
+      "formula_p": null,
+      "generation_attempt": 0,
+      "labels": [
+        "a",
+        "b",
+        "d"
+      ],
+      "metadata": {
+        "base_seed": 20261027,
+        "complexity": "hard",
+        "cr_uid": "antmaze-giant-stitch-v0:ordered_overlap:22",
+        "e5_distractor_bbox_disjoint": true,
+        "e5_distractor_resample": 0,
+        "e5_group": "ordered_overlap",
+        "e5_group_offset": 22,
+        "e5_role": {
+          "a_b": "overlapping multi-positive target",
+          "c": null,
+          "d": "required subsequent goal"
+        },
+        "generator": "generate_semantic_ltl_tasks.py",
+        "predicate_specs": {
+          "a": {
+            "evaluator": "state_region",
+            "geometry": {
+              "color": [
+                0.15,
+                0.45,
+                0.95,
+                0.55
+              ],
+              "type": "polygon",
+              "vertices": [
+                [
+                  34.94953807571265,
+                  3.5823875075598255
+                ],
+                [
+                  31.230847223786,
+                  4.082919933856363
+                ],
+                [
+                  25.980563052564193,
+                  3.3817440773237943
+                ],
+                [
+                  24.05322227242363,
+                  -0.807656382795459
+                ],
+                [
+                  35.560002205488246,
+                  -7.1037841961129224
+                ]
+              ]
+            },
+            "metadata": {
+              "shape_kind": "polygon",
+              "source": "task_space_geometry"
+            }
+          },
+          "b": {
+            "evaluator": "state_region",
+            "geometry": {
+              "center": [
+                29.881610343645356,
+                -0.20633153400581938
+              ],
+              "color": [
+                0.05,
+                0.7,
+                0.35,
+                0.55
+              ],
+              "radius": 4.856929288470042,
+              "type": "circle"
+            },
+            "metadata": {
+              "shape_kind": "circle",
+              "source": "task_space_geometry"
+            }
+          },
+          "d": {
+            "evaluator": "state_region",
+            "geometry": {
+              "color": [
+                0.95,
+                0.25,
+                0.2,
+                0.5
+              ],
+              "nonconvex": true,
+              "type": "polygon",
+              "vertices": [
+                [
+                  45.103295271096265,
+                  2.717314195911988
+                ],
+                [
+                  57.514177255260385,
+                  2.717314195911988
+                ],
+                [
+                  57.514177255260385,
+                  6.348647519726949
+                ],
+                [
+                  48.73462859491123,
+                  6.348647519726949
+                ],
+                [
+                  48.73462859491123,
+                  12.234841944601627
+                ],
+                [
+                  45.103295271096265,
+                  12.234841944601627
+                ]
+              ]
+            },
+            "metadata": {
+              "shape_kind": "nonconvex_polygon",
+              "source": "task_space_geometry"
+            }
+          }
+        },
+        "region_kinds": {
+          "a": "polygon",
+          "b": "circle",
+          "d": "nonconvex_polygon"
+        },
+        "relation_checks": {
+          "nontrivial:a": true,
+          "nontrivial:b": true,
+          "nontrivial:d": true,
+          "overlap:a,b": true,
+          "separated:a,b|d": true,
+          "start_clear": true
+        },
+        "semantic_features": [
+          "overlap",
+          "multi_positive",
+          "sequence"
+        ],
+        "stream_seed": 3234108583,
+        "template": "cr_ordered_overlap"
+      },
+      "regions": {
+        "a": {
+          "color": [
+            0.15,
+            0.45,
+            0.95,
+            0.55
+          ],
+          "type": "polygon",
+          "vertices": [
+            [
+              34.94953807571265,
+              3.5823875075598255
+            ],
+            [
+              31.230847223786,
+              4.082919933856363
+            ],
+            [
+              25.980563052564193,
+              3.3817440773237943
+            ],
+            [
+              24.05322227242363,
+              -0.807656382795459
+            ],
+            [
+              35.560002205488246,
+              -7.1037841961129224
+            ]
+          ]
+        },
+        "b": {
+          "center": [
+            29.881610343645356,
+            -0.20633153400581938
+          ],
+          "color": [
+            0.05,
+            0.7,
+            0.35,
+            0.55
+          ],
+          "radius": 4.856929288470042,
+          "type": "circle"
+        },
+        "d": {
+          "color": [
+            0.95,
+            0.25,
+            0.2,
+            0.5
+          ],
+          "nonconvex": true,
+          "type": "polygon",
+          "vertices": [
+            [
+              45.103295271096265,
+              2.717314195911988
+            ],
+            [
+              57.514177255260385,
+              2.717314195911988
+            ],
+            [
+              57.514177255260385,
+              6.348647519726949
+            ],
+            [
+              48.73462859491123,
+              6.348647519726949
+            ],
+            [
+              48.73462859491123,
+              12.234841944601627
+            ],
+            [
+              45.103295271096265,
+              12.234841944601627
+            ]
+          ]
+        }
+      },
+      "seed": 3234114083,
+      "start_xy": [
+        27.545369642841788,
+        36.21569625661948
+      ],
+      "task_id": 12
+    },
+    {
+      "formula_e": "<>((a && b) && <>d)",
+      "formula_p": null,
+      "generation_attempt": 0,
+      "labels": [
+        "a",
+        "b",
+        "d"
+      ],
+      "metadata": {
+        "base_seed": 20261027,
+        "complexity": "hard",
+        "cr_uid": "antmaze-giant-stitch-v0:ordered_overlap:23",
+        "e5_distractor_bbox_disjoint": true,
+        "e5_distractor_resample": 0,
+        "e5_group": "ordered_overlap",
+        "e5_group_offset": 23,
+        "e5_role": {
+          "a_b": "overlapping multi-positive target",
+          "c": null,
+          "d": "required subsequent goal"
+        },
+        "generator": "generate_semantic_ltl_tasks.py",
+        "predicate_specs": {
+          "a": {
+            "evaluator": "state_region",
+            "geometry": {
+              "color": [
+                0.15,
+                0.45,
+                0.95,
+                0.55
+              ],
+              "nonconvex": true,
+              "type": "polygon",
+              "vertices": [
+                [
+                  1.513774034625377,
+                  32.21511221211311
+                ],
+                [
+                  10.276570678740324,
+                  32.21511221211311
+                ],
+                [
+                  10.276570678740324,
+                  35.62981531327907
+                ],
+                [
+                  4.928477135791331,
+                  35.62981531327907
+                ],
+                [
+                  4.928477135791331,
+                  39.908816826268804
+                ],
+                [
+                  1.513774034625377,
+                  39.908816826268804
+                ]
+              ]
+            },
+            "metadata": {
+              "shape_kind": "nonconvex_polygon",
+              "source": "task_space_geometry"
+            }
+          },
+          "b": {
+            "evaluator": "state_region",
+            "geometry": {
+              "color": [
+                0.05,
+                0.7,
+                0.35,
+                0.55
+              ],
+              "type": "polygon",
+              "vertices": [
+                [
+                  10.40089047209047,
+                  39.64304416359355
+                ],
+                [
+                  2.6300189687249045,
+                  27.95175920197743
+                ],
+                [
+                  4.703743032740729,
+                  29.246745777088233
+                ]
+              ]
+            },
+            "metadata": {
+              "shape_kind": "polygon",
+              "source": "task_space_geometry"
+            }
+          },
+          "d": {
+            "evaluator": "state_region",
+            "geometry": {
+              "color": [
+                0.95,
+                0.25,
+                0.2,
+                0.5
+              ],
+              "type": "polygon",
+              "vertices": [
+                [
+                  41.008588074941116,
+                  37.114090640782265
+                ],
+                [
+                  38.40917115675109,
+                  38.44982769526323
+                ],
+                [
+                  34.69332865606608,
+                  35.57182316465021
+                ],
+                [
+                  42.487366689649235,
+                  25.956279947986623
+                ]
+              ]
+            },
+            "metadata": {
+              "shape_kind": "polygon",
+              "source": "task_space_geometry"
+            }
+          }
+        },
+        "region_kinds": {
+          "a": "nonconvex_polygon",
+          "b": "polygon",
+          "d": "polygon"
+        },
+        "relation_checks": {
+          "nontrivial:a": true,
+          "nontrivial:b": true,
+          "nontrivial:d": true,
+          "overlap:a,b": true,
+          "separated:a,b|d": true,
+          "start_clear": true
+        },
+        "semantic_features": [
+          "overlap",
+          "multi_positive",
+          "sequence"
+        ],
+        "stream_seed": 3234108583,
+        "template": "cr_ordered_overlap"
+      },
+      "regions": {
+        "a": {
+          "color": [
+            0.15,
+            0.45,
+            0.95,
+            0.55
+          ],
+          "nonconvex": true,
+          "type": "polygon",
+          "vertices": [
+            [
+              1.513774034625377,
+              32.21511221211311
+            ],
+            [
+              10.276570678740324,
+              32.21511221211311
+            ],
+            [
+              10.276570678740324,
+              35.62981531327907
+            ],
+            [
+              4.928477135791331,
+              35.62981531327907
+            ],
+            [
+              4.928477135791331,
+              39.908816826268804
+            ],
+            [
+              1.513774034625377,
+              39.908816826268804
+            ]
+          ]
+        },
+        "b": {
+          "color": [
+            0.05,
+            0.7,
+            0.35,
+            0.55
+          ],
+          "type": "polygon",
+          "vertices": [
+            [
+              10.40089047209047,
+              39.64304416359355
+            ],
+            [
+              2.6300189687249045,
+              27.95175920197743
+            ],
+            [
+              4.703743032740729,
+              29.246745777088233
+            ]
+          ]
+        },
+        "d": {
+          "color": [
+            0.95,
+            0.25,
+            0.2,
+            0.5
+          ],
+          "type": "polygon",
+          "vertices": [
+            [
+              41.008588074941116,
+              37.114090640782265
+            ],
+            [
+              38.40917115675109,
+              38.44982769526323
+            ],
+            [
+              34.69332865606608,
+              35.57182316465021
+            ],
+            [
+              42.487366689649235,
+              25.956279947986623
+            ]
+          ]
+        }
+      },
+      "seed": 3234114333,
+      "start_xy": [
+        19.285935258908435,
+        15.756938121082834
+      ],
+      "task_id": 13
+    },
+    {
+      "formula_e": "<>((a && b) && <>d)",
+      "formula_p": null,
+      "generation_attempt": 0,
+      "labels": [
+        "a",
+        "b",
+        "d"
+      ],
+      "metadata": {
+        "base_seed": 20261027,
+        "complexity": "hard",
+        "cr_uid": "antmaze-giant-stitch-v0:ordered_overlap:24",
+        "e5_distractor_bbox_disjoint": true,
+        "e5_distractor_resample": 0,
+        "e5_group": "ordered_overlap",
+        "e5_group_offset": 24,
+        "e5_role": {
+          "a_b": "overlapping multi-positive target",
+          "c": null,
+          "d": "required subsequent goal"
+        },
+        "generator": "generate_semantic_ltl_tasks.py",
+        "predicate_specs": {
+          "a": {
+            "evaluator": "state_region",
+            "geometry": {
+              "color": [
+                0.15,
+                0.45,
+                0.95,
+                0.55
+              ],
+              "type": "polygon",
+              "vertices": [
+                [
+                  49.61472334976226,
+                  16.47398701546192
+                ],
+                [
+                  43.73038536238447,
+                  16.63918566084509
+                ],
+                [
+                  46.1352364155739,
+                  7.661817191353034
+                ],
+                [
+                  48.305223838632784,
+                  7.983504886946415
+                ]
+              ]
+            },
+            "metadata": {
+              "shape_kind": "polygon",
+              "source": "task_space_geometry"
+            }
+          },
+          "b": {
+            "evaluator": "state_region",
+            "geometry": {
+              "color": [
+                0.05,
+                0.7,
+                0.35,
+                0.55
+              ],
+              "type": "polygon",
+              "vertices": [
+                [
+                  49.939748411325546,
+                  13.887444391188833
+                ],
+                [
+                  45.89038746625165,
+                  18.618809951257123
+                ],
+                [
+                  37.988871590799164,
+                  7.525210232103877
+                ],
+                [
+                  48.146363216614525,
+                  9.926477653904081
+                ]
+              ]
+            },
+            "metadata": {
+              "shape_kind": "polygon",
+              "source": "task_space_geometry"
+            }
+          },
+          "d": {
+            "evaluator": "state_region",
+            "geometry": {
+              "color": [
+                0.95,
+                0.25,
+                0.2,
+                0.5
+              ],
+              "type": "rect",
+              "xmax": 4.643959527506999,
+              "xmin": -3.933427800081843,
+              "ymax": 9.719360286056002,
+              "ymin": -2.269515512289408
+            },
+            "metadata": {
+              "shape_kind": "rect",
+              "source": "task_space_geometry"
+            }
+          }
+        },
+        "region_kinds": {
+          "a": "polygon",
+          "b": "polygon",
+          "d": "rect"
+        },
+        "relation_checks": {
+          "nontrivial:a": true,
+          "nontrivial:b": true,
+          "nontrivial:d": true,
+          "overlap:a,b": true,
+          "separated:a,b|d": true,
+          "start_clear": true
+        },
+        "semantic_features": [
+          "overlap",
+          "multi_positive",
+          "sequence"
+        ],
+        "stream_seed": 3234108583,
+        "template": "cr_ordered_overlap"
+      },
+      "regions": {
+        "a": {
+          "color": [
+            0.15,
+            0.45,
+            0.95,
+            0.55
+          ],
+          "type": "polygon",
+          "vertices": [
+            [
+              49.61472334976226,
+              16.47398701546192
+            ],
+            [
+              43.73038536238447,
+              16.63918566084509
+            ],
+            [
+              46.1352364155739,
+              7.661817191353034
+            ],
+            [
+              48.305223838632784,
+              7.983504886946415
+            ]
+          ]
+        },
+        "b": {
+          "color": [
+            0.05,
+            0.7,
+            0.35,
+            0.55
+          ],
+          "type": "polygon",
+          "vertices": [
+            [
+              49.939748411325546,
+              13.887444391188833
+            ],
+            [
+              45.89038746625165,
+              18.618809951257123
+            ],
+            [
+              37.988871590799164,
+              7.525210232103877
+            ],
+            [
+              48.146363216614525,
+              9.926477653904081
+            ]
+          ]
+        },
+        "d": {
+          "color": [
+            0.95,
+            0.25,
+            0.2,
+            0.5
+          ],
+          "type": "rect",
+          "xmax": 4.643959527506999,
+          "xmin": -3.933427800081843,
+          "ymax": 9.719360286056002,
+          "ymin": -2.269515512289408
+        }
+      },
+      "seed": 3234114583,
+      "start_xy": [
+        27.70168903060488,
+        19.954396679307795
+      ],
+      "task_id": 14
+    },
+    {
+      "formula_e": "<>((a && b) && <>d)",
+      "formula_p": null,
+      "generation_attempt": 0,
+      "labels": [
+        "a",
+        "b",
+        "d"
+      ],
+      "metadata": {
+        "base_seed": 20261027,
+        "complexity": "hard",
+        "cr_uid": "antmaze-giant-stitch-v0:ordered_overlap:25",
+        "e5_distractor_bbox_disjoint": true,
+        "e5_distractor_resample": 0,
+        "e5_group": "ordered_overlap",
+        "e5_group_offset": 25,
+        "e5_role": {
+          "a_b": "overlapping multi-positive target",
+          "c": null,
+          "d": "required subsequent goal"
+        },
+        "generator": "generate_semantic_ltl_tasks.py",
+        "predicate_specs": {
+          "a": {
+            "evaluator": "state_region",
+            "geometry": {
+              "center": [
+                33.01027402611351,
+                31.401017962042584
+              ],
+              "color": [
+                0.15,
+                0.45,
+                0.95,
+                0.55
+              ],
+              "radius": 3.561076384193198,
+              "type": "circle"
+            },
+            "metadata": {
+              "shape_kind": "circle",
+              "source": "task_space_geometry"
+            }
+          },
+          "b": {
+            "evaluator": "state_region",
+            "geometry": {
+              "center": [
+                31.317759265665654,
+                32.03650845422115
+              ],
+              "color": [
+                0.05,
+                0.7,
+                0.35,
+                0.55
+              ],
+              "radius": 6.168109805248768,
+              "type": "circle"
+            },
+            "metadata": {
+              "shape_kind": "circle",
+              "source": "task_space_geometry"
+            }
+          },
+          "d": {
+            "evaluator": "state_region",
+            "geometry": {
+              "color": [
+                0.95,
+                0.25,
+                0.2,
+                0.5
+              ],
+              "type": "rect",
+              "xmax": 53.9895609082991,
+              "xmin": 41.582688847004576,
+              "ymax": 41.44362961582671,
+              "ymin": 29.61602961970887
+            },
+            "metadata": {
+              "shape_kind": "rect",
+              "source": "task_space_geometry"
+            }
+          }
+        },
+        "region_kinds": {
+          "a": "circle",
+          "b": "circle",
+          "d": "rect"
+        },
+        "relation_checks": {
+          "nontrivial:a": true,
+          "nontrivial:b": true,
+          "nontrivial:d": true,
+          "overlap:a,b": true,
+          "separated:a,b|d": true,
+          "start_clear": true
+        },
+        "semantic_features": [
+          "overlap",
+          "multi_positive",
+          "sequence"
+        ],
+        "stream_seed": 3234108583,
+        "template": "cr_ordered_overlap"
+      },
+      "regions": {
+        "a": {
+          "center": [
+            33.01027402611351,
+            31.401017962042584
+          ],
+          "color": [
+            0.15,
+            0.45,
+            0.95,
+            0.55
+          ],
+          "radius": 3.561076384193198,
+          "type": "circle"
+        },
+        "b": {
+          "center": [
+            31.317759265665654,
+            32.03650845422115
+          ],
+          "color": [
+            0.05,
+            0.7,
+            0.35,
+            0.55
+          ],
+          "radius": 6.168109805248768,
+          "type": "circle"
+        },
+        "d": {
+          "color": [
+            0.95,
+            0.25,
+            0.2,
+            0.5
+          ],
+          "type": "rect",
+          "xmax": 53.9895609082991,
+          "xmin": 41.582688847004576,
+          "ymax": 41.44362961582671,
+          "ymin": 29.61602961970887
+        }
+      },
+      "seed": 3234114833,
+      "start_xy": [
+        19.480434472516432,
+        16.350436263272687
+      ],
+      "task_id": 15
+    },
+    {
+      "formula_e": "<>((a && b) && <>d)",
+      "formula_p": null,
+      "generation_attempt": 1,
+      "labels": [
+        "a",
+        "b",
+        "d"
+      ],
+      "metadata": {
+        "base_seed": 20261027,
+        "complexity": "hard",
+        "cr_uid": "antmaze-giant-stitch-v0:ordered_overlap:26",
+        "e5_distractor_bbox_disjoint": true,
+        "e5_distractor_resample": 2,
+        "e5_group": "ordered_overlap",
+        "e5_group_offset": 26,
+        "e5_role": {
+          "a_b": "overlapping multi-positive target",
+          "c": null,
+          "d": "required subsequent goal"
+        },
+        "generator": "generate_semantic_ltl_tasks.py",
+        "predicate_specs": {
+          "a": {
+            "evaluator": "state_region",
+            "geometry": {
+              "color": [
+                0.15,
+                0.45,
+                0.95,
+                0.55
+              ],
+              "type": "polygon",
+              "vertices": [
+                [
+                  49.04468851844131,
+                  12.537171424407173
+                ],
+                [
+                  46.72144156940498,
+                  9.509714298108186
+                ],
+                [
+                  48.11431924993981,
+                  5.8913929927132624
+                ],
+                [
+                  52.27942546800961,
+                  4.916031930038025
+                ]
+              ]
+            },
+            "metadata": {
+              "shape_kind": "polygon",
+              "source": "task_space_geometry"
+            }
+          },
+          "b": {
+            "evaluator": "state_region",
+            "geometry": {
+              "color": [
+                0.05,
+                0.7,
+                0.35,
+                0.55
+              ],
+              "type": "polygon",
+              "vertices": [
+                [
+                  61.18541606770097,
+                  8.987088382356529
+                ],
+                [
+                  60.04922115464642,
+                  11.55991397033106
+                ],
+                [
+                  47.67512425444654,
+                  11.64686616431083
+                ],
+                [
+                  58.13682219220633,
+                  7.060118687180011
+                ]
+              ]
+            },
+            "metadata": {
+              "shape_kind": "polygon",
+              "source": "task_space_geometry"
+            }
+          },
+          "d": {
+            "evaluator": "state_region",
+            "geometry": {
+              "color": [
+                0.95,
+                0.25,
+                0.2,
+                0.5
+              ],
+              "type": "polygon",
+              "vertices": [
+                [
+                  1.6698049022426973,
+                  38.37437220516516
+                ],
+                [
+                  -4.179816695894441,
+                  39.12129507103555
+                ],
+                [
+                  -3.7083718021592933,
+                  34.68392435557892
+                ]
+              ]
+            },
+            "metadata": {
+              "shape_kind": "polygon",
+              "source": "task_space_geometry"
+            }
+          }
+        },
+        "region_kinds": {
+          "a": "polygon",
+          "b": "polygon",
+          "d": "polygon"
+        },
+        "relation_checks": {
+          "nontrivial:a": true,
+          "nontrivial:b": true,
+          "nontrivial:d": true,
+          "overlap:a,b": true,
+          "separated:a,b|d": true,
+          "start_clear": true
+        },
+        "semantic_features": [
+          "overlap",
+          "multi_positive",
+          "sequence"
+        ],
+        "stream_seed": 3234108583,
+        "template": "cr_ordered_overlap"
+      },
+      "regions": {
+        "a": {
+          "color": [
+            0.15,
+            0.45,
+            0.95,
+            0.55
+          ],
+          "type": "polygon",
+          "vertices": [
+            [
+              49.04468851844131,
+              12.537171424407173
+            ],
+            [
+              46.72144156940498,
+              9.509714298108186
+            ],
+            [
+              48.11431924993981,
+              5.8913929927132624
+            ],
+            [
+              52.27942546800961,
+              4.916031930038025
+            ]
+          ]
+        },
+        "b": {
+          "color": [
+            0.05,
+            0.7,
+            0.35,
+            0.55
+          ],
+          "type": "polygon",
+          "vertices": [
+            [
+              61.18541606770097,
+              8.987088382356529
+            ],
+            [
+              60.04922115464642,
+              11.55991397033106
+            ],
+            [
+              47.67512425444654,
+              11.64686616431083
+            ],
+            [
+              58.13682219220633,
+              7.060118687180011
+            ]
+          ]
+        },
+        "d": {
+          "color": [
+            0.95,
+            0.25,
+            0.2,
+            0.5
+          ],
+          "type": "polygon",
+          "vertices": [
+            [
+              1.6698049022426973,
+              38.37437220516516
+            ],
+            [
+              -4.179816695894441,
+              39.12129507103555
+            ],
+            [
+              -3.7083718021592933,
+              34.68392435557892
+            ]
+          ]
+        }
+      },
+      "seed": 3236115090,
+      "start_xy": [
+        43.57441076799257,
+        28.58539781840006
+      ],
+      "task_id": 16
+    },
+    {
+      "formula_e": "<>((a && b) && <>d)",
+      "formula_p": null,
+      "generation_attempt": 0,
+      "labels": [
+        "a",
+        "b",
+        "d"
+      ],
+      "metadata": {
+        "base_seed": 20261027,
+        "complexity": "hard",
+        "cr_uid": "antmaze-giant-stitch-v0:ordered_overlap:27",
+        "e5_distractor_bbox_disjoint": true,
+        "e5_distractor_resample": 0,
+        "e5_group": "ordered_overlap",
+        "e5_group_offset": 27,
+        "e5_role": {
+          "a_b": "overlapping multi-positive target",
+          "c": null,
+          "d": "required subsequent goal"
+        },
+        "generator": "generate_semantic_ltl_tasks.py",
+        "predicate_specs": {
+          "a": {
+            "evaluator": "state_region",
+            "geometry": {
+              "color": [
+                0.15,
+                0.45,
+                0.95,
+                0.55
+              ],
+              "type": "polygon",
+              "vertices": [
+                [
+                  26.82746595922712,
+                  25.628568331023544
+                ],
+                [
+                  22.959317165304114,
+                  26.106662736162388
+                ],
+                [
+                  11.709449354844475,
+                  29.598603772512778
+                ],
+                [
+                  16.828010577514487,
+                  19.56362616047351
+                ]
+              ]
+            },
+            "metadata": {
+              "shape_kind": "polygon",
+              "source": "task_space_geometry"
+            }
+          },
+          "b": {
+            "evaluator": "state_region",
+            "geometry": {
+              "color": [
+                0.05,
+                0.7,
+                0.35,
+                0.55
+              ],
+              "nonconvex": true,
+              "type": "polygon",
+              "vertices": [
+                [
+                  10.830909886865037,
+                  17.634981442934944
+                ],
+                [
+                  22.426324284348077,
+                  17.634981442934944
+                ],
+                [
+                  22.426324284348077,
+                  22.421382186380352
+                ],
+                [
+                  15.617310630310445,
+                  22.421382186380352
+                ],
+                [
+                  15.617310630310445,
+                  26.341394148543984
+                ],
+                [
+                  10.830909886865037,
+                  26.341394148543984
+                ]
+              ]
+            },
+            "metadata": {
+              "shape_kind": "nonconvex_polygon",
+              "source": "task_space_geometry"
+            }
+          },
+          "d": {
+            "evaluator": "state_region",
+            "geometry": {
+              "center": [
+                12.280337708351134,
+                -0.40382320265106647
+              ],
+              "color": [
+                0.95,
+                0.25,
+                0.2,
+                0.5
+              ],
+              "radius": 5.568454222443689,
+              "type": "circle"
+            },
+            "metadata": {
+              "shape_kind": "circle",
+              "source": "task_space_geometry"
+            }
+          }
+        },
+        "region_kinds": {
+          "a": "polygon",
+          "b": "nonconvex_polygon",
+          "d": "circle"
+        },
+        "relation_checks": {
+          "nontrivial:a": true,
+          "nontrivial:b": true,
+          "nontrivial:d": true,
+          "overlap:a,b": true,
+          "separated:a,b|d": true,
+          "start_clear": true
+        },
+        "semantic_features": [
+          "overlap",
+          "multi_positive",
+          "sequence"
+        ],
+        "stream_seed": 3234108583,
+        "template": "cr_ordered_overlap"
+      },
+      "regions": {
+        "a": {
+          "color": [
+            0.15,
+            0.45,
+            0.95,
+            0.55
+          ],
+          "type": "polygon",
+          "vertices": [
+            [
+              26.82746595922712,
+              25.628568331023544
+            ],
+            [
+              22.959317165304114,
+              26.106662736162388
+            ],
+            [
+              11.709449354844475,
+              29.598603772512778
+            ],
+            [
+              16.828010577514487,
+              19.56362616047351
+            ]
+          ]
+        },
+        "b": {
+          "color": [
+            0.05,
+            0.7,
+            0.35,
+            0.55
+          ],
+          "nonconvex": true,
+          "type": "polygon",
+          "vertices": [
+            [
+              10.830909886865037,
+              17.634981442934944
+            ],
+            [
+              22.426324284348077,
+              17.634981442934944
+            ],
+            [
+              22.426324284348077,
+              22.421382186380352
+            ],
+            [
+              15.617310630310445,
+              22.421382186380352
+            ],
+            [
+              15.617310630310445,
+              26.341394148543984
+            ],
+            [
+              10.830909886865037,
+              26.341394148543984
+            ]
+          ]
+        },
+        "d": {
+          "center": [
+            12.280337708351134,
+            -0.40382320265106647
+          ],
+          "color": [
+            0.95,
+            0.25,
+            0.2,
+            0.5
+          ],
+          "radius": 5.568454222443689,
+          "type": "circle"
+        }
+      },
+      "seed": 3234115333,
+      "start_xy": [
+        -0.023826249418725687,
+        24.296171759253326
+      ],
+      "task_id": 17
+    },
+    {
+      "formula_e": "<>((a && b) && <>d)",
+      "formula_p": null,
+      "generation_attempt": 0,
+      "labels": [
+        "a",
+        "b",
+        "d"
+      ],
+      "metadata": {
+        "base_seed": 20261027,
+        "complexity": "hard",
+        "cr_uid": "antmaze-giant-stitch-v0:ordered_overlap:28",
+        "e5_distractor_bbox_disjoint": true,
+        "e5_distractor_resample": 0,
+        "e5_group": "ordered_overlap",
+        "e5_group_offset": 28,
+        "e5_role": {
+          "a_b": "overlapping multi-positive target",
+          "c": null,
+          "d": "required subsequent goal"
+        },
+        "generator": "generate_semantic_ltl_tasks.py",
+        "predicate_specs": {
+          "a": {
+            "evaluator": "state_region",
+            "geometry": {
+              "center": [
+                18.393708808901692,
+                26.071387875577443
+              ],
+              "color": [
+                0.15,
+                0.45,
+                0.95,
+                0.55
+              ],
+              "radius": 4.415354203947935,
+              "type": "circle"
+            },
+            "metadata": {
+              "shape_kind": "circle",
+              "source": "task_space_geometry"
+            }
+          },
+          "b": {
+            "evaluator": "state_region",
+            "geometry": {
+              "color": [
+                0.05,
+                0.7,
+                0.35,
+                0.55
+              ],
+              "type": "rect",
+              "xmax": 22.42132750840031,
+              "xmin": 11.663627133734424,
+              "ymax": 33.93826308632044,
+              "ymin": 23.7884726143086
+            },
+            "metadata": {
+              "shape_kind": "rect",
+              "source": "task_space_geometry"
+            }
+          },
+          "d": {
+            "evaluator": "state_region",
+            "geometry": {
+              "center": [
+                0.35982026265449907,
+                3.990715379835085
+              ],
+              "color": [
+                0.95,
+                0.25,
+                0.2,
+                0.5
+              ],
+              "radius": 3.8819881980405984,
+              "type": "circle"
+            },
+            "metadata": {
+              "shape_kind": "circle",
+              "source": "task_space_geometry"
+            }
+          }
+        },
+        "region_kinds": {
+          "a": "circle",
+          "b": "rect",
+          "d": "circle"
+        },
+        "relation_checks": {
+          "nontrivial:a": true,
+          "nontrivial:b": true,
+          "nontrivial:d": true,
+          "overlap:a,b": true,
+          "separated:a,b|d": true,
+          "start_clear": true
+        },
+        "semantic_features": [
+          "overlap",
+          "multi_positive",
+          "sequence"
+        ],
+        "stream_seed": 3234108583,
+        "template": "cr_ordered_overlap"
+      },
+      "regions": {
+        "a": {
+          "center": [
+            18.393708808901692,
+            26.071387875577443
+          ],
+          "color": [
+            0.15,
+            0.45,
+            0.95,
+            0.55
+          ],
+          "radius": 4.415354203947935,
+          "type": "circle"
+        },
+        "b": {
+          "color": [
+            0.05,
+            0.7,
+            0.35,
+            0.55
+          ],
+          "type": "rect",
+          "xmax": 22.42132750840031,
+          "xmin": 11.663627133734424,
+          "ymax": 33.93826308632044,
+          "ymin": 23.7884726143086
+        },
+        "d": {
+          "center": [
+            0.35982026265449907,
+            3.990715379835085
+          ],
+          "color": [
+            0.95,
+            0.25,
+            0.2,
+            0.5
+          ],
+          "radius": 3.8819881980405984,
+          "type": "circle"
+        }
+      },
+      "seed": 3234115583,
+      "start_xy": [
+        43.862404456251575,
+        19.548172535369087
+      ],
+      "task_id": 18
+    },
+    {
+      "formula_e": "<>((a && b) && <>d)",
+      "formula_p": null,
+      "generation_attempt": 0,
+      "labels": [
+        "a",
+        "b",
+        "d"
+      ],
+      "metadata": {
+        "base_seed": 20261027,
+        "complexity": "hard",
+        "cr_uid": "antmaze-giant-stitch-v0:ordered_overlap:29",
+        "e5_distractor_bbox_disjoint": true,
+        "e5_distractor_resample": 0,
+        "e5_group": "ordered_overlap",
+        "e5_group_offset": 29,
+        "e5_role": {
+          "a_b": "overlapping multi-positive target",
+          "c": null,
+          "d": "required subsequent goal"
+        },
+        "generator": "generate_semantic_ltl_tasks.py",
+        "predicate_specs": {
+          "a": {
+            "evaluator": "state_region",
+            "geometry": {
+              "color": [
+                0.15,
+                0.45,
+                0.95,
+                0.55
+              ],
+              "type": "polygon",
+              "vertices": [
+                [
+                  -0.3370008372308443,
+                  11.179215253082775
+                ],
+                [
+                  -6.369283508536115,
+                  5.553691870433841
+                ],
+                [
+                  -4.667923503921978,
+                  4.859549414479311
+                ],
+                [
+                  1.0918748182479172,
+                  -0.03217775946394852
+                ]
+              ]
+            },
+            "metadata": {
+              "shape_kind": "polygon",
+              "source": "task_space_geometry"
+            }
+          },
+          "b": {
+            "evaluator": "state_region",
+            "geometry": {
+              "color": [
+                0.05,
+                0.7,
+                0.35,
+                0.55
+              ],
+              "type": "polygon",
+              "vertices": [
+                [
+                  6.326205736397016,
+                  9.16659548487458
+                ],
+                [
+                  -2.4598780390607873,
+                  4.248186323229712
+                ],
+                [
+                  -0.662573747140955,
+                  3.3688367287944985
+                ]
+              ]
+            },
+            "metadata": {
+              "shape_kind": "polygon",
+              "source": "task_space_geometry"
+            }
+          },
+          "d": {
+            "evaluator": "state_region",
+            "geometry": {
+              "center": [
+                31.276165500757248,
+                23.61772683224726
+              ],
+              "color": [
+                0.95,
+                0.25,
+                0.2,
+                0.5
+              ],
+              "radius": 3.7018770679574136,
+              "type": "circle"
+            },
+            "metadata": {
+              "shape_kind": "circle",
+              "source": "task_space_geometry"
+            }
+          }
+        },
+        "region_kinds": {
+          "a": "polygon",
+          "b": "polygon",
+          "d": "circle"
+        },
+        "relation_checks": {
+          "nontrivial:a": true,
+          "nontrivial:b": true,
+          "nontrivial:d": true,
+          "overlap:a,b": true,
+          "separated:a,b|d": true,
+          "start_clear": true
+        },
+        "semantic_features": [
+          "overlap",
+          "multi_positive",
+          "sequence"
+        ],
+        "stream_seed": 3234108583,
+        "template": "cr_ordered_overlap"
+      },
+      "regions": {
+        "a": {
+          "color": [
+            0.15,
+            0.45,
+            0.95,
+            0.55
+          ],
+          "type": "polygon",
+          "vertices": [
+            [
+              -0.3370008372308443,
+              11.179215253082775
+            ],
+            [
+              -6.369283508536115,
+              5.553691870433841
+            ],
+            [
+              -4.667923503921978,
+              4.859549414479311
+            ],
+            [
+              1.0918748182479172,
+              -0.03217775946394852
+            ]
+          ]
+        },
+        "b": {
+          "color": [
+            0.05,
+            0.7,
+            0.35,
+            0.55
+          ],
+          "type": "polygon",
+          "vertices": [
+            [
+              6.326205736397016,
+              9.16659548487458
+            ],
+            [
+              -2.4598780390607873,
+              4.248186323229712
+            ],
+            [
+              -0.662573747140955,
+              3.3688367287944985
+            ]
+          ]
+        },
+        "d": {
+          "center": [
+            31.276165500757248,
+            23.61772683224726
+          ],
+          "color": [
+            0.95,
+            0.25,
+            0.2,
+            0.5
+          ],
+          "radius": 3.7018770679574136,
+          "type": "circle"
+        }
+      },
+      "seed": 3234115833,
+      "start_xy": [
+        15.371711596443607,
+        16.41379475663483
+      ],
+      "task_id": 19
+    },
+    {
+      "formula_e": "<>((a && b) && <>d)",
+      "formula_p": null,
+      "generation_attempt": 1,
+      "labels": [
+        "a",
+        "b",
+        "d"
+      ],
+      "metadata": {
+        "base_seed": 20261027,
+        "complexity": "hard",
+        "cr_uid": "antmaze-giant-stitch-v0:ordered_overlap:30",
+        "e5_distractor_bbox_disjoint": true,
+        "e5_distractor_resample": 0,
+        "e5_group": "ordered_overlap",
+        "e5_group_offset": 30,
+        "e5_role": {
+          "a_b": "overlapping multi-positive target",
+          "c": null,
+          "d": "required subsequent goal"
+        },
+        "generator": "generate_semantic_ltl_tasks.py",
+        "predicate_specs": {
+          "a": {
+            "evaluator": "state_region",
+            "geometry": {
+              "color": [
+                0.15,
+                0.45,
+                0.95,
+                0.55
+              ],
+              "nonconvex": true,
+              "type": "polygon",
+              "vertices": [
+                [
+                  23.55778015313941,
+                  0.3160454209389192
+                ],
+                [
+                  32.46481047131618,
+                  0.3160454209389192
+                ],
+                [
+                  32.46481047131618,
+                  3.682059184283919
+                ],
+                [
+                  26.92379391648441,
+                  3.682059184283919
+                ],
+                [
+                  26.92379391648441,
+                  8.426249331061786
+                ],
+                [
+                  23.55778015313941,
+                  8.426249331061786
+                ]
+              ]
+            },
+            "metadata": {
+              "shape_kind": "nonconvex_polygon",
+              "source": "task_space_geometry"
+            }
+          },
+          "b": {
+            "evaluator": "state_region",
+            "geometry": {
+              "center": [
+                26.566382356537726,
+                2.615210614305995
+              ],
+              "color": [
+                0.05,
+                0.7,
+                0.35,
+                0.55
+              ],
+              "radius": 6.404600869883706,
+              "type": "circle"
+            },
+            "metadata": {
+              "shape_kind": "circle",
+              "source": "task_space_geometry"
+            }
+          },
+          "d": {
+            "evaluator": "state_region",
+            "geometry": {
+              "color": [
+                0.95,
+                0.25,
+                0.2,
+                0.5
+              ],
+              "type": "rect",
+              "xmax": 38.43517542747614,
+              "xmin": 25.63557274679749,
+              "ymax": 37.071058787238684,
+              "ymin": 25.638917605585892
+            },
+            "metadata": {
+              "shape_kind": "rect",
+              "source": "task_space_geometry"
+            }
+          }
+        },
+        "region_kinds": {
+          "a": "nonconvex_polygon",
+          "b": "circle",
+          "d": "rect"
+        },
+        "relation_checks": {
+          "nontrivial:a": true,
+          "nontrivial:b": true,
+          "nontrivial:d": true,
+          "overlap:a,b": true,
+          "separated:a,b|d": true,
+          "start_clear": true
+        },
+        "semantic_features": [
+          "overlap",
+          "multi_positive",
+          "sequence"
+        ],
+        "stream_seed": 3234108583,
+        "template": "cr_ordered_overlap"
+      },
+      "regions": {
+        "a": {
+          "color": [
+            0.15,
+            0.45,
+            0.95,
+            0.55
+          ],
+          "nonconvex": true,
+          "type": "polygon",
+          "vertices": [
+            [
+              23.55778015313941,
+              0.3160454209389192
+            ],
+            [
+              32.46481047131618,
+              0.3160454209389192
+            ],
+            [
+              32.46481047131618,
+              3.682059184283919
+            ],
+            [
+              26.92379391648441,
+              3.682059184283919
+            ],
+            [
+              26.92379391648441,
+              8.426249331061786
+            ],
+            [
+              23.55778015313941,
+              8.426249331061786
+            ]
+          ]
+        },
+        "b": {
+          "center": [
+            26.566382356537726,
+            2.615210614305995
+          ],
+          "color": [
+            0.05,
+            0.7,
+            0.35,
+            0.55
+          ],
+          "radius": 6.404600869883706,
+          "type": "circle"
+        },
+        "d": {
+          "color": [
+            0.95,
+            0.25,
+            0.2,
+            0.5
+          ],
+          "type": "rect",
+          "xmax": 38.43517542747614,
+          "xmin": 25.63557274679749,
+          "ymax": 37.071058787238684,
+          "ymin": 25.638917605585892
+        }
+      },
+      "seed": 3234116084,
+      "start_xy": [
+        20.428373184632292,
+        16.27236343079519
+      ],
+      "task_id": 20
+    },
+    {
+      "formula_e": "<>((a && b) && <>d)",
+      "formula_p": null,
+      "generation_attempt": 0,
+      "labels": [
+        "a",
+        "b",
+        "d"
+      ],
+      "metadata": {
+        "base_seed": 20261027,
+        "complexity": "hard",
+        "cr_uid": "antmaze-giant-stitch-v0:ordered_overlap:31",
+        "e5_distractor_bbox_disjoint": true,
+        "e5_distractor_resample": 0,
+        "e5_group": "ordered_overlap",
+        "e5_group_offset": 31,
+        "e5_role": {
+          "a_b": "overlapping multi-positive target",
+          "c": null,
+          "d": "required subsequent goal"
+        },
+        "generator": "generate_semantic_ltl_tasks.py",
+        "predicate_specs": {
+          "a": {
+            "evaluator": "state_region",
+            "geometry": {
+              "color": [
+                0.15,
+                0.45,
+                0.95,
+                0.55
+              ],
+              "type": "rect",
+              "xmax": 53.15104441603276,
+              "xmin": 44.876963245086486,
+              "ymax": 42.87663227832926,
+              "ymin": 31.60734453309022
+            },
+            "metadata": {
+              "shape_kind": "rect",
+              "source": "task_space_geometry"
+            }
+          },
+          "b": {
+            "evaluator": "state_region",
+            "geometry": {
+              "color": [
+                0.05,
+                0.7,
+                0.35,
+                0.55
+              ],
+              "nonconvex": true,
+              "type": "polygon",
+              "vertices": [
+                [
+                  45.2691791722962,
+                  31.07597124567788
+                ],
+                [
+                  53.44245929860188,
+                  31.07597124567788
+                ],
+                [
+                  53.44245929860188,
+                  34.68880184342508
+                ],
+                [
+                  48.8820097700434,
+                  34.68880184342508
+                ],
+                [
+                  48.8820097700434,
+                  37.67779478663226
+                ],
+                [
+                  45.2691791722962,
+                  37.67779478663226
+                ]
+              ]
+            },
+            "metadata": {
+              "shape_kind": "nonconvex_polygon",
+              "source": "task_space_geometry"
+            }
+          },
+          "d": {
+            "evaluator": "state_region",
+            "geometry": {
+              "color": [
+                0.95,
+                0.25,
+                0.2,
+                0.5
+              ],
+              "nonconvex": true,
+              "type": "polygon",
+              "vertices": [
+                [
+                  48.69422103648257,
+                  0.6484319502994236
+                ],
+                [
+                  56.05493461809488,
+                  0.6484319502994236
+                ],
+                [
+                  56.05493461809488,
+                  4.1419744689825455
+                ],
+                [
+                  52.18776355516569,
+                  4.1419744689825455
+                ],
+                [
+                  52.18776355516569,
+                  8.648938799877675
+                ],
+                [
+                  48.69422103648257,
+                  8.648938799877675
+                ]
+              ]
+            },
+            "metadata": {
+              "shape_kind": "nonconvex_polygon",
+              "source": "task_space_geometry"
+            }
+          }
+        },
+        "region_kinds": {
+          "a": "rect",
+          "b": "nonconvex_polygon",
+          "d": "nonconvex_polygon"
+        },
+        "relation_checks": {
+          "nontrivial:a": true,
+          "nontrivial:b": true,
+          "nontrivial:d": true,
+          "overlap:a,b": true,
+          "separated:a,b|d": true,
+          "start_clear": true
+        },
+        "semantic_features": [
+          "overlap",
+          "multi_positive",
+          "sequence"
+        ],
+        "stream_seed": 3234108583,
+        "template": "cr_ordered_overlap"
+      },
+      "regions": {
+        "a": {
+          "color": [
+            0.15,
+            0.45,
+            0.95,
+            0.55
+          ],
+          "type": "rect",
+          "xmax": 53.15104441603276,
+          "xmin": 44.876963245086486,
+          "ymax": 42.87663227832926,
+          "ymin": 31.60734453309022
+        },
+        "b": {
+          "color": [
+            0.05,
+            0.7,
+            0.35,
+            0.55
+          ],
+          "nonconvex": true,
+          "type": "polygon",
+          "vertices": [
+            [
+              45.2691791722962,
+              31.07597124567788
+            ],
+            [
+              53.44245929860188,
+              31.07597124567788
+            ],
+            [
+              53.44245929860188,
+              34.68880184342508
+            ],
+            [
+              48.8820097700434,
+              34.68880184342508
+            ],
+            [
+              48.8820097700434,
+              37.67779478663226
+            ],
+            [
+              45.2691791722962,
+              37.67779478663226
+            ]
+          ]
+        },
+        "d": {
+          "color": [
+            0.95,
+            0.25,
+            0.2,
+            0.5
+          ],
+          "nonconvex": true,
+          "type": "polygon",
+          "vertices": [
+            [
+              48.69422103648257,
+              0.6484319502994236
+            ],
+            [
+              56.05493461809488,
+              0.6484319502994236
+            ],
+            [
+              56.05493461809488,
+              4.1419744689825455
+            ],
+            [
+              52.18776355516569,
+              4.1419744689825455
+            ],
+            [
+              52.18776355516569,
+              8.648938799877675
+            ],
+            [
+              48.69422103648257,
+              8.648938799877675
+            ]
+          ]
+        }
+      },
+      "seed": 3234116333,
+      "start_xy": [
+        -0.17009396342390593,
+        11.760852502667776
+      ],
+      "task_id": 21
+    },
+    {
+      "formula_e": "<>((a && b) && <>d)",
+      "formula_p": null,
+      "generation_attempt": 0,
+      "labels": [
+        "a",
+        "b",
+        "d"
+      ],
+      "metadata": {
+        "base_seed": 20261027,
+        "complexity": "hard",
+        "cr_uid": "antmaze-giant-stitch-v0:ordered_overlap:32",
+        "e5_distractor_bbox_disjoint": true,
+        "e5_distractor_resample": 0,
+        "e5_group": "ordered_overlap",
+        "e5_group_offset": 32,
+        "e5_role": {
+          "a_b": "overlapping multi-positive target",
+          "c": null,
+          "d": "required subsequent goal"
+        },
+        "generator": "generate_semantic_ltl_tasks.py",
+        "predicate_specs": {
+          "a": {
+            "evaluator": "state_region",
+            "geometry": {
+              "color": [
+                0.15,
+                0.45,
+                0.95,
+                0.55
+              ],
+              "type": "rect",
+              "xmax": 51.84709029986252,
+              "xmin": 41.96433269641333,
+              "ymax": 29.19890464422603,
+              "ymin": 19.043458765024024
+            },
+            "metadata": {
+              "shape_kind": "rect",
+              "source": "task_space_geometry"
+            }
+          },
+          "b": {
+            "evaluator": "state_region",
+            "geometry": {
+              "color": [
+                0.05,
+                0.7,
+                0.35,
+                0.55
+              ],
+              "nonconvex": true,
+              "type": "polygon",
+              "vertices": [
+                [
+                  42.158046265317495,
+                  19.25931278624219
+                ],
+                [
+                  52.614203327409115,
+                  19.25931278624219
+                ],
+                [
+                  52.614203327409115,
+                  24.520484594778832
+                ],
+                [
+                  47.41921807385414,
+                  24.520484594778832
+                ],
+                [
+                  47.41921807385414,
+                  29.692330082043412
+                ],
+                [
+                  42.158046265317495,
+                  29.692330082043412
+                ]
+              ]
+            },
+            "metadata": {
+              "shape_kind": "nonconvex_polygon",
+              "source": "task_space_geometry"
+            }
+          },
+          "d": {
+            "evaluator": "state_region",
+            "geometry": {
+              "center": [
+                15.827919143145024,
+                23.28073910137181
+              ],
+              "color": [
+                0.95,
+                0.25,
+                0.2,
+                0.5
+              ],
+              "radius": 6.369952795999773,
+              "type": "circle"
+            },
+            "metadata": {
+              "shape_kind": "circle",
+              "source": "task_space_geometry"
+            }
+          }
+        },
+        "region_kinds": {
+          "a": "rect",
+          "b": "nonconvex_polygon",
+          "d": "circle"
+        },
+        "relation_checks": {
+          "nontrivial:a": true,
+          "nontrivial:b": true,
+          "nontrivial:d": true,
+          "overlap:a,b": true,
+          "separated:a,b|d": true,
+          "start_clear": true
+        },
+        "semantic_features": [
+          "overlap",
+          "multi_positive",
+          "sequence"
+        ],
+        "stream_seed": 3234108583,
+        "template": "cr_ordered_overlap"
+      },
+      "regions": {
+        "a": {
+          "color": [
+            0.15,
+            0.45,
+            0.95,
+            0.55
+          ],
+          "type": "rect",
+          "xmax": 51.84709029986252,
+          "xmin": 41.96433269641333,
+          "ymax": 29.19890464422603,
+          "ymin": 19.043458765024024
+        },
+        "b": {
+          "color": [
+            0.05,
+            0.7,
+            0.35,
+            0.55
+          ],
+          "nonconvex": true,
+          "type": "polygon",
+          "vertices": [
+            [
+              42.158046265317495,
+              19.25931278624219
+            ],
+            [
+              52.614203327409115,
+              19.25931278624219
+            ],
+            [
+              52.614203327409115,
+              24.520484594778832
+            ],
+            [
+              47.41921807385414,
+              24.520484594778832
+            ],
+            [
+              47.41921807385414,
+              29.692330082043412
+            ],
+            [
+              42.158046265317495,
+              29.692330082043412
+            ]
+          ]
+        },
+        "d": {
+          "center": [
+            15.827919143145024,
+            23.28073910137181
+          ],
+          "color": [
+            0.95,
+            0.25,
+            0.2,
+            0.5
+          ],
+          "radius": 6.369952795999773,
+          "type": "circle"
+        }
+      },
+      "seed": 3234116583,
+      "start_xy": [
+        52.26426086011958,
+        35.437472824991985
+      ],
+      "task_id": 22
+    },
+    {
+      "formula_e": "<>((a && b) && <>d)",
+      "formula_p": null,
+      "generation_attempt": 2,
+      "labels": [
+        "a",
+        "b",
+        "d"
+      ],
+      "metadata": {
+        "base_seed": 20261027,
+        "complexity": "hard",
+        "cr_uid": "antmaze-giant-stitch-v0:ordered_overlap:33",
+        "e5_distractor_bbox_disjoint": true,
+        "e5_distractor_resample": 0,
+        "e5_group": "ordered_overlap",
+        "e5_group_offset": 33,
+        "e5_role": {
+          "a_b": "overlapping multi-positive target",
+          "c": null,
+          "d": "required subsequent goal"
+        },
+        "generator": "generate_semantic_ltl_tasks.py",
+        "predicate_specs": {
+          "a": {
+            "evaluator": "state_region",
+            "geometry": {
+              "color": [
+                0.15,
+                0.45,
+                0.95,
+                0.55
+              ],
+              "nonconvex": true,
+              "type": "polygon",
+              "vertices": [
+                [
+                  39.227069096688496,
+                  14.76324474463592
+                ],
+                [
+                  49.33721955756128,
+                  14.76324474463592
+                ],
+                [
+                  49.33721955756128,
+                  19.332486929653374
+                ],
+                [
+                  43.796311281705954,
+                  19.332486929653374
+                ],
+                [
+                  43.796311281705954,
+                  25.88350157009497
+                ],
+                [
+                  39.227069096688496,
+                  25.88350157009497
+                ]
+              ]
+            },
+            "metadata": {
+              "shape_kind": "nonconvex_polygon",
+              "source": "task_space_geometry"
+            }
+          },
+          "b": {
+            "evaluator": "state_region",
+            "geometry": {
+              "center": [
+                43.443672494797745,
+                19.28049829264223
+              ],
+              "color": [
+                0.05,
+                0.7,
+                0.35,
+                0.55
+              ],
+              "radius": 6.589042748411089,
+              "type": "circle"
+            },
+            "metadata": {
+              "shape_kind": "circle",
+              "source": "task_space_geometry"
+            }
+          },
+          "d": {
+            "evaluator": "state_region",
+            "geometry": {
+              "center": [
+                8.564780709529826,
+                8.297189457583805
+              ],
+              "color": [
+                0.95,
+                0.25,
+                0.2,
+                0.5
+              ],
+              "radius": 4.1236304563391055,
+              "type": "circle"
+            },
+            "metadata": {
+              "shape_kind": "circle",
+              "source": "task_space_geometry"
+            }
+          }
+        },
+        "region_kinds": {
+          "a": "nonconvex_polygon",
+          "b": "circle",
+          "d": "circle"
+        },
+        "relation_checks": {
+          "nontrivial:a": true,
+          "nontrivial:b": true,
+          "nontrivial:d": true,
+          "overlap:a,b": true,
+          "separated:a,b|d": true,
+          "start_clear": true
+        },
+        "semantic_features": [
+          "overlap",
+          "multi_positive",
+          "sequence"
+        ],
+        "stream_seed": 3234108583,
+        "template": "cr_ordered_overlap"
+      },
+      "regions": {
+        "a": {
+          "color": [
+            0.15,
+            0.45,
+            0.95,
+            0.55
+          ],
+          "nonconvex": true,
+          "type": "polygon",
+          "vertices": [
+            [
+              39.227069096688496,
+              14.76324474463592
+            ],
+            [
+              49.33721955756128,
+              14.76324474463592
+            ],
+            [
+              49.33721955756128,
+              19.332486929653374
+            ],
+            [
+              43.796311281705954,
+              19.332486929653374
+            ],
+            [
+              43.796311281705954,
+              25.88350157009497
+            ],
+            [
+              39.227069096688496,
+              25.88350157009497
+            ]
+          ]
+        },
+        "b": {
+          "center": [
+            43.443672494797745,
+            19.28049829264223
+          ],
+          "color": [
+            0.05,
+            0.7,
+            0.35,
+            0.55
+          ],
+          "radius": 6.589042748411089,
+          "type": "circle"
+        },
+        "d": {
+          "center": [
+            8.564780709529826,
+            8.297189457583805
+          ],
+          "color": [
+            0.95,
+            0.25,
+            0.2,
+            0.5
+          ],
+          "radius": 4.1236304563391055,
+          "type": "circle"
+        }
+      },
+      "seed": 3234116835,
+      "start_xy": [
+        -0.09547766194336949,
+        0.12981358382044283
+      ],
+      "task_id": 23
+    },
+    {
+      "formula_e": "<>((a && b) && <>d)",
+      "formula_p": null,
+      "generation_attempt": 0,
+      "labels": [
+        "a",
+        "b",
+        "d"
+      ],
+      "metadata": {
+        "base_seed": 20261027,
+        "complexity": "hard",
+        "cr_uid": "antmaze-giant-stitch-v0:ordered_overlap:34",
+        "e5_distractor_bbox_disjoint": true,
+        "e5_distractor_resample": 0,
+        "e5_group": "ordered_overlap",
+        "e5_group_offset": 34,
+        "e5_role": {
+          "a_b": "overlapping multi-positive target",
+          "c": null,
+          "d": "required subsequent goal"
+        },
+        "generator": "generate_semantic_ltl_tasks.py",
+        "predicate_specs": {
+          "a": {
+            "evaluator": "state_region",
+            "geometry": {
+              "color": [
+                0.15,
+                0.45,
+                0.95,
+                0.55
+              ],
+              "type": "polygon",
+              "vertices": [
+                [
+                  19.965130057836188,
+                  22.486929118060143
+                ],
+                [
+                  13.4998769162417,
+                  21.56213791349212
+                ],
+                [
+                  15.315561771996705,
+                  15.632194112308731
+                ],
+                [
+                  21.855653266103452,
+                  12.277503205256492
+                ],
+                [
+                  22.94609692852605,
+                  13.235107383976974
+                ]
+              ]
+            },
+            "metadata": {
+              "shape_kind": "polygon",
+              "source": "task_space_geometry"
+            }
+          },
+          "b": {
+            "evaluator": "state_region",
+            "geometry": {
+              "color": [
+                0.05,
+                0.7,
+                0.35,
+                0.55
+              ],
+              "nonconvex": true,
+              "type": "polygon",
+              "vertices": [
+                [
+                  15.480957460254713,
+                  12.611637465066078
+                ],
+                [
+                  23.359543302509067,
+                  12.611637465066078
+                ],
+                [
+                  23.359543302509067,
+                  16.315009174715197
+                ],
+                [
+                  19.184329169903833,
+                  16.315009174715197
+                ],
+                [
+                  19.184329169903833,
+                  22.05474032722614
+                ],
+                [
+                  15.480957460254713,
+                  22.05474032722614
+                ]
+              ]
+            },
+            "metadata": {
+              "shape_kind": "nonconvex_polygon",
+              "source": "task_space_geometry"
+            }
+          },
+          "d": {
+            "evaluator": "state_region",
+            "geometry": {
+              "color": [
+                0.95,
+                0.25,
+                0.2,
+                0.5
+              ],
+              "nonconvex": true,
+              "type": "polygon",
+              "vertices": [
+                [
+                  2.6528775422318853,
+                  -1.6642417670161365
+                ],
+                [
+                  12.333571157802087,
+                  -1.6642417670161365
+                ],
+                [
+                  12.333571157802087,
+                  3.3967861454530386
+                ],
+                [
+                  7.71390545470106,
+                  3.3967861454530386
+                ],
+                [
+                  7.71390545470106,
+                  8.434211461177453
+                ],
+                [
+                  2.6528775422318853,
+                  8.434211461177453
+                ]
+              ]
+            },
+            "metadata": {
+              "shape_kind": "nonconvex_polygon",
+              "source": "task_space_geometry"
+            }
+          }
+        },
+        "region_kinds": {
+          "a": "polygon",
+          "b": "nonconvex_polygon",
+          "d": "nonconvex_polygon"
+        },
+        "relation_checks": {
+          "nontrivial:a": true,
+          "nontrivial:b": true,
+          "nontrivial:d": true,
+          "overlap:a,b": true,
+          "separated:a,b|d": true,
+          "start_clear": true
+        },
+        "semantic_features": [
+          "overlap",
+          "multi_positive",
+          "sequence"
+        ],
+        "stream_seed": 3234108583,
+        "template": "cr_ordered_overlap"
+      },
+      "regions": {
+        "a": {
+          "color": [
+            0.15,
+            0.45,
+            0.95,
+            0.55
+          ],
+          "type": "polygon",
+          "vertices": [
+            [
+              19.965130057836188,
+              22.486929118060143
+            ],
+            [
+              13.4998769162417,
+              21.56213791349212
+            ],
+            [
+              15.315561771996705,
+              15.632194112308731
+            ],
+            [
+              21.855653266103452,
+              12.277503205256492
+            ],
+            [
+              22.94609692852605,
+              13.235107383976974
+            ]
+          ]
+        },
+        "b": {
+          "color": [
+            0.05,
+            0.7,
+            0.35,
+            0.55
+          ],
+          "nonconvex": true,
+          "type": "polygon",
+          "vertices": [
+            [
+              15.480957460254713,
+              12.611637465066078
+            ],
+            [
+              23.359543302509067,
+              12.611637465066078
+            ],
+            [
+              23.359543302509067,
+              16.315009174715197
+            ],
+            [
+              19.184329169903833,
+              16.315009174715197
+            ],
+            [
+              19.184329169903833,
+              22.05474032722614
+            ],
+            [
+              15.480957460254713,
+              22.05474032722614
+            ]
+          ]
+        },
+        "d": {
+          "color": [
+            0.95,
+            0.25,
+            0.2,
+            0.5
+          ],
+          "nonconvex": true,
+          "type": "polygon",
+          "vertices": [
+            [
+              2.6528775422318853,
+              -1.6642417670161365
+            ],
+            [
+              12.333571157802087,
+              -1.6642417670161365
+            ],
+            [
+              12.333571157802087,
+              3.3967861454530386
+            ],
+            [
+              7.71390545470106,
+              3.3967861454530386
+            ],
+            [
+              7.71390545470106,
+              8.434211461177453
+            ],
+            [
+              2.6528775422318853,
+              8.434211461177453
+            ]
+          ]
+        }
+      },
+      "seed": 3234117083,
+      "start_xy": [
+        32.34987266351794,
+        7.840666515024839
+      ],
+      "task_id": 24
+    },
+    {
+      "formula_e": "<>((a && b) && <>d)",
+      "formula_p": null,
+      "generation_attempt": 0,
+      "labels": [
+        "a",
+        "b",
+        "d"
+      ],
+      "metadata": {
+        "base_seed": 20261027,
+        "complexity": "hard",
+        "cr_uid": "antmaze-giant-stitch-v0:ordered_overlap:35",
+        "e5_distractor_bbox_disjoint": true,
+        "e5_distractor_resample": 0,
+        "e5_group": "ordered_overlap",
+        "e5_group_offset": 35,
+        "e5_role": {
+          "a_b": "overlapping multi-positive target",
+          "c": null,
+          "d": "required subsequent goal"
+        },
+        "generator": "generate_semantic_ltl_tasks.py",
+        "predicate_specs": {
+          "a": {
+            "evaluator": "state_region",
+            "geometry": {
+              "center": [
+                50.812989259464956,
+                27.862168808697195
+              ],
+              "color": [
+                0.15,
+                0.45,
+                0.95,
+                0.55
+              ],
+              "radius": 5.504236788907046,
+              "type": "circle"
+            },
+            "metadata": {
+              "shape_kind": "circle",
+              "source": "task_space_geometry"
+            }
+          },
+          "b": {
+            "evaluator": "state_region",
+            "geometry": {
+              "color": [
+                0.05,
+                0.7,
+                0.35,
+                0.55
+              ],
+              "nonconvex": true,
+              "type": "polygon",
+              "vertices": [
+                [
+                  45.76308751669548,
+                  20.533169439608393
+                ],
+                [
+                  55.84810470163471,
+                  20.533169439608393
+                ],
+                [
+                  55.84810470163471,
+                  25.468020555928845
+                ],
+                [
+                  50.69793863301593,
+                  25.468020555928845
+                ],
+                [
+                  50.69793863301593,
+                  30.692724273081197
+                ],
+                [
+                  45.76308751669548,
+                  30.692724273081197
+                ]
+              ]
+            },
+            "metadata": {
+              "shape_kind": "nonconvex_polygon",
+              "source": "task_space_geometry"
+            }
+          },
+          "d": {
+            "evaluator": "state_region",
+            "geometry": {
+              "center": [
+                4.086289830442736,
+                7.589440008416749
+              ],
+              "color": [
+                0.95,
+                0.25,
+                0.2,
+                0.5
+              ],
+              "radius": 3.3216404823074828,
+              "type": "circle"
+            },
+            "metadata": {
+              "shape_kind": "circle",
+              "source": "task_space_geometry"
+            }
+          }
+        },
+        "region_kinds": {
+          "a": "circle",
+          "b": "nonconvex_polygon",
+          "d": "circle"
+        },
+        "relation_checks": {
+          "nontrivial:a": true,
+          "nontrivial:b": true,
+          "nontrivial:d": true,
+          "overlap:a,b": true,
+          "separated:a,b|d": true,
+          "start_clear": true
+        },
+        "semantic_features": [
+          "overlap",
+          "multi_positive",
+          "sequence"
+        ],
+        "stream_seed": 3234108583,
+        "template": "cr_ordered_overlap"
+      },
+      "regions": {
+        "a": {
+          "center": [
+            50.812989259464956,
+            27.862168808697195
+          ],
+          "color": [
+            0.15,
+            0.45,
+            0.95,
+            0.55
+          ],
+          "radius": 5.504236788907046,
+          "type": "circle"
+        },
+        "b": {
+          "color": [
+            0.05,
+            0.7,
+            0.35,
+            0.55
+          ],
+          "nonconvex": true,
+          "type": "polygon",
+          "vertices": [
+            [
+              45.76308751669548,
+              20.533169439608393
+            ],
+            [
+              55.84810470163471,
+              20.533169439608393
+            ],
+            [
+              55.84810470163471,
+              25.468020555928845
+            ],
+            [
+              50.69793863301593,
+              25.468020555928845
+            ],
+            [
+              50.69793863301593,
+              30.692724273081197
+            ],
+            [
+              45.76308751669548,
+              30.692724273081197
+            ]
+          ]
+        },
+        "d": {
+          "center": [
+            4.086289830442736,
+            7.589440008416749
+          ],
+          "color": [
+            0.95,
+            0.25,
+            0.2,
+            0.5
+          ],
+          "radius": 3.3216404823074828,
+          "type": "circle"
+        }
+      },
+      "seed": 3234117333,
+      "start_xy": [
+        20.022904826169437,
+        32.10288743959966
+      ],
+      "task_id": 25
+    },
+    {
+      "formula_e": "<>((a && b) && <>d)",
+      "formula_p": null,
+      "generation_attempt": 0,
+      "labels": [
+        "a",
+        "b",
+        "d"
+      ],
+      "metadata": {
+        "base_seed": 20261027,
+        "complexity": "hard",
+        "cr_uid": "antmaze-giant-stitch-v0:ordered_overlap:36",
+        "e5_distractor_bbox_disjoint": true,
+        "e5_distractor_resample": 0,
+        "e5_group": "ordered_overlap",
+        "e5_group_offset": 36,
+        "e5_role": {
+          "a_b": "overlapping multi-positive target",
+          "c": null,
+          "d": "required subsequent goal"
+        },
+        "generator": "generate_semantic_ltl_tasks.py",
+        "predicate_specs": {
+          "a": {
+            "evaluator": "state_region",
+            "geometry": {
+              "center": [
+                -0.8256711735495552,
+                33.676982246653765
+              ],
+              "color": [
+                0.15,
+                0.45,
+                0.95,
+                0.55
+              ],
+              "radius": 4.634415287055118,
+              "type": "circle"
+            },
+            "metadata": {
+              "shape_kind": "circle",
+              "source": "task_space_geometry"
+            }
+          },
+          "b": {
+            "evaluator": "state_region",
+            "geometry": {
+              "color": [
+                0.05,
+                0.7,
+                0.35,
+                0.55
+              ],
+              "type": "polygon",
+              "vertices": [
+                [
+                  -0.37343292466675715,
+                  39.194544157544485
+                ],
+                [
+                  0.4002103218310098,
+                  41.37347708407197
+                ],
+                [
+                  -7.105887922838208,
+                  38.417287780280056
+                ],
+                [
+                  0.326858064468055,
+                  30.229972219079578
+                ],
+                [
+                  2.2422707267109354,
+                  33.79937624101
+                ]
+              ]
+            },
+            "metadata": {
+              "shape_kind": "polygon",
+              "source": "task_space_geometry"
+            }
+          },
+          "d": {
+            "evaluator": "state_region",
+            "geometry": {
+              "center": [
+                23.67232719362208,
+                35.290304571660926
+              ],
+              "color": [
+                0.95,
+                0.25,
+                0.2,
+                0.5
+              ],
+              "radius": 4.9361497466669695,
+              "type": "circle"
+            },
+            "metadata": {
+              "shape_kind": "circle",
+              "source": "task_space_geometry"
+            }
+          }
+        },
+        "region_kinds": {
+          "a": "circle",
+          "b": "polygon",
+          "d": "circle"
+        },
+        "relation_checks": {
+          "nontrivial:a": true,
+          "nontrivial:b": true,
+          "nontrivial:d": true,
+          "overlap:a,b": true,
+          "separated:a,b|d": true,
+          "start_clear": true
+        },
+        "semantic_features": [
+          "overlap",
+          "multi_positive",
+          "sequence"
+        ],
+        "stream_seed": 3234108583,
+        "template": "cr_ordered_overlap"
+      },
+      "regions": {
+        "a": {
+          "center": [
+            -0.8256711735495552,
+            33.676982246653765
+          ],
+          "color": [
+            0.15,
+            0.45,
+            0.95,
+            0.55
+          ],
+          "radius": 4.634415287055118,
+          "type": "circle"
+        },
+        "b": {
+          "color": [
+            0.05,
+            0.7,
+            0.35,
+            0.55
+          ],
+          "type": "polygon",
+          "vertices": [
+            [
+              -0.37343292466675715,
+              39.194544157544485
+            ],
+            [
+              0.4002103218310098,
+              41.37347708407197
+            ],
+            [
+              -7.105887922838208,
+              38.417287780280056
+            ],
+            [
+              0.326858064468055,
+              30.229972219079578
+            ],
+            [
+              2.2422707267109354,
+              33.79937624101
+            ]
+          ]
+        },
+        "d": {
+          "center": [
+            23.67232719362208,
+            35.290304571660926
+          ],
+          "color": [
+            0.95,
+            0.25,
+            0.2,
+            0.5
+          ],
+          "radius": 4.9361497466669695,
+          "type": "circle"
+        }
+      },
+      "seed": 3234117583,
+      "start_xy": [
+        44.434705208169355,
+        28.384233783639136
+      ],
+      "task_id": 26
+    },
+    {
+      "formula_e": "<>((a && b) && <>d)",
+      "formula_p": null,
+      "generation_attempt": 0,
+      "labels": [
+        "a",
+        "b",
+        "d"
+      ],
+      "metadata": {
+        "base_seed": 20261027,
+        "complexity": "hard",
+        "cr_uid": "antmaze-giant-stitch-v0:ordered_overlap:37",
+        "e5_distractor_bbox_disjoint": true,
+        "e5_distractor_resample": 1,
+        "e5_group": "ordered_overlap",
+        "e5_group_offset": 37,
+        "e5_role": {
+          "a_b": "overlapping multi-positive target",
+          "c": null,
+          "d": "required subsequent goal"
+        },
+        "generator": "generate_semantic_ltl_tasks.py",
+        "predicate_specs": {
+          "a": {
+            "evaluator": "state_region",
+            "geometry": {
+              "color": [
+                0.15,
+                0.45,
+                0.95,
+                0.55
+              ],
+              "nonconvex": true,
+              "type": "polygon",
+              "vertices": [
+                [
+                  0.8581113271736918,
+                  16.888375004477663
+                ],
+                [
+                  12.716046590722524,
+                  16.888375004477663
+                ],
+                [
+                  12.716046590722524,
+                  20.290501020891153
+                ],
+                [
+                  4.260237343587182,
+                  20.290501020891153
+                ],
+                [
+                  4.260237343587182,
+                  25.860160947826568
+                ],
+                [
+                  0.8581113271736918,
+                  25.860160947826568
+                ]
+              ]
+            },
+            "metadata": {
+              "shape_kind": "nonconvex_polygon",
+              "source": "task_space_geometry"
+            }
+          },
+          "b": {
+            "evaluator": "state_region",
+            "geometry": {
+              "center": [
+                8.062310293870574,
+                21.521093701024224
+              ],
+              "color": [
+                0.05,
+                0.7,
+                0.35,
+                0.55
+              ],
+              "radius": 3.6328082676014604,
+              "type": "circle"
+            },
+            "metadata": {
+              "shape_kind": "circle",
+              "source": "task_space_geometry"
+            }
+          },
+          "d": {
+            "evaluator": "state_region",
+            "geometry": {
+              "center": [
+                51.460808084230095,
+                4.22244794885851
+              ],
+              "color": [
+                0.95,
+                0.25,
+                0.2,
+                0.5
+              ],
+              "radius": 4.894523912201233,
+              "type": "circle"
+            },
+            "metadata": {
+              "shape_kind": "circle",
+              "source": "task_space_geometry"
+            }
+          }
+        },
+        "region_kinds": {
+          "a": "nonconvex_polygon",
+          "b": "circle",
+          "d": "circle"
+        },
+        "relation_checks": {
+          "nontrivial:a": true,
+          "nontrivial:b": true,
+          "nontrivial:d": true,
+          "overlap:a,b": true,
+          "separated:a,b|d": true,
+          "start_clear": true
+        },
+        "semantic_features": [
+          "overlap",
+          "multi_positive",
+          "sequence"
+        ],
+        "stream_seed": 3234108583,
+        "template": "cr_ordered_overlap"
+      },
+      "regions": {
+        "a": {
+          "color": [
+            0.15,
+            0.45,
+            0.95,
+            0.55
+          ],
+          "nonconvex": true,
+          "type": "polygon",
+          "vertices": [
+            [
+              0.8581113271736918,
+              16.888375004477663
+            ],
+            [
+              12.716046590722524,
+              16.888375004477663
+            ],
+            [
+              12.716046590722524,
+              20.290501020891153
+            ],
+            [
+              4.260237343587182,
+              20.290501020891153
+            ],
+            [
+              4.260237343587182,
+              25.860160947826568
+            ],
+            [
+              0.8581113271736918,
+              25.860160947826568
+            ]
+          ]
+        },
+        "b": {
+          "center": [
+            8.062310293870574,
+            21.521093701024224
+          ],
+          "color": [
+            0.05,
+            0.7,
+            0.35,
+            0.55
+          ],
+          "radius": 3.6328082676014604,
+          "type": "circle"
+        },
+        "d": {
+          "center": [
+            51.460808084230095,
+            4.22244794885851
+          ],
+          "color": [
+            0.95,
+            0.25,
+            0.2,
+            0.5
+          ],
+          "radius": 4.894523912201233,
+          "type": "circle"
+        }
+      },
+      "seed": 3235117836,
+      "start_xy": [
+        15.390092851852001,
+        20.552668871318446
+      ],
+      "task_id": 27
+    },
+    {
+      "formula_e": "<>((a && b) && <>d)",
+      "formula_p": null,
+      "generation_attempt": 0,
+      "labels": [
+        "a",
+        "b",
+        "d"
+      ],
+      "metadata": {
+        "base_seed": 20261027,
+        "complexity": "hard",
+        "cr_uid": "antmaze-giant-stitch-v0:ordered_overlap:38",
+        "e5_distractor_bbox_disjoint": true,
+        "e5_distractor_resample": 0,
+        "e5_group": "ordered_overlap",
+        "e5_group_offset": 38,
+        "e5_role": {
+          "a_b": "overlapping multi-positive target",
+          "c": null,
+          "d": "required subsequent goal"
+        },
+        "generator": "generate_semantic_ltl_tasks.py",
+        "predicate_specs": {
+          "a": {
+            "evaluator": "state_region",
+            "geometry": {
+              "color": [
+                0.15,
+                0.45,
+                0.95,
+                0.55
+              ],
+              "type": "rect",
+              "xmax": 22.459513507151073,
+              "xmin": 8.188757586819133,
+              "ymax": 39.66086625948375,
+              "ymin": 27.87036689726197
+            },
+            "metadata": {
+              "shape_kind": "rect",
+              "source": "task_space_geometry"
+            }
+          },
+          "b": {
+            "evaluator": "state_region",
+            "geometry": {
+              "color": [
+                0.05,
+                0.7,
+                0.35,
+                0.55
+              ],
+              "type": "rect",
+              "xmax": 19.708969545355508,
+              "xmin": 12.358583642602284,
+              "ymax": 40.50467958118481,
+              "ymin": 30.47227227947311
+            },
+            "metadata": {
+              "shape_kind": "rect",
+              "source": "task_space_geometry"
+            }
+          },
+          "d": {
+            "evaluator": "state_region",
+            "geometry": {
+              "center": [
+                32.704848788937454,
+                32.216814997682214
+              ],
+              "color": [
+                0.95,
+                0.25,
+                0.2,
+                0.5
+              ],
+              "radius": 5.902350934115944,
+              "type": "circle"
+            },
+            "metadata": {
+              "shape_kind": "circle",
+              "source": "task_space_geometry"
+            }
+          }
+        },
+        "region_kinds": {
+          "a": "rect",
+          "b": "rect",
+          "d": "circle"
+        },
+        "relation_checks": {
+          "nontrivial:a": true,
+          "nontrivial:b": true,
+          "nontrivial:d": true,
+          "overlap:a,b": true,
+          "separated:a,b|d": true,
+          "start_clear": true
+        },
+        "semantic_features": [
+          "overlap",
+          "multi_positive",
+          "sequence"
+        ],
+        "stream_seed": 3234108583,
+        "template": "cr_ordered_overlap"
+      },
+      "regions": {
+        "a": {
+          "color": [
+            0.15,
+            0.45,
+            0.95,
+            0.55
+          ],
+          "type": "rect",
+          "xmax": 22.459513507151073,
+          "xmin": 8.188757586819133,
+          "ymax": 39.66086625948375,
+          "ymin": 27.87036689726197
+        },
+        "b": {
+          "color": [
+            0.05,
+            0.7,
+            0.35,
+            0.55
+          ],
+          "type": "rect",
+          "xmax": 19.708969545355508,
+          "xmin": 12.358583642602284,
+          "ymax": 40.50467958118481,
+          "ymin": 30.47227227947311
+        },
+        "d": {
+          "center": [
+            32.704848788937454,
+            32.216814997682214
+          ],
+          "color": [
+            0.95,
+            0.25,
+            0.2,
+            0.5
+          ],
+          "radius": 5.902350934115944,
+          "type": "circle"
+        }
+      },
+      "seed": 3234118083,
+      "start_xy": [
+        39.427257222812536,
+        36.03962430847123
+      ],
+      "task_id": 28
+    },
+    {
+      "formula_e": "<>((a && b) && <>d)",
+      "formula_p": null,
+      "generation_attempt": 0,
+      "labels": [
+        "a",
+        "b",
+        "d"
+      ],
+      "metadata": {
+        "base_seed": 20261027,
+        "complexity": "hard",
+        "cr_uid": "antmaze-giant-stitch-v0:ordered_overlap:39",
+        "e5_distractor_bbox_disjoint": true,
+        "e5_distractor_resample": 1,
+        "e5_group": "ordered_overlap",
+        "e5_group_offset": 39,
+        "e5_role": {
+          "a_b": "overlapping multi-positive target",
+          "c": null,
+          "d": "required subsequent goal"
+        },
+        "generator": "generate_semantic_ltl_tasks.py",
+        "predicate_specs": {
+          "a": {
+            "evaluator": "state_region",
+            "geometry": {
+              "color": [
+                0.15,
+                0.45,
+                0.95,
+                0.55
+              ],
+              "type": "polygon",
+              "vertices": [
+                [
+                  14.53371294409952,
+                  9.644275912786835
+                ],
+                [
+                  14.363068576440522,
+                  9.20644877592751
+                ],
+                [
+                  11.16449583085542,
+                  6.583493007838102
+                ],
+                [
+                  10.646377680069191,
+                  -2.5910377441554924
+                ]
+              ]
+            },
+            "metadata": {
+              "shape_kind": "polygon",
+              "source": "task_space_geometry"
+            }
+          },
+          "b": {
+            "evaluator": "state_region",
+            "geometry": {
+              "color": [
+                0.05,
+                0.7,
+                0.35,
+                0.55
+              ],
+              "nonconvex": true,
+              "type": "polygon",
+              "vertices": [
+                [
+                  8.491433323757544,
+                  -5.278577244980285
+                ],
+                [
+                  17.263722722128254,
+                  -5.278577244980285
+                ],
+                [
+                  17.263722722128254,
+                  -1.6483858987178759
+                ],
+                [
+                  12.121624670019953,
+                  -1.6483858987178759
+                ],
+                [
+                  12.121624670019953,
+                  6.1487597049038065
+                ],
+                [
+                  8.491433323757544,
+                  6.1487597049038065
+                ]
+              ]
+            },
+            "metadata": {
+              "shape_kind": "nonconvex_polygon",
+              "source": "task_space_geometry"
+            }
+          },
+          "d": {
+            "evaluator": "state_region",
+            "geometry": {
+              "center": [
+                43.68038049905612,
+                36.473324791453784
+              ],
+              "color": [
+                0.95,
+                0.25,
+                0.2,
+                0.5
+              ],
+              "radius": 3.3668705375982393,
+              "type": "circle"
+            },
+            "metadata": {
+              "shape_kind": "circle",
+              "source": "task_space_geometry"
+            }
+          }
+        },
+        "region_kinds": {
+          "a": "polygon",
+          "b": "nonconvex_polygon",
+          "d": "circle"
+        },
+        "relation_checks": {
+          "nontrivial:a": true,
+          "nontrivial:b": true,
+          "nontrivial:d": true,
+          "overlap:a,b": true,
+          "separated:a,b|d": true,
+          "start_clear": true
+        },
+        "semantic_features": [
+          "overlap",
+          "multi_positive",
+          "sequence"
+        ],
+        "stream_seed": 3234108583,
+        "template": "cr_ordered_overlap"
+      },
+      "regions": {
+        "a": {
+          "color": [
+            0.15,
+            0.45,
+            0.95,
+            0.55
+          ],
+          "type": "polygon",
+          "vertices": [
+            [
+              14.53371294409952,
+              9.644275912786835
+            ],
+            [
+              14.363068576440522,
+              9.20644877592751
+            ],
+            [
+              11.16449583085542,
+              6.583493007838102
+            ],
+            [
+              10.646377680069191,
+              -2.5910377441554924
+            ]
+          ]
+        },
+        "b": {
+          "color": [
+            0.05,
+            0.7,
+            0.35,
+            0.55
+          ],
+          "nonconvex": true,
+          "type": "polygon",
+          "vertices": [
+            [
+              8.491433323757544,
+              -5.278577244980285
+            ],
+            [
+              17.263722722128254,
+              -5.278577244980285
+            ],
+            [
+              17.263722722128254,
+              -1.6483858987178759
+            ],
+            [
+              12.121624670019953,
+              -1.6483858987178759
+            ],
+            [
+              12.121624670019953,
+              6.1487597049038065
+            ],
+            [
+              8.491433323757544,
+              6.1487597049038065
+            ]
+          ]
+        },
+        "d": {
+          "center": [
+            43.68038049905612,
+            36.473324791453784
+          ],
+          "color": [
+            0.95,
+            0.25,
+            0.2,
+            0.5
+          ],
+          "radius": 3.3668705375982393,
+          "type": "circle"
+        }
+      },
+      "seed": 3235118336,
+      "start_xy": [
+        40.359334392122044,
+        -0.2748981643972136
+      ],
+      "task_id": 29
+    }
+  ],
+  "template_definitions": {
+    "ordered_overlap": {
+      "complexity": "hard",
+      "feature_tags": [
+        "overlap",
+        "multi_positive",
+        "sequence"
+      ],
+      "formula": "<>((a && b) && <>d)",
+      "labels": [
+        "a",
+        "b",
+        "d"
+      ],
+      "name": "cr_ordered_overlap",
+      "relations": [
+        {
+          "kind": "overlap",
+          "labels": [
+            "a",
+            "b"
+          ],
+          "min_distance": 0.0,
+          "min_witnesses": 1,
+          "other": []
+        },
+        {
+          "kind": "separated",
+          "labels": [
+            "a",
+            "b"
+          ],
+          "min_distance": 4.0,
+          "min_witnesses": 1,
+          "other": [
+            "d"
+          ]
+        },
+        {
+          "kind": "start_clear",
+          "labels": [],
+          "min_distance": 0.0,
+          "min_witnesses": 1,
+          "other": []
+        }
+      ]
+    }
+  }
+}

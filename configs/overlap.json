@@ -1,0 +1,269 @@
+[
+  {
+    "agent_config_overrides": {
+      "alpha": 1.0,
+      "batch_size": 1024,
+      "discount": 0.995,
+      "encoder": "not_used",
+      "p_aug": 0.0,
+      "tdr_expectile": 0.999,
+      "way_steps": 8
+    },
+    "assets": {
+      "graph": "antmaze-giant-stitch-v0:graph:3e1fe008cbee",
+      "policy": "antmaze-giant-stitch-v0:tdr:20c40a89b4fb",
+      "tdr": "antmaze-giant-stitch-v0:tdr:20c40a89b4fb"
+    },
+    "datasets": [
+      "antmaze-giant-stitch-v0:dataset:c697fa4ebd04",
+      "antmaze-giant-stitch-v0:dataset:b4d0862d31d1"
+    ],
+    "env": "antmaze-giant-stitch-v0",
+    "flags": {
+      "anchor-reached-threshold": 8,
+      "env-max-episode-steps": 8000,
+      "gpu": 0,
+      "json": true,
+      "local-step-budget": 8000,
+      "max-prefix-candidates": 5,
+      "mode": "real_task_batch",
+      "reach-threshold": 8,
+      "resume": true,
+      "seed": 100,
+      "semantic-evaluator": "state_region",
+      "suffix-cycles": 2,
+      "task-limit": 0
+    },
+    "method": "sagas",
+    "shard": "events",
+    "task_count": 120,
+    "task_file": "tasks/overlap/antmaze-giant-stitch-v0/events/e5_antmaze_giant_stitch_overlap120_large_seed20260727.json",
+    "task_sha256": "97305b4c41d5011ba6018704fd0b93f2b92283277fada53d9d1bccdba3a9539c"
+  },
+  {
+    "agent_config_overrides": {
+      "alpha": 1.0,
+      "batch_size": 1024,
+      "discount": 0.995,
+      "encoder": "not_used",
+      "p_aug": 0.0,
+      "tdr_expectile": 0.999,
+      "way_steps": 8
+    },
+    "assets": {
+      "graph": "antmaze-giant-stitch-v0:graph:3e1fe008cbee",
+      "policy": "antmaze-giant-stitch-v0:tdr:20c40a89b4fb",
+      "tdr": "antmaze-giant-stitch-v0:tdr:20c40a89b4fb"
+    },
+    "datasets": [
+      "antmaze-giant-stitch-v0:dataset:c697fa4ebd04",
+      "antmaze-giant-stitch-v0:dataset:b4d0862d31d1"
+    ],
+    "env": "antmaze-giant-stitch-v0",
+    "flags": {
+      "anchor-reached-threshold": 8,
+      "env-max-episode-steps": 8000,
+      "gpu": 0,
+      "json": true,
+      "local-step-budget": 8000,
+      "max-prefix-candidates": 5,
+      "mode": "real_task_batch",
+      "reach-threshold": 8,
+      "resume": true,
+      "seed": 100,
+      "semantic-evaluator": "state_region",
+      "suffix-cycles": 2,
+      "task-limit": 0
+    },
+    "method": "sagas",
+    "shard": "ordered-1",
+    "task_count": 10,
+    "task_file": "tasks/overlap/antmaze-giant-stitch-v0/ordered-1/cr_a_antmaze-giant-stitch-v0.json",
+    "task_sha256": "edf853592f7032d3bb8a4b3ff815897fcf24c53c7c74796404adc6eb51c68834"
+  },
+  {
+    "agent_config_overrides": {
+      "alpha": 1.0,
+      "batch_size": 1024,
+      "discount": 0.995,
+      "encoder": "not_used",
+      "p_aug": 0.0,
+      "tdr_expectile": 0.999,
+      "way_steps": 8
+    },
+    "assets": {
+      "graph": "antmaze-giant-stitch-v0:graph:3e1fe008cbee",
+      "policy": "antmaze-giant-stitch-v0:tdr:20c40a89b4fb",
+      "tdr": "antmaze-giant-stitch-v0:tdr:20c40a89b4fb"
+    },
+    "datasets": [
+      "antmaze-giant-stitch-v0:dataset:c697fa4ebd04",
+      "antmaze-giant-stitch-v0:dataset:b4d0862d31d1"
+    ],
+    "env": "antmaze-giant-stitch-v0",
+    "flags": {
+      "anchor-reached-threshold": 8,
+      "env-max-episode-steps": 8000,
+      "gpu": 0,
+      "json": true,
+      "local-step-budget": 8000,
+      "max-prefix-candidates": 5,
+      "mode": "real_task_batch",
+      "reach-threshold": 8,
+      "resume": true,
+      "seed": 100,
+      "semantic-evaluator": "state_region",
+      "suffix-cycles": 2,
+      "task-limit": 0
+    },
+    "method": "sagas",
+    "shard": "ordered-2",
+    "task_count": 30,
+    "task_file": "tasks/overlap/antmaze-giant-stitch-v0/ordered-2/overlap_added_antmaze-giant-stitch-v0.json",
+    "task_sha256": "ca1d4a366fb6f1ea22465b12e792d923411b5f9abf0713eb776e5f26d801cef4"
+  },
+  {
+    "agent_config_overrides": {
+      "actor_hidden_dims": [
+        512,
+        512,
+        512
+      ],
+      "agent_name": "gas",
+      "alpha": 0.01,
+      "batch_size": 1024,
+      "const_std": true,
+      "discount": 0.99,
+      "encoder": "not_used",
+      "expectile": 0.7,
+      "final_fc_init_scale": 0.01,
+      "layer_norm": true,
+      "log_std_max": 2,
+      "log_std_min": -5,
+      "lr": 0.0003,
+      "p_aug": 0.0,
+      "state_dependent_std": false,
+      "tanh_squash": false,
+      "tau": 0.005,
+      "tdr_dim": 32,
+      "tdr_expectile": 0.999,
+      "tdr_value_geom_sample": true,
+      "tdr_value_hidden_dims": [
+        512,
+        512,
+        512
+      ],
+      "tdr_value_p_curgoal": 0.0,
+      "tdr_value_p_randomgoal": 0.375,
+      "tdr_value_p_trajgoal": 0.625,
+      "value_hidden_dims": [
+        512,
+        512,
+        512
+      ],
+      "way_steps": 8
+    },
+    "assets": {
+      "graph": "antmaze-large-explore-v0:graph:d577264452f3",
+      "policy": "antmaze-large-explore-v0:policy:3736d9617c82",
+      "tdr": "antmaze-large-explore-v0:tdr:638c6ea79d7d"
+    },
+    "datasets": [
+      "antmaze-large-explore-v0:dataset:8c6303259a60",
+      "antmaze-large-explore-v0:dataset:80fac2570437"
+    ],
+    "env": "antmaze-large-explore-v0",
+    "flags": {
+      "anchor-reached-threshold": 8,
+      "env-max-episode-steps": 8000,
+      "gpu": 0,
+      "json": true,
+      "local-step-budget": 8000,
+      "max-prefix-candidates": 5,
+      "mode": "real_task_batch",
+      "reach-threshold": 8,
+      "resume": true,
+      "seed": 100,
+      "semantic-evaluator": "state_region",
+      "suffix-cycles": 2,
+      "task-limit": 0
+    },
+    "method": "sagas",
+    "shard": "regions-1",
+    "task_count": 40,
+    "task_file": "tasks/overlap/antmaze-large-explore-v0/regions-1/cr_a_antmaze-large-explore-v0.json",
+    "task_sha256": "834f6ada7f306c4275584c2eafe9ea3c953ae43bff68200bf057a8f495cad4cb"
+  },
+  {
+    "agent_config_overrides": {
+      "actor_hidden_dims": [
+        512,
+        512,
+        512
+      ],
+      "agent_name": "gas",
+      "alpha": 0.01,
+      "batch_size": 1024,
+      "const_std": true,
+      "discount": 0.99,
+      "encoder": "not_used",
+      "expectile": 0.7,
+      "final_fc_init_scale": 0.01,
+      "layer_norm": true,
+      "log_std_max": 2,
+      "log_std_min": -5,
+      "lr": 0.0003,
+      "p_aug": 0.0,
+      "state_dependent_std": false,
+      "tanh_squash": false,
+      "tau": 0.005,
+      "tdr_dim": 32,
+      "tdr_expectile": 0.999,
+      "tdr_value_geom_sample": true,
+      "tdr_value_hidden_dims": [
+        512,
+        512,
+        512
+      ],
+      "tdr_value_p_curgoal": 0.0,
+      "tdr_value_p_randomgoal": 0.375,
+      "tdr_value_p_trajgoal": 0.625,
+      "value_hidden_dims": [
+        512,
+        512,
+        512
+      ],
+      "way_steps": 8
+    },
+    "assets": {
+      "graph": "antmaze-large-explore-v0:graph:d577264452f3",
+      "policy": "antmaze-large-explore-v0:policy:3736d9617c82",
+      "tdr": "antmaze-large-explore-v0:tdr:638c6ea79d7d"
+    },
+    "datasets": [
+      "antmaze-large-explore-v0:dataset:8c6303259a60",
+      "antmaze-large-explore-v0:dataset:80fac2570437"
+    ],
+    "env": "antmaze-large-explore-v0",
+    "flags": {
+      "anchor-reached-threshold": 8,
+      "env-max-episode-steps": 8000,
+      "gpu": 0,
+      "json": true,
+      "local-step-budget": 8000,
+      "max-prefix-candidates": 5,
+      "mode": "real_task_batch",
+      "reach-threshold": 8,
+      "resume": true,
+      "seed": 100,
+      "semantic-evaluator": "state_region",
+      "suffix-cycles": 2,
+      "task-limit": 0
+    },
+    "method": "sagas",
+    "shard": "regions-2",
+    "task_count": 120,
+    "task_file": "tasks/overlap/antmaze-large-explore-v0/regions-2/overlap_added_antmaze-large-explore-v0.json",
+    "task_sha256": "36745c81b0e797603a16995d672b6afbdc97b03b1872dc1fc29e19b59704453c"
+  }
+]
