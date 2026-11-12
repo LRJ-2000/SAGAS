@@ -108,7 +108,73 @@ Check `summary_protocol.json` for any changes to the preset evaluation
 parameters. Scene reports finite-lasso success only when both the runtime
 monitor and the independent verifier succeed on the same task.
 
-See `python sagas.py --help` for training, graph building, and task generation.
+## Train and Build
+
+This example trains the temporal-distance representation (TD) and low-level
+policy and builds a graph for AntMaze Medium-Navigate. Run it from the
+repository root after [installation](#install). The
+[navigation presets](configs/training.json) cover AntMaze and HumanoidMaze.
+Use a fresh output directory for each run.
+
+**1. Download the offline data.** This fetches the training and validation
+datasets without downloading pretrained checkpoints. Skip the Python command
+if the matching datasets are already in `DATA_DIR`.
+
+```bash
+ENV_NAME=antmaze-medium-navigate-v0
+DATA_DIR="$HOME/.ogbench/data"
+python -c 'import sys; from ogbenchTL import download_datasets; download_datasets([sys.argv[1]], sys.argv[2])' \
+  "$ENV_NAME" "$DATA_DIR"
+```
+
+**2. Train the TD representation.** The example preset saves a checkpoint at
+step 1,000,000. Use the resulting TD checkpoint for both of the next commands.
+
+```bash
+python sagas.py train tdr --env "$ENV_NAME" --data-dir "$DATA_DIR" \
+  --output-dir runs/antmaze-tdr
+TDR_CHECKPOINT="$(find "$PWD/runs/antmaze-tdr/results" -type f -name params_1000000.pkl -print -quit)"
+```
+
+**3. Train the policy and build the graph.** These two jobs share the TD
+checkpoint; neither requires the other job's output. To skip step 2, set
+`TDR_CHECKPOINT` to a compatible existing checkpoint file.
+
+```bash
+python sagas.py train policy --env "$ENV_NAME" --data-dir "$DATA_DIR" \
+  --tdr-checkpoint "$TDR_CHECKPOINT" --output-dir runs/antmaze-policy
+python sagas.py build navigation --env "$ENV_NAME" --data-dir "$DATA_DIR" \
+  --tdr-checkpoint "$TDR_CHECKPOINT" --output-dir runs/antmaze-graph
+```
+
+Checkpoints (`params_<step>.pkl`) and graphs (`keygraph.pkl`) are saved in
+run-specific subdirectories under the corresponding `results/` directory.
+Add `--dry-run` to any training or build command to preview its inputs and
+flags without starting the job.
+
+**Rebuild a Scene graph.** With the official Scene datasets and the joint
+checkpoint from the [Scene bundle](ASSETS.md) available locally, run
+`python sagas.py build scene --output-dir runs/scene-graph`. Use
+`--tdr-checkpoint` to supply a compatible checkpoint explicitly. The release
+does not include a Scene training preset.
+
+**Evaluate new assets.** The unified evaluation command checks the hashes of
+the released assets. For a new navigation graph or policy, use the original
+[navigation evaluator](implementations/navigation/evaluate_ltl.py) with
+`--keygraph_path` and `--policy_path`. Preview the full-file preset first:
+
+```bash
+python sagas.py evaluate navigation --env "$ENV_NAME" --difficulty easy \
+  --data-dir "$DATA_DIR" --output-dir runs/antmaze-custom-eval --dry-run
+```
+
+Replace the asset paths in the printed `command` array and run that command
+from its reported `cwd`. Set
+`SAGAS_DATA_DIR` and `SAGAS_LTL2BA` to the data directory and translator
+path when invoking the evaluator directly. Report these runs separately from
+the fixed benchmark.
+
+See `python sagas.py generate --help` to generate new task files.
 
 ## Citation
 

@@ -89,7 +89,8 @@ Check `summary_protocol.json` before reporting the metrics. A
   fixed protocol. These options still verify the manifest assets. For your
   own checkpoints or graphs, follow [ASSETS.md](ASSETS.md#fetch-or-verify)
   and pass explicit asset paths to the original evaluator.
-- **Train, build, or generate:** Use the corresponding `sagas.py`
-  subcommand when requested. Inspect its `--help` and preview with
-  `--dry-run`. Keep newly generated tasks, graphs, and checkpoints separate
-  from fixed benchmark inputs and the released asset files.
+- **Train or build:** Follow [Train and Build](README.md#train-and-build) for
+  dataset preparation, checkpoint handoff, and rebuilding a Scene graph.
+  Preview the chosen preset with `--dry-run` and use a fresh output directory.
+- **Generate tasks:** Use `sagas.py generate --help`. Keep new tasks separate
+  from the fixed benchmark inputs.

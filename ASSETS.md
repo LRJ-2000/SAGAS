@@ -43,7 +43,7 @@ retain sampled OGBench states for semantic grounding; the original dataset
 files are downloaded separately.
 
 For other settings, use a trusted matching local asset set, or build new
-assets with the retained training and graph construction commands.
+assets using the [Train and Build](README.md#train-and-build) guide.
 Use the original evaluator with explicit paths for newly built assets that
 do not match the historical manifest. **Only load trusted pickle files.**
 
